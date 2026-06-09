@@ -1,0 +1,6 @@
+{% extends 'emails/base_email.html' %}
+{% load i18n %}
+{% block content %}
+<h2>{% trans "Registration received" %}</h2>
+<p>{% blocktrans with name=merchant.business_name %}We received your merchant application for <strong>{{ name }}</strong>. Our team will review it shortly.{% endblocktrans %}</p>
+{% endblock %}

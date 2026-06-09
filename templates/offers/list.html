@@ -1,0 +1,88 @@
+{% extends 'base.html' %}
+{% load i18n %}
+{% block title %}{% trans "Offers" %}{% endblock %}
+{% block content %}
+{% include 'partials/deals_toolbar.html' %}
+<div class="container-app page-shell">
+    {% if filters.q %}
+    <p class="text-muted mb-3">{% blocktrans with query=filters.q %}Results for "{{ query }}"{% endblocktrans %}</p>
+    {% endif %}
+    <div class="row g-3">
+        <aside class="col-lg-3 mb-3 mb-lg-4">
+            <div class="filter-panel rounded overflow-hidden">
+                <button class="filter-toggle-btn d-lg-none" type="button"
+                        data-bs-toggle="collapse" data-bs-target="#offersFilterPanel"
+                        aria-expanded="false" aria-controls="offersFilterPanel">
+                    <span><i class="bi bi-funnel me-2"></i>{% trans "Filters" %}</span>
+                    <i class="bi bi-chevron-down" aria-hidden="true"></i>
+                </button>
+                <div class="collapse" id="offersFilterPanel">
+                    <div class="p-3 border-bottom fw-bold d-none d-lg-block">{% trans "Filters" %}</div>
+                    <div class="p-3">
+                        <form method="get">
+                            <div class="mb-3">
+                                <label class="form-label small fw-semibold">{% trans "Category" %}</label>
+                                <select name="category" class="form-select form-select-sm">
+                                    <option value="">{% trans "All" %}</option>
+                                    {% for cat in categories %}
+                                    <option value="{{ cat.slug }}" {% if filters.category == cat.slug %}selected{% endif %}>{% trans cat.name %}</option>
+                                    {% endfor %}
+                                </select>
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label small fw-semibold">{% trans "City" %}</label>
+                                <input type="text" name="city" class="form-control form-control-sm" value="{{ filters.city }}">
+                            </div>
+                            <div class="row g-2 mb-3">
+                                <div class="col-6">
+                                    <label class="form-label small fw-semibold">{% trans "Min Price" %}</label>
+                                    <input type="number" name="min_price" class="form-control form-control-sm" value="{{ filters.min_price }}">
+                                </div>
+                                <div class="col-6">
+                                    <label class="form-label small fw-semibold">{% trans "Max Price" %}</label>
+                                    <input type="number" name="max_price" class="form-control form-control-sm" value="{{ filters.max_price }}">
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label small fw-semibold">{% trans "Sort" %}</label>
+                                <select name="sort" class="form-select form-select-sm">
+                                    <option value="newest" {% if filters.sort == 'newest' %}selected{% endif %}>{% trans "Newest" %}</option>
+                                    <option value="discount" {% if filters.sort == 'discount' %}selected{% endif %}>{% trans "Highest Discount" %}</option>
+                                    <option value="price_asc" {% if filters.sort == 'price_asc' %}selected{% endif %}>{% trans "Price Low-High" %}</option>
+                                    <option value="price_desc" {% if filters.sort == 'price_desc' %}selected{% endif %}>{% trans "Price High-Low" %}</option>
+                                </select>
+                            </div>
+                            {% if filters.q %}<input type="hidden" name="q" value="{{ filters.q }}">{% endif %}
+                            <button type="submit" class="btn btn-primary w-100">{% trans "Apply" %}</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </aside>
+        <div class="col-lg-9">
+            <div class="row g-3">
+                {% for offer in offers %}
+                {% include 'partials/offer_grid_card.html' %}
+                {% empty %}
+                <div class="col-12">
+                    <div class="text-center py-5 bg-white border text-muted rounded">{% trans "No offers found." %}</div>
+                </div>
+                {% endfor %}
+            </div>
+            {% if offers.has_other_pages %}
+            <nav class="mt-4" aria-label="{% trans 'Pagination' %}">
+                <ul class="pagination flex-wrap justify-content-center gap-1">
+                    {% if offers.has_previous %}
+                    <li class="page-item"><a class="page-link" href="?page={{ offers.previous_page_number }}">{% trans "Previous" %}</a></li>
+                    {% endif %}
+                    <li class="page-item disabled"><span class="page-link">{% blocktrans with number=offers.number total=offers.paginator.num_pages %}Page {{ number }} of {{ total }}{% endblocktrans %}</span></li>
+                    {% if offers.has_next %}
+                    <li class="page-item"><a class="page-link" href="?page={{ offers.next_page_number }}">{% trans "Next" %}</a></li>
+                    {% endif %}
+                </ul>
+            </nav>
+            {% endif %}
+        </div>
+    </div>
+</div>
+{% endblock %}

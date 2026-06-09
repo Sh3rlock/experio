@@ -1,0 +1,5 @@
+{# Always emit values — bound management forms lose values after validation errors #}
+<input type="hidden" name="{{ fs_prefix }}-TOTAL_FORMS" value="{{ fs_total }}" id="id_{{ fs_prefix }}-TOTAL_FORMS">
+<input type="hidden" name="{{ fs_prefix }}-INITIAL_FORMS" value="{{ fs_initial }}" id="id_{{ fs_prefix }}-INITIAL_FORMS">
+<input type="hidden" name="{{ fs_prefix }}-MIN_NUM_FORMS" value="0" id="id_{{ fs_prefix }}-MIN_NUM_FORMS">
+<input type="hidden" name="{{ fs_prefix }}-MAX_NUM_FORMS" value="1000" id="id_{{ fs_prefix }}-MAX_NUM_FORMS">

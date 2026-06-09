@@ -1,0 +1,75 @@
+{% extends 'base.html' %}
+{% load i18n %}
+{% block title %}{% trans "Admin Dashboard" %}{% endblock %}
+{% block extra_js %}
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+<script>
+const salesData = {{ sales_by_month_json|safe }};
+const monthLabels = salesData.map(d => d.month ? new Date(d.month).toLocaleDateString(document.documentElement.lang || 'en',{month:'short',year:'numeric'}) : '');
+const monthTotals = salesData.map(d => parseFloat(d.total || 0));
+new Chart(document.getElementById('salesChart'), {
+    type: 'line',
+    data: { labels: monthLabels, datasets: [{ label: '{% trans "Revenue (RON)" %}', data: monthTotals, borderColor: '#4f46e5', tension: 0.3 }] },
+    options: { responsive: true, maintainAspectRatio: true }
+});
+</script>
+{% endblock %}
+{% block content %}
+<div class="container-app py-4 page-shell">
+    <h1 class="mb-4">{% trans "Admin Analytics" %}</h1>
+    <div class="row g-3 g-md-4 mb-4">
+        <div class="col-12 col-sm-6 col-lg-4"><div class="card p-3 stat-card"><div class="text-muted small">{% trans "Total Revenue" %}</div><div class="fs-4 fw-bold">{{ total_revenue }} RON</div></div></div>
+        <div class="col-12 col-sm-6 col-lg-4"><div class="card p-3 stat-card"><div class="text-muted small">{% trans "Commission Revenue" %}</div><div class="fs-4 fw-bold">{{ commission_revenue }} RON</div></div></div>
+        <div class="col-12 col-sm-6 col-lg-4"><div class="card p-3 stat-card"><div class="text-muted small">{% trans "Sold Vouchers" %}</div><div class="fs-4 fw-bold">{{ sold_vouchers }}</div></div></div>
+        <div class="col-12 col-sm-6"><div class="card p-3 stat-card"><div class="text-muted small">{% trans "Active Merchants" %}</div><div class="fs-4 fw-bold">{{ active_merchants }}</div></div></div>
+        <div class="col-12 col-sm-6"><div class="card p-3 stat-card"><div class="text-muted small">{% trans "Active Offers" %}</div><div class="fs-4 fw-bold">{{ active_offers }}</div></div></div>
+    </div>
+    <div class="row g-4">
+        <div class="col-12 col-lg-8">
+            <div class="card p-3"><h5 class="h6">{% trans "Sales by Month" %}</h5><div style="position:relative;min-height:220px;"><canvas id="salesChart"></canvas></div></div>
+        </div>
+        <div class="col-12 col-lg-4">
+            <div class="card p-3 mb-3">
+                <h5 class="h6">{% trans "Top Merchants" %}</h5>
+                <ul class="list-group list-group-flush">
+                    {% for m in top_merchants %}
+                    <li class="list-group-item d-flex justify-content-between align-items-start gap-2">
+                        <span class="text-break">{{ m.merchant__business_name }}</span>
+                        <span class="fw-semibold text-nowrap">{{ m.revenue }} RON</span>
+                    </li>
+                    {% empty %}<li class="list-group-item text-muted">{% trans "No data" %}</li>{% endfor %}
+                </ul>
+            </div>
+            <div class="card p-3">
+                <h5 class="h6">{% trans "Top Categories" %}</h5>
+                <ul class="list-group list-group-flush">
+                    {% for c in top_categories %}
+                    <li class="list-group-item d-flex justify-content-between gap-2">
+                        <span>{{ c.category__name }}</span>
+                        <span class="text-nowrap">{% blocktrans with count=c.sales %}{{ count }} sales{% endblocktrans %}</span>
+                    </li>
+                    {% empty %}<li class="list-group-item text-muted">{% trans "No data" %}</li>{% endfor %}
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="card mt-4 overflow-hidden">
+        <div class="card-header">{% trans "Recent Transactions" %}</div>
+        <div class="table-responsive table-responsive-cards">
+            <table class="table mb-0">
+                <thead><tr><th>{% trans "Date" %}</th><th>{% trans "Customer" %}</th><th>{% trans "Offer" %}</th><th>{% trans "Amount" %}</th></tr></thead>
+                <tbody>
+                    {% for t in recent_transactions %}
+                    <tr>
+                        <td class="text-nowrap">{{ t.created_at|date:"d M Y" }}</td>
+                        <td class="text-break">{{ t.customer.email }}</td>
+                        <td>{{ t.offer.title }}</td>
+                        <td class="text-nowrap">{{ t.amount }} RON</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+{% endblock %}

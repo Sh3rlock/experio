@@ -1,0 +1,92 @@
+{% load i18n %}
+{% if form.non_field_errors %}
+<div class="alert alert-danger">{{ form.non_field_errors }}</div>
+{% endif %}
+
+<div class="landing-form-section">
+    <h3 class="landing-form-section-title">{% trans "Business Information" %}</h3>
+    <div class="landing-form-grid">
+        <div class="landing-form-field landing-form-field--full">
+            <label for="{{ form.business_name.id_for_label }}" class="landing-form-label">{{ form.business_name.label }}</label>
+            {{ form.business_name }}
+            {% if form.business_name.errors %}<p class="landing-form-error">{{ form.business_name.errors.0 }}</p>{% endif %}
+        </div>
+        <div class="landing-form-field">
+            <label for="{{ form.business_category.id_for_label }}" class="landing-form-label">{{ form.business_category.label }}</label>
+            {{ form.business_category }}
+            {% if form.business_category.errors %}<p class="landing-form-error">{{ form.business_category.errors.0 }}</p>{% endif %}
+        </div>
+        <div class="landing-form-field">
+            <label for="{{ form.website_or_social.id_for_label }}" class="landing-form-label">{{ form.website_or_social.label }}</label>
+            {{ form.website_or_social }}
+            {% if form.website_or_social.errors %}<p class="landing-form-error">{{ form.website_or_social.errors.0 }}</p>{% endif %}
+        </div>
+        <div class="landing-form-field landing-form-field--full">
+            <label for="{{ form.business_address.id_for_label }}" class="landing-form-label">{{ form.business_address.label }}</label>
+            {{ form.business_address }}
+            {% if form.business_address.errors %}<p class="landing-form-error">{{ form.business_address.errors.0 }}</p>{% endif %}
+        </div>
+    </div>
+</div>
+
+<div class="landing-form-section">
+    <h3 class="landing-form-section-title">{% trans "Contact Information" %}</h3>
+    <div class="landing-form-grid">
+        <div class="landing-form-field landing-form-field--full">
+            <label for="{{ form.contact_person.id_for_label }}" class="landing-form-label">{{ form.contact_person.label }}</label>
+            {{ form.contact_person }}
+            {% if form.contact_person.errors %}<p class="landing-form-error">{{ form.contact_person.errors.0 }}</p>{% endif %}
+        </div>
+        <div class="landing-form-field">
+            <label for="{{ form.email.id_for_label }}" class="landing-form-label">{{ form.email.label }}</label>
+            {{ form.email }}
+            {% if form.email.errors %}<p class="landing-form-error">{{ form.email.errors.0 }}</p>{% endif %}
+        </div>
+        <div class="landing-form-field">
+            <label for="{{ form.phone.id_for_label }}" class="landing-form-label">{{ form.phone.label }}</label>
+            {{ form.phone }}
+            {% if form.phone.errors %}<p class="landing-form-error">{{ form.phone.errors.0 }}</p>{% endif %}
+        </div>
+    </div>
+</div>
+
+<div class="landing-form-section">
+    <h3 class="landing-form-section-title">{% trans "About Your Business" %}</h3>
+    <div class="landing-form-field landing-form-field--full">
+        <label for="{{ form.description.id_for_label }}" class="landing-form-label">{{ form.description.label }}</label>
+        {% if form.description.help_text %}
+        <p class="landing-form-hint">{{ form.description.help_text }}</p>
+        {% endif %}
+        {{ form.description }}
+        {% if form.description.errors %}<p class="landing-form-error">{{ form.description.errors.0 }}</p>{% endif %}
+    </div>
+    <fieldset class="landing-form-fieldset">
+        <legend class="landing-form-label">{{ form.voucher_interest.label }}</legend>
+        <div class="landing-choice-list">
+            {% for radio in form.voucher_interest %}
+            <label class="landing-choice" for="{{ radio.id_for_label }}">
+                {{ radio.tag }}
+                <span class="landing-choice-text">{{ radio.choice_label }}</span>
+            </label>
+            {% endfor %}
+        </div>
+        {% if form.voucher_interest.errors %}<p class="landing-form-error">{{ form.voucher_interest.errors.0 }}</p>{% endif %}
+    </fieldset>
+</div>
+
+<div class="landing-form-section">
+    <h3 class="landing-form-section-title">{% trans "Voucher Ideas" %}</h3>
+    <fieldset class="landing-form-fieldset">
+        <legend class="landing-form-label visually-hidden">{{ form.voucher_types.label }}</legend>
+        <p class="landing-form-hint mb-3">{{ form.voucher_types.label }}</p>
+        <div class="landing-choice-list landing-choice-list--checkboxes">
+            {% for checkbox in form.voucher_types %}
+            <label class="landing-choice" for="{{ checkbox.id_for_label }}">
+                {{ checkbox.tag }}
+                <span class="landing-choice-text">{{ checkbox.choice_label }}</span>
+            </label>
+            {% endfor %}
+        </div>
+        {% if form.voucher_types.errors %}<p class="landing-form-error">{{ form.voucher_types.errors.0 }}</p>{% endif %}
+    </fieldset>
+</div>

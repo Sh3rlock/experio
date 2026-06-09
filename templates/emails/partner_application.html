@@ -1,0 +1,35 @@
+{% extends 'emails/base_email.html' %}
+{% load i18n %}
+{% block content %}
+<h1>{% trans "New founding partner application" %}</h1>
+
+<h2>{% trans "Business Information" %}</h2>
+<p><strong>{% trans "Business Name" %}:</strong> {{ application.business_name }}</p>
+<p><strong>{% trans "Business Category" %}:</strong> {{ application.business_category_display }}</p>
+{% if application.website_or_social %}
+<p><strong>{% trans "Website or Facebook Page" %}:</strong> {{ application.website_or_social }}</p>
+{% endif %}
+<p><strong>{% trans "Business Address" %}:</strong> {{ application.business_address }}</p>
+
+<h2>{% trans "Contact Information" %}</h2>
+<p><strong>{% trans "Contact Person" %}:</strong> {{ application.contact_person }}</p>
+<p><strong>{% trans "Email Address" %}:</strong> {{ application.email }}</p>
+<p><strong>{% trans "Phone Number" %}:</strong> {{ application.phone }}</p>
+
+<h2>{% trans "About Your Business" %}</h2>
+<p><strong>{% trans "Brief Description" %}:</strong></p>
+<p>{{ application.description|linebreaksbr }}</p>
+<p><strong>{% trans "Would you be interested in selling gift vouchers online?" %}:</strong> {{ application.voucher_interest_display }}</p>
+
+<h2>{% trans "Voucher Ideas" %}</h2>
+<p><strong>{% trans "What types of vouchers would you like to offer?" %}:</strong></p>
+{% if application.voucher_types_display %}
+<ul>
+    {% for label in application.voucher_types_display %}
+    <li>{{ label }}</li>
+    {% endfor %}
+</ul>
+{% else %}
+<p>{% trans "None selected" %}</p>
+{% endif %}
+{% endblock %}

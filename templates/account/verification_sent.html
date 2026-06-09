@@ -1,0 +1,20 @@
+{% extends 'account/base_auth.html' %}
+{% load i18n %}
+{% block title %}{% trans "Verify Your Email Address" %}{% endblock %}
+{% block auth_icon %}
+<div class="auth-status-icon auth-status-icon--info">
+    <i class="bi bi-envelope" aria-hidden="true"></i>
+</div>
+{% endblock %}
+{% block auth_title %}{% trans "Verify Your Email Address" %}{% endblock %}
+{% block auth_subtitle %}
+<p class="auth-form-subtitle">
+    {% trans "We have sent an email to you for verification. Follow the link provided to finalize the signup process." %}
+</p>
+{% endblock %}
+{% block auth_content %}
+<p class="auth-form-text text-muted small mb-4">
+    {% trans "If you do not see the verification email in your main inbox, check your spam folder. Please contact us if you do not receive the verification email within a few minutes." %}
+</p>
+<a href="{% url 'account_login' %}" class="btn btn-outline-primary btn-lg w-100">{% trans "Back to sign in" %}</a>
+{% endblock %}

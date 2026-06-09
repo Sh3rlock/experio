@@ -1,0 +1,26 @@
+{% load i18n %}
+<div class="col-sm-6 col-lg-3">
+    <div class="card h-100 shadow-sm offer-card">
+        {% with img=offer.featured_image %}
+        {% if img %}
+        <img src="{{ img.image.url }}" class="card-img-top" alt="{{ offer.title }}" style="height:180px;object-fit:cover;">
+        {% else %}
+        <div class="card-img-top bg-light d-flex align-items-center justify-content-center" style="height:180px;">
+            <i class="bi bi-image text-muted fs-1"></i>
+        </div>
+        {% endif %}
+        {% endwith %}
+        <div class="card-body d-flex flex-column">
+            <span class="discount-flag align-self-start mb-2">-{{ offer.discount_percentage }}%</span>
+            <h6 class="card-title">{{ offer.title|truncatechars:50 }}</h6>
+            <p class="text-muted small mb-2">{{ offer.merchant.business_name }} · {{ offer.merchant.city }}</p>
+            <div class="mt-auto">
+                <span class="text-decoration-line-through text-muted small">{{ offer.original_price }} RON</span>
+                <span class="fw-bold text-primary fs-5 ms-1">{{ offer.sale_price }} RON</span>
+            </div>
+        </div>
+        <div class="card-footer bg-white border-0">
+            <a href="{% url 'offers:detail' offer.slug %}" class="btn btn-primary w-100 btn-sm">{% trans "View Offer" %}</a>
+        </div>
+    </div>
+</div>

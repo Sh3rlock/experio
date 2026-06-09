@@ -1,0 +1,66 @@
+{% extends 'base.html' %}
+{% load i18n %}
+{% block title %}{{ title }}{% endblock %}
+{% block content %}
+<div class="container-app container-form py-4 page-shell">
+    <h1>{{ title }}</h1>
+    <form method="post" enctype="multipart/form-data" novalidate>
+        {% csrf_token %}
+
+        {% include 'partials/image_formset_management.html' %}
+
+        {% if form.non_field_errors %}
+        <div class="alert alert-danger">{{ form.non_field_errors }}</div>
+        {% endif %}
+
+        {% for field in form %}
+        <div class="mb-3">
+            <label class="form-label" for="{{ field.id_for_label }}">{{ field.label }}</label>
+            {{ field }}
+            {% if field.errors %}<div class="text-danger small">{{ field.errors }}</div>{% endif %}
+            {% if field.help_text %}<div class="form-text">{{ field.help_text }}</div>{% endif %}
+        </div>
+        {% endfor %}
+
+        <h5 class="mt-4">{% trans "Images" %}</h5>
+        <p class="text-muted small">{% blocktrans with total=fs_total initial=fs_initial %}Upload up to {{ total }} slots ({{ initial }} existing). Sort order 0 = featured image.{% endblocktrans %}</p>
+
+        {% if formset.non_form_errors %}
+        <div class="alert alert-danger">{{ formset.non_form_errors }}</div>
+        {% endif %}
+
+        {% for f in formset %}
+        <div class="card mb-3 p-3">
+            {% for hidden in f.hidden_fields %}{{ hidden }}{% endfor %}
+            {% if f.non_field_errors %}<div class="text-danger small">{{ f.non_field_errors }}</div>{% endif %}
+            <div class="row g-3 align-items-end">
+                <div class="col-md-6">
+                    <label class="form-label" for="{{ f.image.id_for_label }}">{{ f.image.label }}</label>
+                    {{ f.image }}
+                    {% if f.image.errors %}<div class="text-danger small">{{ f.image.errors }}</div>{% endif %}
+                    {% if f.instance.pk and f.instance.image %}
+                    <img src="{{ f.instance.image.url }}" alt="" class="img-thumbnail mt-2" style="max-height:80px;">
+                    {% endif %}
+                </div>
+                <div class="col-md-3">
+                    <label class="form-label" for="{{ f.sort_order.id_for_label }}">{{ f.sort_order.label }}</label>
+                    {{ f.sort_order }}
+                </div>
+                {% if formset.can_delete and f.instance.pk %}
+                <div class="col-md-3">
+                    <div class="form-check">
+                        {{ f.DELETE }}
+                        <label class="form-check-label" for="{{ f.DELETE.id_for_label }}">{% trans "Remove" %}</label>
+                    </div>
+                </div>
+                {% endif %}
+            </div>
+        </div>
+        {% empty %}
+        <p class="text-muted">{% trans "No image slots available. Refresh the page and try again." %}</p>
+        {% endfor %}
+
+        <button type="submit" class="btn btn-primary mt-2">{% trans "Save Offer" %}</button>
+    </form>
+</div>
+{% endblock %}

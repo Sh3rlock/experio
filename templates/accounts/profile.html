@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags i18n %}
+{% block title %}{% trans "Profile" %}{% endblock %}
+{% block content %}
+<div class="container-app container-narrow py-4 page-shell">
+    <h1>{% trans "My Profile" %}</h1>
+    {% crispy form %}
+</div>
+{% endblock %}

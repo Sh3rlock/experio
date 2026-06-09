@@ -1,0 +1,8 @@
+{% load i18n %}
+<form class="header-search{% if search_class %} {{ search_class }}{% endif %}" action="{% url 'offers:list' %}" method="get" role="search">
+    <i class="bi bi-search header-search-icon" aria-hidden="true"></i>
+    <input type="search" name="q" class="form-control" placeholder="{% trans 'Search, e.g. wellness, spa...' %}" value="{{ request.GET.q }}" autocomplete="off">
+    <button type="submit" class="header-search-submit" aria-label="{% trans 'Search' %}">
+        <i class="bi bi-arrow-right" aria-hidden="true"></i>
+    </button>
+</form>

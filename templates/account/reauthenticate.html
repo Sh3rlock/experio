@@ -1,0 +1,28 @@
+{% extends 'account/base_auth.html' %}
+{% load i18n static %}
+{% url 'account_reauthenticate' as reauth_action %}
+{% block title %}{% trans "Confirm Access" %}{% endblock %}
+{% block auth_icon %}
+<div class="auth-status-icon auth-status-icon--warning">
+    <i class="bi bi-shield-lock" aria-hidden="true"></i>
+</div>
+{% endblock %}
+{% block auth_title %}{% trans "Confirm Access" %}{% endblock %}
+{% block auth_subtitle %}
+<p class="auth-form-subtitle">{% trans "Please reauthenticate to safeguard your account." %}</p>
+{% endblock %}
+{% block auth_content %}
+<p class="auth-form-text text-muted mb-3">{% trans "Enter your password:" %}</p>
+{% include 'partials/auth_form.html' with form=form form_action=reauth_action submit_label=_('Confirm') %}
+{% if reauthentication_alternatives %}
+<div class="auth-divider"><span>{% trans "Alternative options" %}</span></div>
+<div class="auth-action-stack">
+    {% for alt in reauthentication_alternatives %}
+    <a href="{{ alt.url }}" class="btn btn-outline-primary w-100">{{ alt.description }}</a>
+    {% endfor %}
+</div>
+{% endif %}
+{% endblock %}
+{% block auth_extra_js %}
+<script src="{% static 'js/auth-forms.js' %}" defer></script>
+{% endblock %}

@@ -1,0 +1,31 @@
+{% load i18n %}
+{% get_current_language as CURRENT_LANGUAGE %}
+<div class="language-switcher" role="group" aria-label="{% trans 'Language' %}">
+    <form action="{% url 'set_language' %}" method="post" class="lang-form">
+        {% csrf_token %}
+        <input type="hidden" name="next" value="{{ request.get_full_path }}">
+        <input type="hidden" name="language" value="hu">
+        <button type="submit" class="lang-btn{% if CURRENT_LANGUAGE == 'hu' %} active{% endif %}" aria-pressed="{% if CURRENT_LANGUAGE == 'hu' %}true{% else %}false{% endif %}">
+            <span class="language-flag" aria-hidden="true">🇭🇺</span>
+            <span class="lang-code">HU</span>
+        </button>
+    </form>
+    <form action="{% url 'set_language' %}" method="post" class="lang-form">
+        {% csrf_token %}
+        <input type="hidden" name="next" value="{{ request.get_full_path }}">
+        <input type="hidden" name="language" value="ro">
+        <button type="submit" class="lang-btn{% if CURRENT_LANGUAGE == 'ro' %} active{% endif %}" aria-pressed="{% if CURRENT_LANGUAGE == 'ro' %}true{% else %}false{% endif %}">
+            <span class="language-flag" aria-hidden="true">🇷🇴</span>
+            <span class="lang-code">RO</span>
+        </button>
+    </form>
+    <form action="{% url 'set_language' %}" method="post" class="lang-form">
+        {% csrf_token %}
+        <input type="hidden" name="next" value="{{ request.get_full_path }}">
+        <input type="hidden" name="language" value="en">
+        <button type="submit" class="lang-btn{% if CURRENT_LANGUAGE == 'en' %} active{% endif %}" aria-pressed="{% if CURRENT_LANGUAGE == 'en' %}true{% else %}false{% endif %}">
+            <span class="language-flag" aria-hidden="true">🇬🇧</span>
+            <span class="lang-code">EN</span>
+        </button>
+    </form>
+</div>

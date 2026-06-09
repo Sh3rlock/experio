@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+{% load i18n %}
+{% block title %}{% trans "My Offers" %}{% endblock %}
+{% block content %}
+<div class="container-app py-4 page-shell">
+    <div class="page-toolbar">
+        <h1>{% trans "My Offers" %}</h1>
+        <div class="page-toolbar-actions">
+            <a href="{% url 'offers:merchant_create' %}" class="btn btn-primary">{% trans "Create Offer" %}</a>
+        </div>
+    </div>
+    <div class="table-responsive table-responsive-cards bg-white border rounded">
+        <table class="table mb-0">
+            <thead><tr><th>{% trans "Title" %}</th><th>{% trans "Price" %}</th><th>{% trans "Qty" %}</th><th>{% trans "Status" %}</th><th>{% trans "Actions" %}</th></tr></thead>
+            <tbody>
+                {% for offer in offers %}
+                <tr>
+                    <td>{{ offer.title }}</td>
+                    <td class="text-nowrap">{{ offer.sale_price }} RON</td>
+                    <td>{{ offer.quantity_available }}</td>
+                    <td><span class="badge bg-secondary">{{ offer.get_status_display }}</span></td>
+                    <td>
+                        <div class="d-flex flex-wrap gap-1">
+                            <a href="{% url 'offers:merchant_edit' offer.pk %}" class="btn btn-sm btn-outline-primary">{% trans "Edit" %}</a>
+                            <a href="{% url 'offers:merchant_preview' offer.pk %}" class="btn btn-sm btn-outline-secondary">{% trans "Preview" %}</a>
+                            <form method="post" action="{% url 'offers:merchant_delete' offer.pk %}" class="d-inline" onsubmit="return confirm('{% trans "Delete?" %}')">
+                                {% csrf_token %}
+                                <button class="btn btn-sm btn-outline-danger">{% trans "Delete" %}</button>
+                            </form>
+                        </div>
+                    </td>
+                </tr>
+                {% empty %}
+                <tr><td colspan="5" class="text-muted">{% trans "No offers yet." %}</td></tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>
+{% endblock %}

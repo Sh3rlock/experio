@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% load i18n %}
+{% block title %}{% trans "Redeem Voucher" %}{% endblock %}
+{% block content %}
+<div class="container-app container-narrow py-4 page-shell">
+    <h1>{% trans "Redeem Voucher" %}</h1>
+    <div class="card p-4">
+        <form method="post">
+            {% csrf_token %}
+            <div class="mb-3">
+                <label class="form-label">{% trans "Voucher Code" %}</label>
+                <input type="text" name="voucher_code" class="form-control form-control-lg text-uppercase" placeholder="EXP-2026-XXXXXX" required autofocus>
+            </div>
+            <button type="submit" class="btn btn-success w-100">{% trans "Redeem" %}</button>
+        </form>
+        <p class="text-muted small mt-3 mb-0">{% trans "Scan QR codes with any camera app and paste the code above." %}</p>
+    </div>
+    {% if result %}
+    <div class="alert alert-success mt-3">
+        <strong>{% trans "Success!" %}</strong> {% blocktrans with code=result.voucher_code title=result.offer.title %}Voucher {{ code }} for {{ title }} has been redeemed.{% endblocktrans %}
+    </div>
+    {% endif %}
+</div>
+{% endblock %}

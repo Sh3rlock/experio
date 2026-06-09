@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% load i18n static %}
+{% block content %}
+<section class="auth-page page-shell">
+    <div class="container-app auth-page-inner {% block auth_width_class %}{% endblock %}">
+        <div class="auth-form-card">
+            <div class="auth-form-card-header text-center">
+                <a href="{% url 'core:home' %}" class="auth-form-logo">
+                    {% include 'partials/brand_logo.html' with logo_class='brand-logo-img--auth-form' %}
+                </a>
+                {% block auth_icon %}{% endblock %}
+                <h1 class="auth-form-title">{% block auth_title %}{% endblock %}</h1>
+                {% block auth_subtitle %}{% endblock %}
+            </div>
+            <div class="auth-form-card-body">
+                {% block auth_content %}{% endblock %}
+            </div>
+            {% block auth_footer %}{% endblock %}
+        </div>
+    </div>
+</section>
+{% endblock %}
+{% block extra_js %}
+{% block auth_extra_js %}{% endblock %}
+{% endblock %}

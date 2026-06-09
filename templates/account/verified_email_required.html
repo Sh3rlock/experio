@@ -1,0 +1,25 @@
+{% extends 'account/base_auth.html' %}
+{% load i18n %}
+{% block title %}{% trans "Verify Your Email Address" %}{% endblock %}
+{% block auth_width_class %}auth-page-inner--wide{% endblock %}
+{% block auth_icon %}
+<div class="auth-status-icon auth-status-icon--warning">
+    <i class="bi bi-envelope-exclamation" aria-hidden="true"></i>
+</div>
+{% endblock %}
+{% block auth_title %}{% trans "Verify Your Email Address" %}{% endblock %}
+{% block auth_subtitle %}
+<p class="auth-form-subtitle">
+    {% trans "This part of the site requires us to verify that you are who you claim to be." %}
+</p>
+{% endblock %}
+{% block auth_content %}
+<p class="auth-form-text text-muted mb-3">
+    {% trans "We have sent an email to you for verification. Please click on the link inside that email. If you do not see the verification email in your main inbox, check your spam folder." %}
+</p>
+<p class="auth-form-text text-muted small mb-4">
+    {% url 'account_email' as email_url %}
+    {% blocktrans %}<strong>Note:</strong> you can still <a href="{{ email_url }}" class="auth-link">change your email address</a>.{% endblocktrans %}
+</p>
+<a href="{% url 'core:home' %}" class="btn btn-outline-primary btn-lg w-100">{% trans "Back to home" %}</a>
+{% endblock %}

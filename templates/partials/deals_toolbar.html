@@ -1,0 +1,27 @@
+{% load i18n %}
+<div class="deals-toolbar">
+    <div class="container-app">
+        <div class="row align-items-center toolbar-row">
+            <div class="col-12 col-md-5">
+                <a href="{% url 'offers:list' %}" class="location-pill">
+                    <i class="bi bi-geo-alt-fill"></i>
+                    {% if request.GET.city %}{{ request.GET.city }}{% else %}{% trans "All locations" %}{% endif %}
+                </a>
+            </div>
+            <div class="col-12 col-md-7">
+                <div class="sort-links-scroll">
+                    <div class="sort-links">
+                        <a href="{% url 'offers:list' %}{% if request.GET.category %}?category={{ request.GET.category }}{% endif %}"
+                           class="{% if not request.GET.sort or request.GET.sort == 'newest' %}active{% endif %}">{% trans "Recommended" %}</a>
+                        <a href="{% url 'offers:list' %}?sort=newest{% if request.GET.category %}&category={{ request.GET.category }}{% endif %}"
+                           class="{% if request.GET.sort == 'newest' and request.path != '/' %}active{% endif %}">{% trans "Newest" %}</a>
+                        <a href="{% url 'offers:list' %}?sort=price_asc{% if request.GET.category %}&category={{ request.GET.category }}{% endif %}"
+                           class="{% if request.GET.sort == 'price_asc' %}active{% endif %}">{% trans "Cheapest" %}</a>
+                        <a href="{% url 'offers:list' %}?sort=discount{% if request.GET.category %}&category={{ request.GET.category }}{% endif %}"
+                           class="{% if request.GET.sort == 'discount' %}active{% endif %}">{% trans "Best discount" %}</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

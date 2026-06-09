@@ -1,0 +1,29 @@
+{% load i18n %}
+<div class="carousel-item{% if forloop.first %} active{% endif %}">
+    {% with img=offer.featured_image %}
+    {% if img %}
+    <img src="{{ img.image.url }}" class="carousel-bg" alt="{{ offer.title }}">
+    {% else %}
+    <div class="carousel-placeholder"></div>
+    {% endif %}
+    {% endwith %}
+    <span class="discount-flag">-{{ offer.discount_percentage }}%</span>
+    <a href="{% url 'offers:detail' offer.slug %}" class="carousel-overlay">
+        <div class="price-box">
+            <span class="price-current">{{ offer.sale_price|floatformat:0 }} RON</span>
+            <span class="price-old">{{ offer.original_price|floatformat:0 }} RON</span>
+        </div>
+        <div class="carousel-info">
+            <h2 class="carousel-title">{{ offer.title }}</h2>
+            <p class="carousel-meta mb-0">
+                {% if offer.display_rating %}
+                <span class="rating">{{ offer.display_rating }}/5</span> ·
+                {% endif %}
+                {{ offer.merchant.business_name }}
+            </p>
+            {% if offer.highlight_tag %}
+            <span class="highlight-tag">{{ offer.highlight_tag }}</span>
+            {% endif %}
+        </div>
+    </a>
+</div>

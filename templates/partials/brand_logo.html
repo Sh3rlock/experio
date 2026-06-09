@@ -1,0 +1,9 @@
+{% load static i18n %}
+<img
+    src="{% static 'img/logo.png' %}"
+    alt="{% trans 'Experio logo' %}"
+    class="brand-logo-img{% if logo_class %} {{ logo_class }}{% endif %}"
+    width="993"
+    height="299"
+    decoding="async"
+>

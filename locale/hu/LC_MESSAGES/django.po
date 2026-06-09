@@ -1,0 +1,1866 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-09 09:11+0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: hu\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: accounts/forms.py:45 accounts/forms.py:78 accounts/forms.py:118
+#: accounts/forms.py:175 accounts/forms.py:189 merchants/models.py:18
+msgid "Email"
+msgstr "E-mail"
+
+#: accounts/forms.py:47 accounts/forms.py:80 accounts/forms.py:120
+#: accounts/forms.py:177 accounts/forms.py:191
+msgid "you@example.com"
+msgstr ""
+
+#: accounts/forms.py:53 accounts/forms.py:149
+msgid "Your password"
+msgstr ""
+
+#: accounts/forms.py:66 accounts/forms.py:107
+msgid "Please enter your email address."
+msgstr ""
+
+#: accounts/forms.py:70 accounts/forms.py:111
+#: templates/account/confirm_email_verification_code.html:59
+#: templates/account/email.html:49 templates/partials/auth_form.html:4
+msgid "Please enter a valid email address."
+msgstr ""
+
+#: accounts/forms.py:86 accounts/forms.py:147 accounts/forms.py:160
+msgid "Password"
+msgstr ""
+
+#: accounts/forms.py:88
+msgid "Create a password"
+msgstr ""
+
+#: accounts/forms.py:94 accounts/forms.py:161
+msgid "Confirm password"
+msgstr ""
+
+#: accounts/forms.py:96
+msgid "Repeat your password"
+msgstr ""
+
+#: accounts/forms.py:132 accounts/forms.py:217
+msgid "New password"
+msgstr ""
+
+#: accounts/forms.py:133 accounts/forms.py:218
+msgid "Confirm new password"
+msgstr ""
+
+#: accounts/forms.py:203
+msgid "Verification code"
+msgstr ""
+
+#: accounts/forms.py:205
+msgid "Enter code"
+msgstr ""
+
+#: accounts/forms.py:216
+msgid "Current password"
+msgstr ""
+
+#: accounts/forms.py:243
+msgid "Save Profile"
+msgstr "Profil mentése"
+
+#: accounts/views.py:15
+msgid "Profile updated successfully."
+msgstr "A profil sikeresen frissítve."
+
+#: core/forms.py:19
+msgid "Restaurant / Café"
+msgstr "Étterem / Kávézó"
+
+#: core/forms.py:20
+msgid "Hotel / Accommodation"
+msgstr "Szálloda / Szálláshely"
+
+#: core/forms.py:21
+msgid "Wellness / Spa"
+msgstr "Wellness / Spa"
+
+#: core/forms.py:22
+msgid "Beauty Salon"
+msgstr "Szépségszalon"
+
+#: core/forms.py:23 templates/core/home.html:61
+msgid "Fitness"
+msgstr "Fitnesz"
+
+#: core/forms.py:24
+msgid "Adventure & Activities"
+msgstr "Kaland és programok"
+
+#: core/forms.py:25
+msgid "Tourism"
+msgstr "Turizmus"
+
+#: core/forms.py:26
+msgid "Retail Store"
+msgstr "Kiskereskedelmi üzlet"
+
+#: core/forms.py:27
+msgid "Other"
+msgstr "Egyéb"
+
+#: core/forms.py:38
+msgid "Yes"
+msgstr "Igen"
+
+#: core/forms.py:39
+msgid "Maybe, I would like more information"
+msgstr "Talán, szeretnék több információt"
+
+#: core/forms.py:40
+msgid "Not sure yet"
+msgstr "Még nem tudom"
+
+#: core/forms.py:53
+#| msgid "Fixed value vouchers (e.g. €25, €50, €100)"
+msgid "Fixed value vouchers (e.g. 50, 100, 200, 500 RON)"
+msgstr "Fix értékű kuponok (pl. 50, 100, 200, 500 RON)"
+
+#: core/forms.py:54
+msgid "Experience packages"
+msgstr "Élménycsomagok"
+
+#: core/forms.py:55
+msgid "Special offers"
+msgstr "Különleges ajánlatok"
+
+#: core/forms.py:56
+msgid "Seasonal promotions"
+msgstr "Szezonális promóciók"
+
+#: core/forms.py:57
+msgid "Custom vouchers"
+msgstr "Egyedi kuponok"
+
+#: core/forms.py:65 templates/emails/partner_application.html:7
+msgid "Business Name"
+msgstr "Vállalkozás neve"
+
+#: core/forms.py:69 templates/emails/partner_application.html:8
+msgid "Business Category"
+msgstr "Vállalkozás kategóriája"
+
+#: core/forms.py:74 templates/emails/partner_application.html:10
+msgid "Website or Facebook Page"
+msgstr "Weboldal vagy Facebook oldal"
+
+#: core/forms.py:79 templates/emails/partner_application.html:12
+msgid "Business Address"
+msgstr "Vállalkozás címe"
+
+#: core/forms.py:83 templates/emails/partner_application.html:15
+msgid "Contact Person"
+msgstr "Kapcsolattartó"
+
+#: core/forms.py:86 templates/emails/partner_application.html:16
+msgid "Email Address"
+msgstr "E-mail cím"
+
+#: core/forms.py:87 templates/emails/partner_application.html:17
+msgid "Phone Number"
+msgstr "Telefonszám"
+
+#: core/forms.py:89 templates/emails/partner_application.html:20
+msgid "Brief Description"
+msgstr "Rövid leírás"
+
+#: core/forms.py:90
+msgid "Tell us about your business and what makes it special."
+msgstr "Meséljen vállalkozásáról és arról, mi teszi különlegessé."
+
+#: core/forms.py:94 templates/emails/partner_application.html:22
+msgid "Would you be interested in selling gift vouchers online?"
+msgstr "Érdekelné az online ajándékkuponok értékesítése?"
+
+#: core/forms.py:99 templates/emails/partner_application.html:25
+msgid "What types of vouchers would you like to offer?"
+msgstr "Milyen típusú kuponokat szeretne kínálni?"
+
+#: core/permissions.py:14
+msgid "You need a merchant account to access this page."
+msgstr "Kereskedői fiókra van szüksége az oldal eléréséhez."
+
+#: core/permissions.py:17
+msgid "Your merchant account is pending approval."
+msgstr "Kereskedői fiókja jóváhagyásra vár."
+
+#: core/permissions.py:36
+msgid "Admin access required."
+msgstr "Adminisztrátori hozzáférés szükséges."
+
+#: core/views.py:42
+msgid ""
+"Thank you for your interest! We will contact you within 2 business days to "
+"discuss how we can help your business reach new customers through digital "
+"gift vouchers."
+msgstr ""
+"Köszönjük érdeklődését! 2 munkanapon belül felvesszük Önnel a kapcsolatot, "
+"hogy megbeszéljük, hogyan segíthetünk vállalkozásának új ügyfeleket elérni "
+"digitális ajándékkuponokon keresztül."
+
+#: merchants/forms.py:21
+msgid "Romania"
+msgstr "Románia"
+
+#: merchants/forms.py:26 templates/merchants/register.html:3
+msgid "Register Business"
+msgstr "Vállalkozás regisztrálása"
+
+#: merchants/models.py:8 offers/models.py:31 payments/models.py:10
+msgid "Pending"
+msgstr "Függőben"
+
+#: merchants/models.py:9 offers/models.py:32
+msgid "Approved"
+msgstr "Jóváhagyva"
+
+#: merchants/models.py:10 offers/models.py:33
+msgid "Rejected"
+msgstr "Elutasítva"
+
+#: merchants/models.py:13
+msgid "Business name"
+msgstr "Vállalkozás neve"
+
+#: merchants/models.py:14 templates/offers/detail.html:58
+msgid "Description"
+msgstr "Leírás"
+
+#: merchants/models.py:15
+msgid "Logo"
+msgstr "Logó"
+
+#: merchants/models.py:16
+msgid "Website"
+msgstr "Weboldal"
+
+#: merchants/models.py:17
+msgid "Phone"
+msgstr "Telefon"
+
+#: merchants/models.py:19
+msgid "Address"
+msgstr "Cím"
+
+#: merchants/models.py:20 templates/offers/list.html:33
+msgid "City"
+msgstr "Város"
+
+#: merchants/models.py:21
+msgid "County"
+msgstr "Megye"
+
+#: merchants/models.py:22
+msgid "Country"
+msgstr "Ország"
+
+#: merchants/views.py:26
+msgid "Business registered! Awaiting admin approval."
+msgstr "Vállalkozás regisztrálva! Adminisztrátori jóváhagyásra vár."
+
+#: merchants/views.py:53
+#, python-format
+msgid "Voucher %(code)s redeemed successfully!"
+msgstr "A(z) %(code)s kupon sikeresen beváltva!"
+
+#: notifications/services.py:33 templates/emails/welcome_customer.html:4
+msgid "Welcome to Experio!"
+msgstr "Üdvözöljük az Experio-n!"
+
+#: notifications/services.py:44
+msgid "Merchant Registration Received"
+msgstr "Kereskedői regisztráció fogadva"
+
+#: notifications/services.py:55
+msgid "Your Merchant Account is Approved!"
+msgstr "Kereskedői fiókja jóváhagyva!"
+
+#: notifications/services.py:66
+#, python-format
+msgid "Your Offer \"%(title)s\" is Live!"
+msgstr "Az „%(title)s” ajánlata élőben van!"
+
+#: notifications/services.py:82
+#, python-format
+msgid "Your Experio Voucher - %(code)s"
+msgstr "Experio kuponja – %(code)s"
+
+#: notifications/services.py:93
+#, python-format
+msgid "Voucher Redeemed - %(code)s"
+msgstr "Kupon beváltva – %(code)s"
+
+#: notifications/services.py:104
+msgid "Payment Failed - Experio"
+msgstr "Sikertelen fizetés – Experio"
+
+#: notifications/services.py:121
+#, python-format
+msgid "New founding partner application: %(business)s"
+msgstr "Új alapító partner jelentkezés: %(business)s"
+
+#: offers/models.py:30
+msgid "Draft"
+msgstr "Piszkozat"
+
+#: offers/models.py:34 vouchers/models.py:12
+msgid "Expired"
+msgstr "Lejárt"
+
+#: offers/views.py:60
+msgid "This offer is no longer available."
+msgstr "Ez az ajánlat már nem elérhető."
+
+#: offers/views.py:98
+msgid "Offer submitted for approval."
+msgstr "Ajánlat elküldve jóváhagyásra."
+
+#: offers/views.py:106 templates/offers/merchant_list.html:9
+msgid "Create Offer"
+msgstr "Ajánlat létrehozása"
+
+#: offers/views.py:122
+msgid "Offer updated."
+msgstr "Ajánlat frissítve."
+
+#: offers/views.py:130
+msgid "Edit Offer"
+msgstr "Ajánlat szerkesztése"
+
+#: offers/views.py:145
+msgid "Offer deleted."
+msgstr "Ajánlat törölve."
+
+#: payments/models.py:11
+msgid "Paid"
+msgstr "Fizetve"
+
+#: payments/models.py:12
+msgid "Failed"
+msgstr "Sikertelen"
+
+#: payments/models.py:13
+msgid "Refunded"
+msgstr "Visszatérítve"
+
+#: payments/models.py:16
+msgid "Stripe"
+msgstr "Stripe"
+
+#: templates/account/account_inactive.html:3
+#: templates/account/account_inactive.html:9
+msgid "Account Inactive"
+msgstr "Fiók"
+
+#: templates/account/account_inactive.html:11
+msgid "This account is inactive."
+msgstr ""
+
+#: templates/account/account_inactive.html:14
+#: templates/account/verified_email_required.html:24
+msgid "Back to home"
+msgstr ""
+
+#: templates/account/confirm_email_verification_code.html:4
+msgid "Email Verification"
+msgstr ""
+
+#: templates/account/confirm_email_verification_code.html:10
+msgid "Enter Email Verification Code"
+msgstr ""
+
+#: templates/account/confirm_email_verification_code.html:13
+#, python-format
+msgid ""
+"We've sent a code to <a href=\"mailto:%(email)s\">%(email)s</a>. The code "
+"expires shortly, so please enter it soon."
+msgstr ""
+
+#: templates/account/confirm_email_verification_code.html:18
+#: templates/account/confirm_email_verification_code.html:58
+#: templates/account/email.html:48 templates/partials/auth_form.html:3
+msgid "This field is required."
+msgstr "Adminisztrátori hozzáférés szükséges."
+
+#: templates/account/confirm_email_verification_code.html:31
+#: templates/account/email_confirm.html:20
+#: templates/account/reauthenticate.html:16
+msgid "Confirm"
+msgstr ""
+
+#: templates/account/confirm_email_verification_code.html:33
+msgid "Request new code"
+msgstr ""
+
+#: templates/account/confirm_email_verification_code.html:36
+#: templates/account/confirm_email_verification_code.html:38
+#: templates/account/logout.html:19
+#: templates/account/password_reset_from_key.html:22
+msgid "Cancel"
+msgstr "Törölve"
+
+#: templates/account/confirm_email_verification_code.html:56
+msgid "Use a different email address"
+msgstr ""
+
+#: templates/account/confirm_email_verification_code.html:67
+msgid "Change"
+msgstr ""
+
+#: templates/account/email.html:3 templates/account/email.html:5
+msgid "Email Addresses"
+msgstr ""
+
+#: templates/account/email.html:8
+msgid "The following email addresses are associated with your account:"
+msgstr ""
+
+#: templates/account/email.html:20
+msgid "Verified"
+msgstr ""
+
+#: templates/account/email.html:22
+msgid "Unverified"
+msgstr ""
+
+#: templates/account/email.html:25
+msgid "Primary"
+msgstr ""
+
+#: templates/account/email.html:33
+msgid "Make Primary"
+msgstr ""
+
+#: templates/account/email.html:34
+msgid "Re-send Verification"
+msgstr ""
+
+#: templates/account/email.html:35 templates/offers/merchant_form.html:53
+msgid "Remove"
+msgstr "Eltávolítás"
+
+#: templates/account/email.html:40
+msgid ""
+"You currently do not have any email address set up. You should really add an"
+" email address so you can receive notifications, reset your password, etc."
+msgstr ""
+
+#: templates/account/email.html:46
+msgid "Add Email Address"
+msgstr ""
+
+#: templates/account/email.html:56
+msgid "Add Email"
+msgstr ""
+
+#: templates/account/email.html:64
+msgid "Do you really want to remove the selected email address?"
+msgstr ""
+
+#: templates/account/email_confirm.html:3
+#: templates/account/email_confirm.html:9
+msgid "Confirm Email Address"
+msgstr ""
+
+#: templates/account/email_confirm.html:15
+#, python-format
+msgid ""
+"Please confirm that <a href=\"mailto:%(email)s\">%(email)s</a> is an email "
+"address for user %(user_display)s."
+msgstr ""
+
+#: templates/account/email_confirm.html:24
+#, python-format
+msgid ""
+"Unable to confirm %(email)s because it is already confirmed by a different "
+"account."
+msgstr ""
+
+#: templates/account/email_confirm.html:26
+#: templates/account/email_confirm.html:33
+#: templates/account/password_reset.html:16
+#: templates/account/password_reset_done.html:16
+#: templates/account/verification_sent.html:19
+msgid "Back to sign in"
+msgstr ""
+
+#: templates/account/email_confirm.html:31
+#, python-format
+msgid ""
+"This email confirmation link expired or is invalid. Please <a "
+"href=\"%(email_url)s\" class=\"auth-link\">issue a new email confirmation "
+"request</a>."
+msgstr ""
+
+#: templates/account/login.html:4 templates/partials/footer.html:21
+#: templates/partials/header_actions.html:32
+msgid "Login"
+msgstr "Bejelentkezés"
+
+#: templates/account/login.html:5
+msgid "Welcome back"
+msgstr ""
+
+#: templates/account/login.html:8
+#, python-format
+msgid "New to Experio? <a href=\"%(signup_url)s\">Create an account</a>"
+msgstr ""
+
+#: templates/account/login.html:12
+msgid "Sign In"
+msgstr "Regisztráció"
+
+#: templates/account/login.html:16
+msgid "Forgot password?"
+msgstr ""
+
+#: templates/account/logout.html:3 templates/account/logout.html:9
+#: templates/account/logout.html:18
+msgid "Sign Out"
+msgstr "Regisztráció"
+
+#: templates/account/logout.html:11
+msgid "Are you sure you want to sign out?"
+msgstr ""
+
+#: templates/account/password_change.html:4
+#: templates/account/password_change.html:6
+#: templates/account/password_change.html:8
+#: templates/account/password_reset_from_key.html:3
+#: templates/account/password_reset_from_key.html:5
+#: templates/account/password_reset_from_key.html:15
+#: templates/account/password_reset_from_key_done.html:3
+msgid "Change Password"
+msgstr ""
+
+#: templates/account/password_change.html:12
+msgid "Forgot Password?"
+msgstr ""
+
+#: templates/account/password_reset.html:4
+#: templates/account/password_reset.html:5
+#: templates/account/password_reset_done.html:3
+msgid "Password Reset"
+msgstr ""
+
+#: templates/account/password_reset.html:8
+msgid ""
+"Enter your email address and we'll send you a link to reset your password."
+msgstr ""
+
+#: templates/account/password_reset.html:12
+msgid "Reset My Password"
+msgstr ""
+
+#: templates/account/password_reset_done.html:9
+msgid "Check your email"
+msgstr ""
+
+#: templates/account/password_reset_done.html:12
+msgid ""
+"We have sent you an email. If you have not received it please check your "
+"spam folder. Otherwise contact us if you do not receive it in a few minutes."
+msgstr ""
+
+#: templates/account/password_reset_from_key.html:5
+msgid "Bad Token"
+msgstr ""
+
+#: templates/account/password_reset_from_key.html:11
+#, python-format
+msgid ""
+"The password reset link was invalid, possibly because it has already been "
+"used. Please request a <a href=\"%(passwd_reset_url)s\" class=\"auth-"
+"link\">new password reset</a>."
+msgstr ""
+
+#: templates/account/password_reset_from_key.html:13
+msgid "Request new reset link"
+msgstr ""
+
+#: templates/account/password_reset_from_key_done.html:9
+msgid "Password changed"
+msgstr ""
+
+#: templates/account/password_reset_from_key_done.html:11
+msgid "Your password is now changed."
+msgstr ""
+
+#: templates/account/password_reset_from_key_done.html:14
+#: templates/account/signup_closed.html:14
+msgid "Sign in"
+msgstr "Regisztráció"
+
+#: templates/account/password_set.html:4 templates/account/password_set.html:5
+#: templates/account/password_set.html:10
+msgid "Set Password"
+msgstr ""
+
+#: templates/account/password_set.html:7
+msgid "You currently have no password set."
+msgstr ""
+
+#: templates/account/reauthenticate.html:4
+#: templates/account/reauthenticate.html:10
+msgid "Confirm Access"
+msgstr ""
+
+#: templates/account/reauthenticate.html:12
+msgid "Please reauthenticate to safeguard your account."
+msgstr ""
+
+#: templates/account/reauthenticate.html:15
+msgid "Enter your password:"
+msgstr ""
+
+#: templates/account/reauthenticate.html:18
+msgid "Alternative options"
+msgstr ""
+
+#: templates/account/signup.html:4 templates/account/signup.html:12
+#: templates/partials/header_actions.html:33
+msgid "Sign Up"
+msgstr "Regisztráció"
+
+#: templates/account/signup.html:5
+msgid "Create your account"
+msgstr "Hozza létre első ajánlatát"
+
+#: templates/account/signup.html:8
+#, python-format
+msgid "Already have an account? <a href=\"%(login_url)s\">Sign in</a>"
+msgstr ""
+
+#: templates/account/signup_closed.html:3
+#: templates/account/signup_closed.html:9
+msgid "Sign Up Closed"
+msgstr "Regisztráció"
+
+#: templates/account/signup_closed.html:11
+msgid "We are sorry, but the sign up is currently closed."
+msgstr ""
+
+#: templates/account/verification_sent.html:3
+#: templates/account/verification_sent.html:9
+#: templates/account/verified_email_required.html:3
+#: templates/account/verified_email_required.html:10
+msgid "Verify Your Email Address"
+msgstr ""
+
+#: templates/account/verification_sent.html:12
+msgid ""
+"We have sent an email to you for verification. Follow the link provided to "
+"finalize the signup process."
+msgstr ""
+
+#: templates/account/verification_sent.html:17
+msgid ""
+"If you do not see the verification email in your main inbox, check your spam"
+" folder. Please contact us if you do not receive the verification email "
+"within a few minutes."
+msgstr ""
+
+#: templates/account/verified_email_required.html:13
+msgid ""
+"This part of the site requires us to verify that you are who you claim to "
+"be."
+msgstr ""
+
+#: templates/account/verified_email_required.html:18
+msgid ""
+"We have sent an email to you for verification. Please click on the link "
+"inside that email. If you do not see the verification email in your main "
+"inbox, check your spam folder."
+msgstr ""
+
+#: templates/account/verified_email_required.html:22
+#, python-format
+msgid ""
+"<strong>Note:</strong> you can still <a href=\"%(email_url)s\" class=\"auth-"
+"link\">change your email address</a>."
+msgstr ""
+
+#: templates/accounts/profile.html:3 templates/dashboard/customer.html:9
+#: templates/partials/header_actions.html:14
+msgid "Profile"
+msgstr "Profil"
+
+#: templates/accounts/profile.html:6
+msgid "My Profile"
+msgstr "Profilom"
+
+#: templates/base.html:7
+msgid "Local Experiences Marketplace"
+msgstr "Helyi élmények piactere"
+
+#: templates/base_landing.html:7
+msgid "Partner Network"
+msgstr "Partnerhálózat"
+
+#: templates/core/home.html:3
+msgid "Home"
+msgstr "Kezdőlap"
+
+#: templates/core/home.html:15 templates/core/home.html:67
+msgid "Slide"
+msgstr ""
+
+#: templates/core/home.html:26 templates/offers/list.html:76
+msgid "Previous"
+msgstr "Előző"
+
+#: templates/core/home.html:30 templates/offers/list.html:80
+msgid "Next"
+msgstr "Következő"
+
+#: templates/core/home.html:46 templates/offers/merchant_list.html:34
+msgid "No offers yet."
+msgstr "Még nincsenek ajánlatok."
+
+#: templates/core/home.html:47
+msgid "Run: python manage.py seed_sample_offers"
+msgstr ""
+
+#: templates/core/home.html:55
+msgid "View all offers"
+msgstr "Összes ajánlat megtekintése"
+
+#: templates/core/home.html:61
+msgid "Restaurant"
+msgstr "Étterem"
+
+#: templates/core/home.html:61
+msgid "Spa"
+msgstr "Spa"
+
+#: templates/core/home.html:61
+msgid "Beauty"
+msgstr "Szépségápolás"
+
+#: templates/core/home.html:62
+msgid "Travel"
+msgstr "Utazás"
+
+#: templates/core/home.html:62
+msgid "Adventure"
+msgstr "Kaland"
+
+#: templates/core/home.html:62
+msgid "Family"
+msgstr "Család"
+
+#: templates/core/home.html:62
+msgid "Courses"
+msgstr "Tanfolyamok"
+
+#: templates/core/home.html:63
+msgid "Events"
+msgstr "Események"
+
+#: templates/core/home.html:63 templates/partials/navbar.html:45
+msgid "Gift Cards"
+msgstr "Ajándékkártyák"
+
+#: templates/core/home.html:64 templates/partials/header_search.html:4
+msgid "Search, e.g. wellness, spa..."
+msgstr "Élmények keresése..."
+
+#: templates/core/home.html:65 templates/partials/header_actions.html:30
+msgid "Need help?"
+msgstr ""
+
+#: templates/core/home.html:65 templates/partials/navbar.html:31
+msgid "Categories"
+msgstr "Legjobb kategóriák"
+
+#: templates/core/home.html:65 templates/partials/deals_toolbar.html:8
+msgid "All locations"
+msgstr "Műveletek"
+
+#: templates/core/home.html:66 templates/partials/deals_toolbar.html:15
+msgid "Recommended"
+msgstr "Visszatérítve"
+
+#: templates/core/home.html:66 templates/partials/deals_toolbar.html:19
+msgid "Cheapest"
+msgstr ""
+
+#: templates/core/home.html:66 templates/partials/deals_toolbar.html:21
+msgid "Best discount"
+msgstr "Legnagyobb kedvezmény"
+
+#: templates/core/landing.html:3 templates/core/landing.html:9
+msgid "Join Experio's Founding Partner Network"
+msgstr "Csatlakozzon az Experio alapító partnerhálózatához"
+
+#: templates/core/landing.html:11
+msgid ""
+"Get early access to a new marketplace that helps local businesses sell "
+"digital gift vouchers and attract new customers."
+msgstr ""
+"Szerezzen korai hozzáférést egy új piactérhez, amely segít a helyi "
+"vállalkozásoknak digitális ajándékkuponokat értékesíteni és új ügyfeleket "
+"vonzani."
+
+#: templates/core/landing.html:13 templates/merchants/register.html:6
+msgid "Register Your Business"
+msgstr "Regisztrálja vállalkozását"
+
+#: templates/core/landing.html:22
+msgid "Simple process"
+msgstr "Egyszerű folyamat"
+
+#: templates/core/landing.html:23 templates/partials/landing_navbar.html:8
+msgid "How it works"
+msgstr "Így működik"
+
+#: templates/core/landing.html:32 templates/partials/footer.html:22
+#: templates/partials/landing_navbar.html:10
+msgid "Register"
+msgstr "Regisztráció"
+
+#: templates/core/landing.html:33
+msgid "Tell us about your business."
+msgstr "Meséljen vállalkozásáról."
+
+#: templates/core/landing.html:42
+msgid "Get Contacted"
+msgstr "Kapcsolatfelvétel"
+
+#: templates/core/landing.html:43
+msgid "We'll discuss how Experio can help you attract new customers."
+msgstr "Megbeszéljük, hogyan segíthet az Experio új ügyfelek vonzásában."
+
+#: templates/core/landing.html:52
+msgid "Launch Together"
+msgstr "Közös indulás"
+
+#: templates/core/landing.html:53
+msgid "Create your first voucher offers when the platform launches."
+msgstr "Hozza létre első kuponajánlatait, amikor a platform elindul."
+
+#: templates/core/landing.html:61
+msgid "Founding partners"
+msgstr "Alapító partnerek"
+
+#: templates/core/landing.html:62
+msgid "Why become a founding partner?"
+msgstr "Miért legyen alapító partner?"
+
+#: templates/core/landing.html:68
+msgid "Free participation during the launch period"
+msgstr "Ingyenes részvétel az indulási időszakban"
+
+#: templates/core/landing.html:72
+msgid "Early visibility on the platform"
+msgstr "Korai láthatóság a platformon"
+
+#: templates/core/landing.html:76
+msgid "Direct influence on platform features"
+msgstr "Közvetlen befolyás a platform funkcióira"
+
+#: templates/core/landing.html:80
+msgid "Priority onboarding and support"
+msgstr "Elsőbbségi bevezetés és támogatás"
+
+#: templates/core/landing.html:84
+msgid ""
+"Reach new customers and generate additional sales through digital gift "
+"vouchers"
+msgstr ""
+"Érjen el új ügyfeleket és generáljon további bevételt digitális "
+"ajándékkuponokon keresztül"
+
+#: templates/core/landing.html:100
+msgid "You are already registered as a partner."
+msgstr "Már regisztrált partnerként."
+
+#: templates/core/landing.html:101
+msgid "Go to merchant dashboard"
+msgstr "Ugrás a kereskedői irányítópultra"
+
+#: templates/core/landing.html:105 templates/core/landing.html:113
+msgid "Become a Founding Partner"
+msgstr "Legyen alapító partner"
+
+#: templates/core/landing.html:106
+msgid "Tell us about your business — it only takes a few minutes."
+msgstr "Meséljen vállalkozásáról — csak néhány percet vesz igénybe."
+
+#: templates/core/landing.html:127
+msgid "FAQ"
+msgstr "GYIK"
+
+#: templates/core/landing.html:130
+msgid "How much does it cost?"
+msgstr "Mennyibe kerül?"
+
+#: templates/core/landing.html:131
+msgid "Founding partners join free during the launch phase."
+msgstr "Az alapító partnerek az indulási fázisban ingyenesen csatlakozhatnak."
+
+#: templates/core/landing.html:134
+msgid "When will the platform launch?"
+msgstr "Mikor indul a platform?"
+
+#: templates/core/landing.html:135
+msgid ""
+"We are currently onboarding businesses and will launch after building our "
+"initial partner network."
+msgstr ""
+"Jelenleg vállalkozásokat regisztrálunk, és az indulás az első partnerhálózat"
+" felépítése után következik."
+
+#: templates/core/landing.html:138
+msgid "Am I committing to anything?"
+msgstr "Vállalok-e kötelezettséget?"
+
+#: templates/core/landing.html:139
+msgid ""
+"No. Registering simply lets us contact you and discuss partnership "
+"opportunities."
+msgstr ""
+"Nem. A regisztráció csak lehetővé teszi, hogy felvesszük Önnel a kapcsolatot"
+" és megbeszéljük a partnerségi lehetőségeket."
+
+#: templates/dashboard/admin.html:3 templates/partials/header_actions.html:22
+msgid "Admin Dashboard"
+msgstr "Adminisztrátori irányítópult"
+
+#: templates/dashboard/admin.html:12
+msgid "Revenue (RON)"
+msgstr "Bevétel (RON)"
+
+#: templates/dashboard/admin.html:19
+msgid "Admin Analytics"
+msgstr "Adminisztrátori analitika"
+
+#: templates/dashboard/admin.html:21
+msgid "Total Revenue"
+msgstr "Összes bevétel"
+
+#: templates/dashboard/admin.html:22
+msgid "Commission Revenue"
+msgstr "Jutalékbevétel"
+
+#: templates/dashboard/admin.html:23
+msgid "Sold Vouchers"
+msgstr "Eladott kuponok"
+
+#: templates/dashboard/admin.html:24
+msgid "Active Merchants"
+msgstr "Aktív kereskedők"
+
+#: templates/dashboard/admin.html:25 templates/dashboard/merchant.html:14
+msgid "Active Offers"
+msgstr "Aktív ajánlatok"
+
+#: templates/dashboard/admin.html:29
+msgid "Sales by Month"
+msgstr "Havi értékesítések"
+
+#: templates/dashboard/admin.html:33
+msgid "Top Merchants"
+msgstr "Legjobb kereskedők"
+
+#: templates/dashboard/admin.html:40 templates/dashboard/admin.html:51
+msgid "No data"
+msgstr "Nincs adat"
+
+#: templates/dashboard/admin.html:44
+msgid "Top Categories"
+msgstr "Legjobb kategóriák"
+
+#: templates/dashboard/admin.html:49
+#, python-format
+msgid "%(count)s sales"
+msgstr "%(count)s eladás"
+
+#: templates/dashboard/admin.html:57
+msgid "Recent Transactions"
+msgstr "Legutóbbi tranzakciók"
+
+#: templates/dashboard/admin.html:60 templates/dashboard/customer.html:44
+#: templates/dashboard/merchant.html:28
+msgid "Date"
+msgstr "Dátum"
+
+#: templates/dashboard/admin.html:60 templates/dashboard/merchant.html:28
+#: templates/merchants/sales.html:9
+msgid "Customer"
+msgstr "Vásárló"
+
+#: templates/dashboard/admin.html:60 templates/dashboard/customer.html:16
+#: templates/dashboard/customer.html:44 templates/dashboard/merchant.html:28
+#: templates/merchants/sales.html:9 vouchers/services.py:78
+msgid "Offer"
+msgstr "Ajánlat"
+
+#: templates/dashboard/admin.html:60 templates/dashboard/customer.html:44
+msgid "Amount"
+msgstr "Összeg"
+
+#: templates/dashboard/customer.html:3 templates/dashboard/customer.html:6
+#: templates/payments/success.html:16
+msgid "My Account"
+msgstr "Fiókom"
+
+#: templates/dashboard/customer.html:8
+msgid "Purchased Vouchers"
+msgstr "Megvásárolt kuponok"
+
+#: templates/dashboard/customer.html:15 templates/dashboard/merchant.html:28
+#: templates/merchants/sales.html:9
+msgid "Code"
+msgstr "Kód"
+
+#: templates/dashboard/customer.html:17 templates/offers/detail.html:48
+#: vouchers/services.py:77
+msgid "Merchant"
+msgstr "Kereskedő"
+
+#: templates/dashboard/customer.html:18 templates/dashboard/customer.html:44
+#: templates/dashboard/merchant.html:28 templates/merchants/pending.html:9
+#: templates/merchants/sales.html:9 templates/offers/merchant_list.html:14
+#: vouchers/services.py:82
+msgid "Status"
+msgstr "Állapot"
+
+#: templates/dashboard/customer.html:19
+msgid "Expires"
+msgstr "Lejár"
+
+#: templates/dashboard/customer.html:20 templates/offers/merchant_list.html:14
+msgid "Actions"
+msgstr "Műveletek"
+
+#: templates/dashboard/customer.html:32
+#: templates/emails/voucher_purchased.html:13
+msgid "Download PDF"
+msgstr "PDF letöltése"
+
+#: templates/dashboard/customer.html:36
+msgid "No vouchers yet."
+msgstr "Még nincsenek kuponok."
+
+#: templates/dashboard/customer.html:36
+msgid "Browse offers"
+msgstr "Ajánlatok böngészése"
+
+#: templates/dashboard/customer.html:41
+msgid "Order History"
+msgstr "Rendelési előzmények"
+
+#: templates/dashboard/customer.html:54
+msgid "No orders yet."
+msgstr "Még nincsenek rendelések."
+
+#: templates/dashboard/merchant.html:3 templates/dashboard/merchant.html:7
+#: templates/partials/header_actions.html:17
+msgid "Merchant Dashboard"
+msgstr "Kereskedői irányítópult"
+
+#: templates/dashboard/merchant.html:9
+msgid "New Offer"
+msgstr "Új ajánlat"
+
+#: templates/dashboard/merchant.html:10 templates/merchants/redeem.html:3
+#: templates/merchants/redeem.html:6
+msgid "Redeem Voucher"
+msgstr "Kupon beváltása"
+
+#: templates/dashboard/merchant.html:15
+msgid "Total Sales"
+msgstr "Összes értékesítés"
+
+#: templates/dashboard/merchant.html:16
+msgid "Revenue"
+msgstr "Bevétel"
+
+#: templates/dashboard/merchant.html:17 templates/merchants/sales.html:9
+#: vouchers/models.py:11
+msgid "Redeemed"
+msgstr "Beváltva"
+
+#: templates/dashboard/merchant.html:20
+msgid "Overview"
+msgstr "Áttekintés"
+
+#: templates/dashboard/merchant.html:21 templates/offers/list.html:3
+msgid "Offers"
+msgstr "Ajánlatok"
+
+#: templates/dashboard/merchant.html:22 templates/merchants/sales.html:3
+#: templates/merchants/sales.html:6
+msgid "Sales"
+msgstr "Értékesítések"
+
+#: templates/dashboard/merchant.html:23
+msgid "Redemption"
+msgstr "Beváltás"
+
+#: templates/dashboard/merchant.html:25
+msgid "Recent Sales"
+msgstr "Legutóbbi értékesítések"
+
+#: templates/dashboard/merchant.html:39
+msgid "No sales yet."
+msgstr "Még nincsenek értékesítések."
+
+#: templates/emails/merchant_approved.html:4
+msgid "You're approved!"
+msgstr "Jóváhagyva!"
+
+#: templates/emails/merchant_approved.html:5
+#, python-format
+msgid ""
+"Your merchant account for <strong>%(name)s</strong> has been approved. You "
+"can now create offers."
+msgstr ""
+"A(z) <strong>%(name)s</strong> kereskedői fiókja jóváhagyásra került. Most "
+"már létrehozhat ajánlatokat."
+
+#: templates/emails/merchant_approved.html:6
+msgid "Create your first offer"
+msgstr "Hozza létre első ajánlatát"
+
+#: templates/emails/merchant_registration.html:4
+msgid "Registration received"
+msgstr "Regisztráció fogadva"
+
+#: templates/emails/merchant_registration.html:5
+#, python-format
+msgid ""
+"We received your merchant application for <strong>%(name)s</strong>. Our "
+"team will review it shortly."
+msgstr ""
+"Megkaptuk a(z) <strong>%(name)s</strong> kereskedői jelentkezését. Csapatunk"
+" hamarosan átnézi."
+
+#: templates/emails/offer_approved.html:4
+msgid "Offer approved"
+msgstr "Ajánlat jóváhagyva"
+
+#: templates/emails/offer_approved.html:5
+#, python-format
+msgid "Your offer <strong>%(title)s</strong> is now live on Experio."
+msgstr ""
+"Az Ön <strong>%(title)s</strong> ajánlata mostantól élőben van az Experio-n."
+
+#: templates/emails/offer_approved.html:6
+msgid "View offer"
+msgstr "Ajánlat megtekintése"
+
+#: templates/emails/partner_application.html:4
+msgid "New founding partner application"
+msgstr "Új alapító partner jelentkezés"
+
+#: templates/emails/partner_application.html:6
+#: templates/partials/founding_partner_form.html:7
+msgid "Business Information"
+msgstr "Vállalkozási adatok"
+
+#: templates/emails/partner_application.html:14
+#: templates/partials/founding_partner_form.html:33
+msgid "Contact Information"
+msgstr "Kapcsolattartási adatok"
+
+#: templates/emails/partner_application.html:19
+#: templates/partials/founding_partner_form.html:54
+msgid "About Your Business"
+msgstr "Vállalkozásáról"
+
+#: templates/emails/partner_application.html:24
+#: templates/partials/founding_partner_form.html:78
+msgid "Voucher Ideas"
+msgstr "Kuponötletek"
+
+#: templates/emails/partner_application.html:33
+msgid "None selected"
+msgstr "Nincs kiválasztva"
+
+#: templates/emails/payment_failed.html:4
+msgid "Payment failed"
+msgstr "Sikertelen fizetés"
+
+#: templates/emails/payment_failed.html:5
+#, python-format
+msgid "Your payment for %(title)s could not be processed. Please try again."
+msgstr "A(z) %(title)s fizetése nem dolgozható fel. Kérjük, próbálja újra."
+
+#: templates/emails/payment_failed.html:6
+msgid "Return to offer"
+msgstr "Vissza az ajánlathoz"
+
+#: templates/emails/voucher_purchased.html:4
+msgid "Your voucher is ready!"
+msgstr "A kuponja kész!"
+
+#: templates/emails/voucher_purchased.html:5
+#: templates/emails/welcome_customer.html:5
+#, python-format
+msgid "Hi %(name)s,"
+msgstr "Kedves %(name)s,"
+
+#: templates/emails/voucher_purchased.html:6
+msgid "Thank you for your purchase. Your voucher details:"
+msgstr "Köszönjük a vásárlást. Kupon adatai:"
+
+#: templates/emails/voucher_purchased.html:8
+msgid "Code:"
+msgstr "Kód:"
+
+#: templates/emails/voucher_purchased.html:9
+msgid "Offer:"
+msgstr "Ajánlat:"
+
+#: templates/emails/voucher_purchased.html:10
+msgid "Merchant:"
+msgstr "Kereskedő:"
+
+#: templates/emails/voucher_purchased.html:11
+msgid "Valid until:"
+msgstr "Érvényes:"
+
+#: templates/emails/voucher_redeemed.html:4
+msgid "Voucher redeemed"
+msgstr "Kupon beváltva"
+
+#: templates/emails/voucher_redeemed.html:5
+#, python-format
+msgid ""
+"Your voucher <strong>%(code)s</strong> for %(title)s was redeemed at "
+"%(date)s."
+msgstr ""
+"A(z) <strong>%(code)s</strong> kuponja (%(title)s) beváltásra került: "
+"%(date)s."
+
+#: templates/emails/welcome_customer.html:6
+msgid "Start exploring local experiences and save with exclusive vouchers."
+msgstr "Fedezze fel a helyi élményeket, és spóroljon exkluzív kuponokkal."
+
+#: templates/emails/welcome_customer.html:7
+#: templates/partials/auth_brand_panel.html:11
+msgid "Browse Offers"
+msgstr "Ajánlatok böngészése"
+
+#: templates/merchants/pending.html:3
+msgid "Pending Approval"
+msgstr "Jóváhagyásra vár"
+
+#: templates/merchants/pending.html:7
+msgid "Awaiting Approval"
+msgstr "Jóváhagyás folyamatban"
+
+#: templates/merchants/pending.html:8
+#, python-format
+msgid "Your business <strong>%(name)s</strong> is pending review."
+msgstr "A(z) <strong>%(name)s</strong> vállalkozása felülvizsgálat alatt áll."
+
+#: templates/merchants/redeem.html:11 vouchers/services.py:79
+msgid "Voucher Code"
+msgstr "Kuponkód"
+
+#: templates/merchants/redeem.html:14
+msgid "Redeem"
+msgstr "Beváltás"
+
+#: templates/merchants/redeem.html:16
+msgid "Scan QR codes with any camera app and paste the code above."
+msgstr ""
+"Olvassa be a QR-kódot bármely kameraalkalmazással, majd illessze be a kódot "
+"fent."
+
+#: templates/merchants/redeem.html:20
+msgid "Success!"
+msgstr "Siker!"
+
+#: templates/merchants/redeem.html:20
+#, python-format
+msgid "Voucher %(code)s for %(title)s has been redeemed."
+msgstr "A(z) %(code)s kupon (%(title)s) beváltásra került."
+
+#: templates/merchants/register.html:7
+msgid "Complete your profile. An admin will review and approve your account."
+msgstr "Töltse ki profilját. Egy adminisztrátor átnézi és jóváhagyja fiókját."
+
+#: templates/merchants/sales.html:9 templates/offers/merchant_list.html:14
+msgid "Price"
+msgstr "Ár"
+
+#: templates/merchants/sales.html:9
+msgid "Purchased"
+msgstr "Megvásárolva"
+
+#: templates/offers/detail.html:7
+msgid "Preview mode — offer not published."
+msgstr "Előnézeti mód — az ajánlat nincs közzétéve."
+
+#: templates/offers/detail.html:41
+msgid "Buy Voucher"
+msgstr "Kupon vásárlása"
+
+#: templates/offers/detail.html:44
+msgid "Login to Buy"
+msgstr "Bejelentkezés vásárláshoz"
+
+#: templates/offers/detail.html:61 vouchers/services.py:101
+msgid "Terms & Conditions"
+msgstr "Általános szerződési feltételek"
+
+#: templates/offers/detail.html:69
+msgid "Related Offers"
+msgstr "Kapcsolódó ajánlatok"
+
+#: templates/offers/list.html:8
+#, python-format
+msgid "Results for \"%(query)s\""
+msgstr "Találatok: „%(query)s”"
+
+#: templates/offers/list.html:16 templates/offers/list.html:20
+msgid "Filters"
+msgstr "Szűrők"
+
+#: templates/offers/list.html:24
+msgid "Category"
+msgstr "Kategória"
+
+#: templates/offers/list.html:26 templates/partials/navbar.html:39
+msgid "All"
+msgstr "Összes"
+
+#: templates/offers/list.html:38
+msgid "Min Price"
+msgstr "Min. ár"
+
+#: templates/offers/list.html:42
+msgid "Max Price"
+msgstr "Max. ár"
+
+#: templates/offers/list.html:47
+msgid "Sort"
+msgstr "Rendezés"
+
+#: templates/offers/list.html:49 templates/partials/deals_toolbar.html:17
+msgid "Newest"
+msgstr "Legújabb"
+
+#: templates/offers/list.html:50
+msgid "Highest Discount"
+msgstr "Legnagyobb kedvezmény"
+
+#: templates/offers/list.html:51
+msgid "Price Low-High"
+msgstr "Ár: növekvő"
+
+#: templates/offers/list.html:52
+msgid "Price High-Low"
+msgstr "Ár: csökkenő"
+
+#: templates/offers/list.html:56
+msgid "Apply"
+msgstr "Alkalmaz"
+
+#: templates/offers/list.html:68
+msgid "No offers found."
+msgstr "Nem található ajánlat."
+
+#: templates/offers/list.html:73
+msgid "Pagination"
+msgstr "Lapozás"
+
+#: templates/offers/list.html:78
+#, python-format
+msgid "Page %(number)s of %(total)s"
+msgstr "%(total)s / %(number)s. oldal"
+
+#: templates/offers/merchant_form.html:25
+msgid "Images"
+msgstr "Képek"
+
+#: templates/offers/merchant_form.html:26
+#, python-format
+msgid ""
+"Upload up to %(total)s slots (%(initial)s existing). Sort order 0 = featured"
+" image."
+msgstr ""
+"Legfeljebb %(total)s hely feltöltése (%(initial)s meglévő). A 0 sorrend = "
+"kiemelt kép."
+
+#: templates/offers/merchant_form.html:60
+msgid "No image slots available. Refresh the page and try again."
+msgstr "Nincs szabad képhely. Frissítse az oldalt, majd próbálja újra."
+
+#: templates/offers/merchant_form.html:63
+msgid "Save Offer"
+msgstr "Ajánlat mentése"
+
+#: templates/offers/merchant_list.html:3 templates/offers/merchant_list.html:7
+msgid "My Offers"
+msgstr "Ajánlataim"
+
+#: templates/offers/merchant_list.html:14
+msgid "Title"
+msgstr "Cím"
+
+#: templates/offers/merchant_list.html:14
+msgid "Qty"
+msgstr "Db"
+
+#: templates/offers/merchant_list.html:24
+msgid "Edit"
+msgstr "Szerkesztés"
+
+#: templates/offers/merchant_list.html:25
+msgid "Preview"
+msgstr "Előnézet"
+
+#: templates/offers/merchant_list.html:26
+msgid "Delete?"
+msgstr "Törlés?"
+
+#: templates/offers/merchant_list.html:28
+msgid "Delete"
+msgstr "Törlés"
+
+#: templates/partials/auth_brand_panel.html:6
+msgid "Discover Local Experiences"
+msgstr "Fedezze fel a helyi élményeket"
+
+#: templates/partials/auth_brand_panel.html:7
+msgid "Buy discounted vouchers from the best businesses near you."
+msgstr "Vásároljon kedvezményes kuponokat a legjobb helyi vállalkozásoktól."
+
+#: templates/partials/auth_brand_panel.html:15
+msgid "Top Discounts"
+msgstr "Legnagyobb kedvezmények"
+
+#: templates/partials/auth_brand_panel.html:19
+#: templates/partials/footer.html:15
+msgid "Partner With Us"
+msgstr "Legyen partnerünk"
+
+#: templates/partials/auth_form.html:5
+#, python-brace-format
+msgid "Please use at least {min} characters."
+msgstr ""
+
+#: templates/partials/auth_form.html:6
+msgid "Passwords do not match."
+msgstr ""
+
+#: templates/partials/brand_logo.html:4
+msgid "Experio logo"
+msgstr "Experio logó"
+
+#: templates/partials/footer.html:9
+msgid ""
+"Discover and purchase local experiences and vouchers from trusted merchants."
+msgstr ""
+"Fedezze fel és vásároljon helyi élményeket és kuponokat megbízható "
+"kereskedőktől."
+
+#: templates/partials/footer.html:12
+msgid "Explore"
+msgstr "Felfedezés"
+
+#: templates/partials/footer.html:14
+msgid "All Offers"
+msgstr "Összes ajánlat"
+
+#: templates/partials/footer.html:19 templates/partials/header_actions.html:10
+#: templates/partials/landing_navbar.html:13
+msgid "Account"
+msgstr "Fiók"
+
+#: templates/partials/footer.html:27 templates/partials/landing_footer.html:18
+msgid "All rights reserved."
+msgstr "Minden jog fenntartva."
+
+#: templates/partials/header_actions.html:13
+#: templates/payments/success.html:12
+msgid "My Vouchers"
+msgstr "Kuponjaim"
+
+#: templates/partials/header_actions.html:19
+msgid "Become a Merchant"
+msgstr "Legyen kereskedő"
+
+#: templates/partials/header_actions.html:25
+msgid "Logout"
+msgstr "Kijelentkezés"
+
+#: templates/partials/header_search.html:5
+msgid "Search"
+msgstr ""
+
+#: templates/partials/landing_footer.html:9
+msgid ""
+"Connecting local businesses with customers through experience vouchers."
+msgstr ""
+"Helyi vállalkozásokat kötünk össze ügyfelekkel élménykuponokon keresztül."
+
+#: templates/partials/landing_footer.html:13
+msgid "Partner registration"
+msgstr "Partner regisztráció"
+
+#: templates/partials/landing_navbar.html:7
+msgid "Main navigation"
+msgstr "Fő navigáció"
+
+#: templates/partials/landing_navbar.html:9
+msgid "Why join early"
+msgstr "Miért csatlakozzon korán"
+
+#: templates/partials/landing_navbar.html:15
+msgid "Join now"
+msgstr "Csatlakozás most"
+
+#: templates/partials/language_switcher.html:3
+msgid "Language"
+msgstr "Nyelv"
+
+#: templates/partials/navbar.html:17
+msgid "Menu"
+msgstr ""
+
+#: templates/partials/navbar.html:35
+msgid "Scroll categories left"
+msgstr "Legjobb kategóriák"
+
+#: templates/partials/navbar.html:49
+msgid "Scroll categories right"
+msgstr ""
+
+#: templates/partials/offer_card.html:23
+msgid "View Offer"
+msgstr "Ajánlat megtekintése"
+
+#: templates/payments/success.html:3
+msgid "Payment Successful"
+msgstr "Sikeres fizetés"
+
+#: templates/payments/success.html:7
+msgid "Payment Successful!"
+msgstr "Sikeres fizetés!"
+
+#: templates/payments/success.html:9
+#, python-format
+msgid "Your voucher <code>%(code)s</code> is ready."
+msgstr "A kuponja (<code>%(code)s</code>) kész."
+
+#: templates/payments/success.html:11
+msgid "Download PDF Voucher"
+msgstr "Kupon PDF letöltése"
+
+#: templates/payments/success.html:15
+msgid ""
+"Your payment is being processed. Check your email and dashboard shortly."
+msgstr ""
+"Fizetése feldolgozás alatt áll. Hamarosan ellenőrizze e-mailjét és "
+"irányítópultját."
+
+#: vouchers/models.py:10
+msgid "Active"
+msgstr "Aktív"
+
+#: vouchers/models.py:13
+msgid "Cancelled"
+msgstr "Törölve"
+
+#: vouchers/services.py:71
+msgid "Experio Voucher"
+msgstr "Experio kupon"
+
+#: vouchers/services.py:80
+msgid "Purchase Price"
+msgstr "Vásárlási ár"
+
+#: vouchers/services.py:81
+msgid "Valid Until"
+msgstr "Érvényes"
+
+#: vouchers/services.py:117
+msgid "Voucher not found."
+msgstr "A kupon nem található."
+
+#: vouchers/services.py:120
+msgid "This voucher belongs to another merchant."
+msgstr "Ez a kupon másik kereskedőhöz tartozik."
+
+#: vouchers/services.py:123
+#, python-format
+msgid "Voucher is %(status)s."
+msgstr "A kupon állapota: %(status)s."
+
+#: vouchers/services.py:128
+msgid "Voucher has expired."
+msgstr "A kupon lejárt."
+
+#~ msgid "Access to promotional campaigns"
+#~ msgstr "Hozzáférés promóciós kampányokhoz"
+
+#~ msgid "Partner program"
+#~ msgstr "Partnerprogram"
+
+#~ msgid ""
+#~ "Experio helps local businesses reach new customers with digital vouchers for"
+#~ " experiences, wellness, dining, and more. Register today and be ready when "
+#~ "we launch."
+#~ msgstr ""
+#~ "Az Experio segít a helyi vállalkozásoknak új ügyfeleket elérni digitális "
+#~ "kuponokkal élményekre, wellnessre, vendéglátásra és másra. Regisztráljon ma,"
+#~ " és legyen készen az indulásra."
+
+#~ msgid "Register your business"
+#~ msgstr "Regisztrálja vállalkozását"
+
+#~ msgid "See how it works"
+#~ msgstr "Így működik"
+
+#~ msgid "Local businesses"
+#~ msgstr "Helyi vállalkozások"
+
+#~ msgid "Restaurants, spas, activities & more"
+#~ msgstr "Éttermek, spák, programok és még sok más"
+
+#~ msgid "Digital vouchers"
+#~ msgstr "Digitális kuponok"
+
+#~ msgid "Sell offers customers can buy online"
+#~ msgstr "Értékesítsen ajánlatokat, amelyeket az ügyfelek online vásárolhatnak"
+
+#~ msgid "Grow your reach"
+#~ msgstr "Bővítse elérését"
+
+#~ msgid "Get discovered by new customers"
+#~ msgstr "Kerüljön új ügyfelek látókörébe"
+
+#~ msgid "A simple path from registration to your first sale."
+#~ msgstr "Egyszerű út a regisztrációtól az első eladásig."
+
+#~ msgid "Apply to join"
+#~ msgstr "Jelentkezés"
+
+#~ msgid "Submit your business details through the registration form below."
+#~ msgstr "Küldje el vállalkozása adatait az alábbi regisztrációs űrlapon."
+
+#~ msgid "Get approved"
+#~ msgstr "Jóváhagyás"
+
+#~ msgid ""
+#~ "Our team reviews your profile to keep the network trusted and high quality."
+#~ msgstr ""
+#~ "Csapatunk átnézi profilját, hogy a hálózat megbízható és magas színvonalú "
+#~ "maradjon."
+
+#~ msgid "Create offers"
+#~ msgstr "Ajánlatok létrehozása"
+
+#~ msgid ""
+#~ "Publish vouchers for your services with pricing, photos, and descriptions."
+#~ msgstr ""
+#~ "Tegyen közzé kuponokat szolgáltatásaira árakkal, fotókkal és leírásokkal."
+
+#~ msgid "Redeem & earn"
+#~ msgstr "Beváltás és bevétel"
+
+#~ msgid ""
+#~ "Customers purchase online; you redeem vouchers and track sales in your "
+#~ "dashboard."
+#~ msgstr ""
+#~ "Az ügyfelek online vásárolnak; Ön beváltja a kuponokat és követi az "
+#~ "értékesítéseket az irányítópulton."
+
+#~ msgid "Benefits"
+#~ msgstr "Előnyök"
+
+#~ msgid "Why businesses choose Experio as their voucher partner."
+#~ msgstr "Miért választják a vállalkozások az Experio-t kuponpartnerüknek."
+
+#~ msgid "Reach new customers"
+#~ msgstr "Érjen el új ügyfeleket"
+
+#~ msgid ""
+#~ "Get in front of people actively looking for local experiences and deals."
+#~ msgstr ""
+#~ "Jelenjen meg azok előtt, akik aktívan keresnek helyi élményeket és "
+#~ "ajánlatokat."
+
+#~ msgid "No upfront listing fees"
+#~ msgstr "Nincs előzetes listázási díj"
+
+#~ msgid ""
+#~ "Join the network without paying to be listed. You earn when customers buy."
+#~ msgstr ""
+#~ "Csatlakozzon a hálózathoz listázási díj nélkül. Akkor keres, amikor az "
+#~ "ügyfelek vásárolnak."
+
+#~ msgid "Merchant dashboard"
+#~ msgstr "Kereskedői irányítópult"
+
+#~ msgid ""
+#~ "Manage offers, track sales, and redeem vouchers from one simple dashboard."
+#~ msgstr ""
+#~ "Kezelje ajánlatait, kövesse az értékesítéseket és váltson be kuponokat egy "
+#~ "egyszerű irányítópultról."
+
+#~ msgid "Secure payments"
+#~ msgstr "Biztonságos fizetés"
+
+#~ msgid ""
+#~ "Customers pay online; payouts are handled reliably through our platform."
+#~ msgstr ""
+#~ "Az ügyfelek online fizetnek; a kifizetéseket megbízhatóan kezeli "
+#~ "platformunk."
+
+#~ msgid "Multi-language support"
+#~ msgstr "Többnyelvű támogatás"
+
+#~ msgid "Reach customers in English, Hungarian, and Romanian from day one."
+#~ msgstr "Érjen el ügyfeleket angolul, magyarul és románul már az első naptól."
+
+#~ msgid "Dedicated onboarding"
+#~ msgstr "Személyre szabott bevezetés"
+
+#~ msgid ""
+#~ "We help you set up your profile and first offers so you can start selling "
+#~ "quickly."
+#~ msgstr ""
+#~ "Segítünk beállítani profilját és első ajánlatait, hogy gyorsan elkezdhessen "
+#~ "értékesíteni."
+
+#~ msgid "Launch Partner Benefits"
+#~ msgstr "Indulási partner előnyök"
+
+#~ msgid "No setup costs"
+#~ msgstr "Nincs beállítási költség"
+
+#~ msgid "Additional exposure through our platform"
+#~ msgstr "További láthatóság platformunkon keresztül"
+
+#~ msgid "Digital vouchers with QR code redemption"
+#~ msgstr "Digitális kuponok QR-kódos beváltással"
+
+#~ msgid "Easy management dashboard"
+#~ msgstr "Egyszerű kezelői irányítópult"
+
+#~ msgid "Submit application"
+#~ msgstr "Jelentkezés elküldése"
+
+#~ msgid "Thank you! We received your application and will be in touch soon."
+#~ msgstr ""
+#~ "Köszönjük! Megkaptuk jelentkezését, hamarosan felvesszük Önnel a "
+#~ "kapcsolatot."
+
+#~ msgid "Merchant registration"
+#~ msgstr "Kereskedői regisztráció"
+
+#~ msgid "Tell us about your business to join the Experio partner network."
+#~ msgstr ""
+#~ "Meséljen vállalkozásáról, és csatlakozzon az Experio partnerhálózathoz."
+
+#~ msgid ""
+#~ "Complete your business profile. An admin will review and approve your "
+#~ "account."
+#~ msgstr "Töltse ki profilját. Egy adminisztrátor átnézi és jóváhagyja fiókját."
+
+#~ msgid "Not signed in yet?"
+#~ msgstr "Még nem jelentkezett be?"
+
+#~ msgid "Create an account"
+#~ msgstr "Hozzon létre fiókot"
+
+#~ msgid ""
+#~ "to register with your full business profile, or submit a quick application "
+#~ "below."
+#~ msgstr ""
+#~ "a teljes üzleti profil regisztrálásához, vagy küldjön egy gyors jelentkezést"
+#~ " alább."
+
+#~ msgid "Already have an account?"
+#~ msgstr "Már van fiókja?"
+
+#~ msgid "Log in"
+#~ msgstr "Jelentkezzen be"
+
+#~ msgid "to complete the full registration form."
+#~ msgstr "a teljes regisztrációs űrlap kitöltéséhez."
+
+#~ msgid "Business"
+#~ msgstr "Vállalkozás"
+
+#~ msgid "Featured Offers"
+#~ msgstr "Kiemelt ajánlatok"
+
+#~ msgid "Hand-picked deals from local merchants"
+#~ msgstr "Válogatott ajánlatok helyi kereskedőktől"
+
+#~ msgid "View all"
+#~ msgstr "Összes megtekintése"
+
+#~ msgid "No featured offers yet."
+#~ msgstr "Még nincsenek kiemelt ajánlatok."
+
+#~ msgid "Popular Categories"
+#~ msgstr "Népszerű kategóriák"
+
+#~ msgid "Find experiences by interest"
+#~ msgstr "Élmények érdeklődés szerint"
+
+#~ msgid "Newest Offers"
+#~ msgstr "Legújabb ajánlatok"
+
+#~ msgid "Recently added to the marketplace"
+#~ msgstr "Nemrég felkerült a piactérre"
+
+#~ msgid "Best savings right now"
+#~ msgstr "Legjobb megtakarítások most"
+
+#~ msgid "Platform performance at a glance"
+#~ msgstr "Platform teljesítmény egy pillantásra"
+
+#~ msgid "Your vouchers and order history"
+#~ msgstr "Kuponjai és rendelési előzményei"
+
+#~ msgid "All vouchers sold through your offers"
+#~ msgstr "Az ajánlatain keresztül eladott kuponok"
+
+#, python-format
+#~ msgid "Save %(savings)s RON · %(discount)s%% off"
+#~ msgstr "Spóroljon %(savings)s RON-t · %(discount)s%% kedvezmény"
+
+#, python-format
+#~ msgid "Valid until %(date)s"
+#~ msgstr "Érvényes: %(date)s"
+
+#~ msgid "Browse Experiences"
+#~ msgstr "Élmények böngészése"
+
+#~ msgid "Find and book local experiences near you"
+#~ msgstr "Találjon és foglaljon helyi élményeket a közelében"
+
+#~ msgid "Django Admin"
+#~ msgstr "Django admin"

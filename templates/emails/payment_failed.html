@@ -1,0 +1,7 @@
+{% extends 'emails/base_email.html' %}
+{% load i18n %}
+{% block content %}
+<h2>{% trans "Payment failed" %}</h2>
+<p>{% blocktrans with title=payment.offer.title %}Your payment for {{ title }} could not be processed. Please try again.{% endblocktrans %}</p>
+<p><a href="{{ site_url }}{{ payment.offer.get_absolute_url }}">{% trans "Return to offer" %}</a></p>
+{% endblock %}

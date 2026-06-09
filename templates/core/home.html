@@ -1,0 +1,69 @@
+{% extends 'base.html' %}
+{% load i18n %}
+{% block title %}{% trans "Home" %}{% endblock %}
+{% block content %}
+{% include 'partials/deals_toolbar.html' %}
+
+{% if carousel_offers %}
+<section class="deal-carousel-section">
+    <div class="container-app">
+    <div id="featuredCarousel" class="carousel slide deal-carousel" data-bs-ride="carousel" data-bs-interval="6000">
+        <div class="carousel-indicators">
+            {% for offer in carousel_offers %}
+            <button type="button" data-bs-target="#featuredCarousel" data-bs-slide-to="{{ forloop.counter0 }}"
+                    {% if forloop.first %}class="active" aria-current="true"{% endif %}
+                    aria-label="{% trans 'Slide' %} {{ forloop.counter }}"></button>
+            {% endfor %}
+        </div>
+        <div class="carousel-inner">
+            {% for offer in carousel_offers %}
+            {% include 'partials/offer_carousel_slide.html' %}
+            {% endfor %}
+        </div>
+        {% if carousel_offers|length > 1 %}
+        <button class="carousel-control-prev" type="button" data-bs-target="#featuredCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">{% trans "Previous" %}</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#featuredCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">{% trans "Next" %}</span>
+        </button>
+        {% endif %}
+    </div>
+    </div>
+</section>
+{% endif %}
+
+<div class="container-app deals-grid">
+    <div class="row g-3">
+        {% for offer in grid_offers %}
+        {% include 'partials/offer_grid_card.html' %}
+        {% empty %}
+        {% if not carousel_offers %}
+        <div class="col-12">
+            <div class="text-center py-5 bg-white border">
+                <p class="text-muted mb-3">{% trans "No offers yet." %}</p>
+                <p class="small text-muted">{% trans "Run: python manage.py seed_sample_offers" %}</p>
+            </div>
+        </div>
+        {% endif %}
+        {% endfor %}
+    </div>
+    {% if grid_offers or carousel_offers %}
+    <div class="text-center mt-4">
+        <a href="{% url 'offers:list' %}" class="btn btn-outline-primary">{% trans "View all offers" %}</a>
+    </div>
+    {% endif %}
+</div>
+
+<div class="visually-hidden" aria-hidden="true">
+    {% trans "Restaurant" %}{% trans "Spa" %}{% trans "Beauty" %}{% trans "Fitness" %}
+    {% trans "Travel" %}{% trans "Adventure" %}{% trans "Family" %}{% trans "Courses" %}
+    {% trans "Events" %}{% trans "Gift Cards" %}
+    {% trans "Search, e.g. wellness, spa..." %}
+    {% trans "Need help?" %}{% trans "Categories" %}{% trans "All locations" %}
+    {% trans "Recommended" %}{% trans "Cheapest" %}{% trans "Best discount" %}
+    {% trans "Slide" %}
+</div>
+{% endblock %}

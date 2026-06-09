@@ -1,0 +1,18 @@
+{% load i18n static %}
+<header class="landing-header sticky-top">
+    <div class="container-app landing-header-inner">
+        <a href="{% url 'core:landing' %}" class="brand-link">
+            {% include 'partials/brand_logo.html' with logo_class='brand-logo-img--header' %}
+        </a>
+        <nav class="landing-nav" aria-label="{% trans 'Main navigation' %}">
+            <a href="#how-it-works" class="landing-nav-link d-none d-md-inline">{% trans "How it works" %}</a>
+            <a href="#why-join-early" class="landing-nav-link d-none d-md-inline">{% trans "Why join early" %}</a>
+            <a href="#register" class="landing-nav-link d-none d-md-inline">{% trans "Register" %}</a>
+            {% include 'partials/language_switcher.html' %}
+            {% if user.is_authenticated %}
+            <a href="{% url 'dashboard:customer' %}" class="btn btn-sm btn-outline-secondary">{% trans "Account" %}</a>
+            {% endif %}
+            <a href="#register" class="btn btn-sm btn-primary">{% trans "Join now" %}</a>
+        </nav>
+    </div>
+</header>

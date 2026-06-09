@@ -1,0 +1,35 @@
+{% extends 'account/base_auth.html' %}
+{% load i18n account %}
+{% block title %}{% trans "Confirm Email Address" %}{% endblock %}
+{% block auth_icon %}
+<div class="auth-status-icon auth-status-icon--info">
+    <i class="bi bi-envelope-open" aria-hidden="true"></i>
+</div>
+{% endblock %}
+{% block auth_title %}{% trans "Confirm Email Address" %}{% endblock %}
+{% block auth_content %}
+{% if confirmation %}
+    {% user_display confirmation.email_address.user as user_display %}
+    {% if can_confirm %}
+    <p class="auth-form-text text-muted mb-4">
+        {% blocktrans with confirmation.email_address.email as email %}Please confirm that <a href="mailto:{{ email }}">{{ email }}</a> is an email address for user {{ user_display }}.{% endblocktrans %}
+    </p>
+    <form method="post" action="{% url 'account_confirm_email' confirmation.key %}" class="auth-form">
+        {% csrf_token %}
+        {{ redirect_field }}
+        <button type="submit" class="btn btn-primary btn-lg w-100">{% trans "Confirm" %}</button>
+    </form>
+    {% else %}
+    <p class="auth-form-text text-muted mb-4">
+        {% blocktrans %}Unable to confirm {{ email }} because it is already confirmed by a different account.{% endblocktrans %}
+    </p>
+    <a href="{% url 'account_login' %}" class="btn btn-outline-primary btn-lg w-100">{% trans "Back to sign in" %}</a>
+    {% endif %}
+{% else %}
+<p class="auth-form-text text-muted mb-4">
+    {% url 'account_email' as email_url %}
+    {% blocktrans %}This email confirmation link expired or is invalid. Please <a href="{{ email_url }}" class="auth-link">issue a new email confirmation request</a>.{% endblocktrans %}
+</p>
+<a href="{% url 'account_login' %}" class="btn btn-outline-primary btn-lg w-100">{% trans "Back to sign in" %}</a>
+{% endif %}
+{% endblock %}

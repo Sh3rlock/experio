@@ -1,0 +1,15 @@
+{% extends 'account/base_auth.html' %}
+{% load i18n %}
+{% block title %}{% trans "Sign Up Closed" %}{% endblock %}
+{% block auth_icon %}
+<div class="auth-status-icon auth-status-icon--warning">
+    <i class="bi bi-lock" aria-hidden="true"></i>
+</div>
+{% endblock %}
+{% block auth_title %}{% trans "Sign Up Closed" %}{% endblock %}
+{% block auth_subtitle %}
+<p class="auth-form-subtitle">{% trans "We are sorry, but the sign up is currently closed." %}</p>
+{% endblock %}
+{% block auth_content %}
+<a href="{% url 'account_login' %}" class="btn btn-primary btn-lg w-100">{% trans "Sign in" %}</a>
+{% endblock %}

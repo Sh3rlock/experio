@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags i18n %}
+{% block title %}{% trans "Register Business" %}{% endblock %}
+{% block content %}
+<div class="container-app container-form py-4 page-shell">
+    <h1>{% trans "Register Your Business" %}</h1>
+    <p class="text-muted">{% trans "Complete your profile. An admin will review and approve your account." %}</p>
+    {% crispy form %}
+</div>
+{% endblock %}

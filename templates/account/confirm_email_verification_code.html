@@ -1,0 +1,75 @@
+{% extends 'account/base_auth.html' %}
+{% load i18n static %}
+{% url 'account_email_verification_sent' as verify_action %}
+{% block title %}{% trans "Email Verification" %}{% endblock %}
+{% block auth_icon %}
+<div class="auth-status-icon auth-status-icon--info">
+    <i class="bi bi-shield-check" aria-hidden="true"></i>
+</div>
+{% endblock %}
+{% block auth_title %}{% trans "Enter Email Verification Code" %}{% endblock %}
+{% block auth_subtitle %}
+<p class="auth-form-subtitle">
+    {% blocktrans %}We've sent a code to <a href="mailto:{{ email }}">{{ email }}</a>. The code expires shortly, so please enter it soon.{% endblocktrans %}
+</p>
+{% endblock %}
+{% block auth_content %}
+<form method="post" action="{{ verify_action }}" class="auth-form" novalidate
+      data-msg-required="{% trans 'This field is required.' %}">
+    {% csrf_token %}
+    {% if verify_form.non_field_errors %}
+    <div class="alert alert-danger auth-form-alert" role="alert">
+        {% for error in verify_form.non_field_errors %}{{ error }}{% endfor %}
+    </div>
+    {% endif %}
+    <div class="auth-form-fields">
+        {% for field in verify_form.visible_fields %}
+        {% include 'partials/auth_form_field.html' with field=field %}
+        {% endfor %}
+    </div>
+    <div class="auth-action-stack">
+        <button type="submit" class="btn btn-primary btn-lg w-100">{% trans "Confirm" %}</button>
+        {% if can_resend %}
+        <button type="submit" form="resend-code" class="btn btn-outline-primary w-100">{% trans "Request new code" %}</button>
+        {% endif %}
+        {% if cancel_url %}
+        <a href="{{ cancel_url }}" class="btn btn-outline-secondary w-100">{% trans "Cancel" %}</a>
+        {% else %}
+        <button type="submit" form="logout-from-stage" class="btn btn-outline-secondary w-100">{% trans "Cancel" %}</button>
+        {% endif %}
+    </div>
+    {{ redirect_field }}
+</form>
+<form id="resend-code" method="post" action="{{ verify_action }}" class="d-none">
+    <input type="hidden" name="action" value="resend">
+    {{ redirect_field }}
+    {% csrf_token %}
+</form>
+{% if not cancel_url %}
+<form id="logout-from-stage" method="post" action="{% url 'account_logout' %}" class="d-none">
+    <input type="hidden" name="next" value="{% url 'account_login' %}">
+    {% csrf_token %}
+</form>
+{% endif %}
+{% if can_change %}
+<details class="auth-change-details mt-4"{% if change_form.errors %} open{% endif %}>
+    <summary class="auth-link">{% trans "Use a different email address" %}</summary>
+    <form method="post" action="{{ verify_action }}" class="auth-form mt-3" novalidate
+          data-msg-required="{% trans 'This field is required.' %}"
+          data-msg-email="{% trans 'Please enter a valid email address.' %}">
+        {% csrf_token %}
+        <input type="hidden" name="action" value="change">
+        <div class="auth-form-fields">
+            {% for field in change_form.visible_fields %}
+            {% include 'partials/auth_form_field.html' with field=field %}
+            {% endfor %}
+        </div>
+        <button type="submit" class="btn btn-outline-primary w-100">{% trans "Change" %}</button>
+        {{ redirect_field }}
+    </form>
+</details>
+{% endif %}
+{% endblock %}
+{% block auth_extra_js %}
+<script src="{% static 'js/auth-forms.js' %}" defer></script>
+{% endblock %}

@@ -1,0 +1,6 @@
+{% extends 'emails/base_email.html' %}
+{% load i18n %}
+{% block content %}
+<h2>{% trans "Voucher redeemed" %}</h2>
+<p>{% blocktrans with code=voucher.voucher_code title=voucher.offer.title date=voucher.redeemed_at|date:"d M Y H:i" %}Your voucher <strong>{{ code }}</strong> for {{ title }} was redeemed at {{ date }}.{% endblocktrans %}</p>
+{% endblock %}

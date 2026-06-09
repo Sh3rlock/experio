@@ -1,0 +1,7 @@
+{% extends 'emails/base_email.html' %}
+{% load i18n %}
+{% block content %}
+<h2>{% trans "You're approved!" %}</h2>
+<p>{% blocktrans with name=merchant.business_name %}Your merchant account for <strong>{{ name }}</strong> has been approved. You can now create offers.{% endblocktrans %}</p>
+<p><a href="{{ site_url }}/offers/manage/create/">{% trans "Create your first offer" %}</a></p>
+{% endblock %}

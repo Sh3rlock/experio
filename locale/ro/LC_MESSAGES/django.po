@@ -1,0 +1,1870 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-09 09:11+0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: ro\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n==1?0:(((n%100>19)||((n%100==0)&&(n!=0)))?2:1));\n"
+
+#: accounts/forms.py:45 accounts/forms.py:78 accounts/forms.py:118
+#: accounts/forms.py:175 accounts/forms.py:189 merchants/models.py:18
+msgid "Email"
+msgstr "E-mail"
+
+#: accounts/forms.py:47 accounts/forms.py:80 accounts/forms.py:120
+#: accounts/forms.py:177 accounts/forms.py:191
+msgid "you@example.com"
+msgstr ""
+
+#: accounts/forms.py:53 accounts/forms.py:149
+msgid "Your password"
+msgstr ""
+
+#: accounts/forms.py:66 accounts/forms.py:107
+msgid "Please enter your email address."
+msgstr ""
+
+#: accounts/forms.py:70 accounts/forms.py:111
+#: templates/account/confirm_email_verification_code.html:59
+#: templates/account/email.html:49 templates/partials/auth_form.html:4
+msgid "Please enter a valid email address."
+msgstr ""
+
+#: accounts/forms.py:86 accounts/forms.py:147 accounts/forms.py:160
+msgid "Password"
+msgstr ""
+
+#: accounts/forms.py:88
+msgid "Create a password"
+msgstr ""
+
+#: accounts/forms.py:94 accounts/forms.py:161
+msgid "Confirm password"
+msgstr ""
+
+#: accounts/forms.py:96
+msgid "Repeat your password"
+msgstr ""
+
+#: accounts/forms.py:132 accounts/forms.py:217
+msgid "New password"
+msgstr ""
+
+#: accounts/forms.py:133 accounts/forms.py:218
+msgid "Confirm new password"
+msgstr ""
+
+#: accounts/forms.py:203
+msgid "Verification code"
+msgstr ""
+
+#: accounts/forms.py:205
+msgid "Enter code"
+msgstr ""
+
+#: accounts/forms.py:216
+msgid "Current password"
+msgstr ""
+
+#: accounts/forms.py:243
+msgid "Save Profile"
+msgstr "Salvează profilul"
+
+#: accounts/views.py:15
+msgid "Profile updated successfully."
+msgstr "Profilul a fost actualizat cu succes."
+
+#: core/forms.py:19
+msgid "Restaurant / Café"
+msgstr "Restaurant / Cafenea"
+
+#: core/forms.py:20
+msgid "Hotel / Accommodation"
+msgstr "Hotel / Cazare"
+
+#: core/forms.py:21
+msgid "Wellness / Spa"
+msgstr "Wellness / Spa"
+
+#: core/forms.py:22
+msgid "Beauty Salon"
+msgstr "Salon de înfrumusețare"
+
+#: core/forms.py:23 templates/core/home.html:61
+msgid "Fitness"
+msgstr "Fitness"
+
+#: core/forms.py:24
+msgid "Adventure & Activities"
+msgstr "Aventură și activități"
+
+#: core/forms.py:25
+msgid "Tourism"
+msgstr "Turism"
+
+#: core/forms.py:26
+msgid "Retail Store"
+msgstr "Magazin retail"
+
+#: core/forms.py:27
+msgid "Other"
+msgstr "Altele"
+
+#: core/forms.py:38
+msgid "Yes"
+msgstr "Da"
+
+#: core/forms.py:39
+msgid "Maybe, I would like more information"
+msgstr "Poate, aș dori mai multe informații"
+
+#: core/forms.py:40
+msgid "Not sure yet"
+msgstr "Încă nu sunt sigur"
+
+#: core/forms.py:53
+#| msgid "Fixed value vouchers (e.g. €25, €50, €100)"
+msgid "Fixed value vouchers (e.g. 50, 100, 200, 500 RON)"
+msgstr "Vouchere cu valoare fixă (ex. 50, 100, 200, 500 RON)"
+
+#: core/forms.py:54
+msgid "Experience packages"
+msgstr "Pachete de experiențe"
+
+#: core/forms.py:55
+msgid "Special offers"
+msgstr "Oferte speciale"
+
+#: core/forms.py:56
+msgid "Seasonal promotions"
+msgstr "Promoții sezoniere"
+
+#: core/forms.py:57
+msgid "Custom vouchers"
+msgstr "Vouchere personalizate"
+
+#: core/forms.py:65 templates/emails/partner_application.html:7
+msgid "Business Name"
+msgstr "Numele afacerii"
+
+#: core/forms.py:69 templates/emails/partner_application.html:8
+msgid "Business Category"
+msgstr "Categoria afacerii"
+
+#: core/forms.py:74 templates/emails/partner_application.html:10
+msgid "Website or Facebook Page"
+msgstr "Site web sau pagină Facebook"
+
+#: core/forms.py:79 templates/emails/partner_application.html:12
+msgid "Business Address"
+msgstr "Adresa afacerii"
+
+#: core/forms.py:83 templates/emails/partner_application.html:15
+msgid "Contact Person"
+msgstr "Persoană de contact"
+
+#: core/forms.py:86 templates/emails/partner_application.html:16
+msgid "Email Address"
+msgstr "Adresă de e-mail"
+
+#: core/forms.py:87 templates/emails/partner_application.html:17
+msgid "Phone Number"
+msgstr "Număr de telefon"
+
+#: core/forms.py:89 templates/emails/partner_application.html:20
+msgid "Brief Description"
+msgstr "Descriere scurtă"
+
+#: core/forms.py:90
+msgid "Tell us about your business and what makes it special."
+msgstr "Spune-ne despre afacerea ta și ce o face specială."
+
+#: core/forms.py:94 templates/emails/partner_application.html:22
+msgid "Would you be interested in selling gift vouchers online?"
+msgstr "Ai fi interesat să vinzi vouchere cadou online?"
+
+#: core/forms.py:99 templates/emails/partner_application.html:25
+msgid "What types of vouchers would you like to offer?"
+msgstr "Ce tipuri de vouchere ai dori să oferi?"
+
+#: core/permissions.py:14
+msgid "You need a merchant account to access this page."
+msgstr "Aveți nevoie de un cont de comerciant pentru a accesa această pagină."
+
+#: core/permissions.py:17
+msgid "Your merchant account is pending approval."
+msgstr "Contul dvs. de comerciant așteaptă aprobarea."
+
+#: core/permissions.py:36
+msgid "Admin access required."
+msgstr "Este necesar acces de administrator."
+
+#: core/views.py:42
+msgid ""
+"Thank you for your interest! We will contact you within 2 business days to "
+"discuss how we can help your business reach new customers through digital "
+"gift vouchers."
+msgstr ""
+"Îți mulțumim pentru interes! Te vom contacta în 2 zile lucrătoare pentru a "
+"discuta cum putem ajuta afacerea ta să ajungă la clienți noi prin vouchere "
+"cadou digitale."
+
+#: merchants/forms.py:21
+msgid "Romania"
+msgstr "România"
+
+#: merchants/forms.py:26 templates/merchants/register.html:3
+msgid "Register Business"
+msgstr "Înregistrează afacerea"
+
+#: merchants/models.py:8 offers/models.py:31 payments/models.py:10
+msgid "Pending"
+msgstr "În așteptare"
+
+#: merchants/models.py:9 offers/models.py:32
+msgid "Approved"
+msgstr "Aprobat"
+
+#: merchants/models.py:10 offers/models.py:33
+msgid "Rejected"
+msgstr "Respins"
+
+#: merchants/models.py:13
+msgid "Business name"
+msgstr "Numele afacerii"
+
+#: merchants/models.py:14 templates/offers/detail.html:58
+msgid "Description"
+msgstr "Descriere"
+
+#: merchants/models.py:15
+msgid "Logo"
+msgstr "Logo"
+
+#: merchants/models.py:16
+msgid "Website"
+msgstr "Site web"
+
+#: merchants/models.py:17
+msgid "Phone"
+msgstr "Telefon"
+
+#: merchants/models.py:19
+msgid "Address"
+msgstr "Adresă"
+
+#: merchants/models.py:20 templates/offers/list.html:33
+msgid "City"
+msgstr "Oraș"
+
+#: merchants/models.py:21
+msgid "County"
+msgstr "Județ"
+
+#: merchants/models.py:22
+msgid "Country"
+msgstr "Țară"
+
+#: merchants/views.py:26
+msgid "Business registered! Awaiting admin approval."
+msgstr "Afacerea a fost înregistrată! Așteaptă aprobarea administratorului."
+
+#: merchants/views.py:53
+#, python-format
+msgid "Voucher %(code)s redeemed successfully!"
+msgstr "Voucherul %(code)s a fost valorificat cu succes!"
+
+#: notifications/services.py:33 templates/emails/welcome_customer.html:4
+msgid "Welcome to Experio!"
+msgstr "Bun venit la Experio!"
+
+#: notifications/services.py:44
+msgid "Merchant Registration Received"
+msgstr "Înregistrare comerciant primită"
+
+#: notifications/services.py:55
+msgid "Your Merchant Account is Approved!"
+msgstr "Contul dvs. de comerciant a fost aprobat!"
+
+#: notifications/services.py:66
+#, python-format
+msgid "Your Offer \"%(title)s\" is Live!"
+msgstr "Oferta dvs. „%(title)s” este activă!"
+
+#: notifications/services.py:82
+#, python-format
+msgid "Your Experio Voucher - %(code)s"
+msgstr "Voucherul Experio – %(code)s"
+
+#: notifications/services.py:93
+#, python-format
+msgid "Voucher Redeemed - %(code)s"
+msgstr "Voucher valorificat – %(code)s"
+
+#: notifications/services.py:104
+msgid "Payment Failed - Experio"
+msgstr "Plată eșuată – Experio"
+
+#: notifications/services.py:121
+#, python-format
+msgid "New founding partner application: %(business)s"
+msgstr "Cerere nouă de partener fondator: %(business)s"
+
+#: offers/models.py:30
+msgid "Draft"
+msgstr "Ciornă"
+
+#: offers/models.py:34 vouchers/models.py:12
+msgid "Expired"
+msgstr "Expirat"
+
+#: offers/views.py:60
+msgid "This offer is no longer available."
+msgstr "Această ofertă nu mai este disponibilă."
+
+#: offers/views.py:98
+msgid "Offer submitted for approval."
+msgstr "Oferta a fost trimisă spre aprobare."
+
+#: offers/views.py:106 templates/offers/merchant_list.html:9
+msgid "Create Offer"
+msgstr "Creează ofertă"
+
+#: offers/views.py:122
+msgid "Offer updated."
+msgstr "Oferta a fost actualizată."
+
+#: offers/views.py:130
+msgid "Edit Offer"
+msgstr "Editează oferta"
+
+#: offers/views.py:145
+msgid "Offer deleted."
+msgstr "Oferta a fost ștearsă."
+
+#: payments/models.py:11
+msgid "Paid"
+msgstr "Plătit"
+
+#: payments/models.py:12
+msgid "Failed"
+msgstr "Eșuat"
+
+#: payments/models.py:13
+msgid "Refunded"
+msgstr "Rambursat"
+
+#: payments/models.py:16
+msgid "Stripe"
+msgstr "Stripe"
+
+#: templates/account/account_inactive.html:3
+#: templates/account/account_inactive.html:9
+msgid "Account Inactive"
+msgstr "Cont"
+
+#: templates/account/account_inactive.html:11
+msgid "This account is inactive."
+msgstr ""
+
+#: templates/account/account_inactive.html:14
+#: templates/account/verified_email_required.html:24
+msgid "Back to home"
+msgstr ""
+
+#: templates/account/confirm_email_verification_code.html:4
+msgid "Email Verification"
+msgstr ""
+
+#: templates/account/confirm_email_verification_code.html:10
+msgid "Enter Email Verification Code"
+msgstr ""
+
+#: templates/account/confirm_email_verification_code.html:13
+#, python-format
+msgid ""
+"We've sent a code to <a href=\"mailto:%(email)s\">%(email)s</a>. The code "
+"expires shortly, so please enter it soon."
+msgstr ""
+
+#: templates/account/confirm_email_verification_code.html:18
+#: templates/account/confirm_email_verification_code.html:58
+#: templates/account/email.html:48 templates/partials/auth_form.html:3
+msgid "This field is required."
+msgstr "Este necesar acces de administrator."
+
+#: templates/account/confirm_email_verification_code.html:31
+#: templates/account/email_confirm.html:20
+#: templates/account/reauthenticate.html:16
+msgid "Confirm"
+msgstr ""
+
+#: templates/account/confirm_email_verification_code.html:33
+msgid "Request new code"
+msgstr ""
+
+#: templates/account/confirm_email_verification_code.html:36
+#: templates/account/confirm_email_verification_code.html:38
+#: templates/account/logout.html:19
+#: templates/account/password_reset_from_key.html:22
+msgid "Cancel"
+msgstr "Anulat"
+
+#: templates/account/confirm_email_verification_code.html:56
+msgid "Use a different email address"
+msgstr ""
+
+#: templates/account/confirm_email_verification_code.html:67
+msgid "Change"
+msgstr ""
+
+#: templates/account/email.html:3 templates/account/email.html:5
+msgid "Email Addresses"
+msgstr ""
+
+#: templates/account/email.html:8
+msgid "The following email addresses are associated with your account:"
+msgstr ""
+
+#: templates/account/email.html:20
+msgid "Verified"
+msgstr ""
+
+#: templates/account/email.html:22
+msgid "Unverified"
+msgstr ""
+
+#: templates/account/email.html:25
+msgid "Primary"
+msgstr ""
+
+#: templates/account/email.html:33
+msgid "Make Primary"
+msgstr ""
+
+#: templates/account/email.html:34
+msgid "Re-send Verification"
+msgstr ""
+
+#: templates/account/email.html:35 templates/offers/merchant_form.html:53
+msgid "Remove"
+msgstr "Elimină"
+
+#: templates/account/email.html:40
+msgid ""
+"You currently do not have any email address set up. You should really add an"
+" email address so you can receive notifications, reset your password, etc."
+msgstr ""
+
+#: templates/account/email.html:46
+msgid "Add Email Address"
+msgstr ""
+
+#: templates/account/email.html:56
+msgid "Add Email"
+msgstr ""
+
+#: templates/account/email.html:64
+msgid "Do you really want to remove the selected email address?"
+msgstr ""
+
+#: templates/account/email_confirm.html:3
+#: templates/account/email_confirm.html:9
+msgid "Confirm Email Address"
+msgstr ""
+
+#: templates/account/email_confirm.html:15
+#, python-format
+msgid ""
+"Please confirm that <a href=\"mailto:%(email)s\">%(email)s</a> is an email "
+"address for user %(user_display)s."
+msgstr ""
+
+#: templates/account/email_confirm.html:24
+#, python-format
+msgid ""
+"Unable to confirm %(email)s because it is already confirmed by a different "
+"account."
+msgstr ""
+
+#: templates/account/email_confirm.html:26
+#: templates/account/email_confirm.html:33
+#: templates/account/password_reset.html:16
+#: templates/account/password_reset_done.html:16
+#: templates/account/verification_sent.html:19
+msgid "Back to sign in"
+msgstr ""
+
+#: templates/account/email_confirm.html:31
+#, python-format
+msgid ""
+"This email confirmation link expired or is invalid. Please <a "
+"href=\"%(email_url)s\" class=\"auth-link\">issue a new email confirmation "
+"request</a>."
+msgstr ""
+
+#: templates/account/login.html:4 templates/partials/footer.html:21
+#: templates/partials/header_actions.html:32
+msgid "Login"
+msgstr "Autentificare"
+
+#: templates/account/login.html:5
+msgid "Welcome back"
+msgstr ""
+
+#: templates/account/login.html:8
+#, python-format
+msgid "New to Experio? <a href=\"%(signup_url)s\">Create an account</a>"
+msgstr ""
+
+#: templates/account/login.html:12
+msgid "Sign In"
+msgstr "Înregistrare"
+
+#: templates/account/login.html:16
+msgid "Forgot password?"
+msgstr ""
+
+#: templates/account/logout.html:3 templates/account/logout.html:9
+#: templates/account/logout.html:18
+msgid "Sign Out"
+msgstr "Înregistrare"
+
+#: templates/account/logout.html:11
+msgid "Are you sure you want to sign out?"
+msgstr ""
+
+#: templates/account/password_change.html:4
+#: templates/account/password_change.html:6
+#: templates/account/password_change.html:8
+#: templates/account/password_reset_from_key.html:3
+#: templates/account/password_reset_from_key.html:5
+#: templates/account/password_reset_from_key.html:15
+#: templates/account/password_reset_from_key_done.html:3
+msgid "Change Password"
+msgstr ""
+
+#: templates/account/password_change.html:12
+msgid "Forgot Password?"
+msgstr ""
+
+#: templates/account/password_reset.html:4
+#: templates/account/password_reset.html:5
+#: templates/account/password_reset_done.html:3
+msgid "Password Reset"
+msgstr ""
+
+#: templates/account/password_reset.html:8
+msgid ""
+"Enter your email address and we'll send you a link to reset your password."
+msgstr ""
+
+#: templates/account/password_reset.html:12
+msgid "Reset My Password"
+msgstr ""
+
+#: templates/account/password_reset_done.html:9
+msgid "Check your email"
+msgstr ""
+
+#: templates/account/password_reset_done.html:12
+msgid ""
+"We have sent you an email. If you have not received it please check your "
+"spam folder. Otherwise contact us if you do not receive it in a few minutes."
+msgstr ""
+
+#: templates/account/password_reset_from_key.html:5
+msgid "Bad Token"
+msgstr ""
+
+#: templates/account/password_reset_from_key.html:11
+#, python-format
+msgid ""
+"The password reset link was invalid, possibly because it has already been "
+"used. Please request a <a href=\"%(passwd_reset_url)s\" class=\"auth-"
+"link\">new password reset</a>."
+msgstr ""
+
+#: templates/account/password_reset_from_key.html:13
+msgid "Request new reset link"
+msgstr ""
+
+#: templates/account/password_reset_from_key_done.html:9
+msgid "Password changed"
+msgstr ""
+
+#: templates/account/password_reset_from_key_done.html:11
+msgid "Your password is now changed."
+msgstr ""
+
+#: templates/account/password_reset_from_key_done.html:14
+#: templates/account/signup_closed.html:14
+msgid "Sign in"
+msgstr "Înregistrare"
+
+#: templates/account/password_set.html:4 templates/account/password_set.html:5
+#: templates/account/password_set.html:10
+msgid "Set Password"
+msgstr ""
+
+#: templates/account/password_set.html:7
+msgid "You currently have no password set."
+msgstr ""
+
+#: templates/account/reauthenticate.html:4
+#: templates/account/reauthenticate.html:10
+msgid "Confirm Access"
+msgstr ""
+
+#: templates/account/reauthenticate.html:12
+msgid "Please reauthenticate to safeguard your account."
+msgstr ""
+
+#: templates/account/reauthenticate.html:15
+msgid "Enter your password:"
+msgstr ""
+
+#: templates/account/reauthenticate.html:18
+msgid "Alternative options"
+msgstr ""
+
+#: templates/account/signup.html:4 templates/account/signup.html:12
+#: templates/partials/header_actions.html:33
+msgid "Sign Up"
+msgstr "Înregistrare"
+
+#: templates/account/signup.html:5
+msgid "Create your account"
+msgstr "Creați prima ofertă"
+
+#: templates/account/signup.html:8
+#, python-format
+msgid "Already have an account? <a href=\"%(login_url)s\">Sign in</a>"
+msgstr ""
+
+#: templates/account/signup_closed.html:3
+#: templates/account/signup_closed.html:9
+msgid "Sign Up Closed"
+msgstr "Înregistrare"
+
+#: templates/account/signup_closed.html:11
+msgid "We are sorry, but the sign up is currently closed."
+msgstr ""
+
+#: templates/account/verification_sent.html:3
+#: templates/account/verification_sent.html:9
+#: templates/account/verified_email_required.html:3
+#: templates/account/verified_email_required.html:10
+msgid "Verify Your Email Address"
+msgstr ""
+
+#: templates/account/verification_sent.html:12
+msgid ""
+"We have sent an email to you for verification. Follow the link provided to "
+"finalize the signup process."
+msgstr ""
+
+#: templates/account/verification_sent.html:17
+msgid ""
+"If you do not see the verification email in your main inbox, check your spam"
+" folder. Please contact us if you do not receive the verification email "
+"within a few minutes."
+msgstr ""
+
+#: templates/account/verified_email_required.html:13
+msgid ""
+"This part of the site requires us to verify that you are who you claim to "
+"be."
+msgstr ""
+
+#: templates/account/verified_email_required.html:18
+msgid ""
+"We have sent an email to you for verification. Please click on the link "
+"inside that email. If you do not see the verification email in your main "
+"inbox, check your spam folder."
+msgstr ""
+
+#: templates/account/verified_email_required.html:22
+#, python-format
+msgid ""
+"<strong>Note:</strong> you can still <a href=\"%(email_url)s\" class=\"auth-"
+"link\">change your email address</a>."
+msgstr ""
+
+#: templates/accounts/profile.html:3 templates/dashboard/customer.html:9
+#: templates/partials/header_actions.html:14
+msgid "Profile"
+msgstr "Profil"
+
+#: templates/accounts/profile.html:6
+msgid "My Profile"
+msgstr "Profilul meu"
+
+#: templates/base.html:7
+msgid "Local Experiences Marketplace"
+msgstr "Piața experiențelor locale"
+
+#: templates/base_landing.html:7
+msgid "Partner Network"
+msgstr "Rețea de parteneri"
+
+#: templates/core/home.html:3
+msgid "Home"
+msgstr "Acasă"
+
+#: templates/core/home.html:15 templates/core/home.html:67
+msgid "Slide"
+msgstr ""
+
+#: templates/core/home.html:26 templates/offers/list.html:76
+msgid "Previous"
+msgstr "Anterior"
+
+#: templates/core/home.html:30 templates/offers/list.html:80
+msgid "Next"
+msgstr "Următor"
+
+#: templates/core/home.html:46 templates/offers/merchant_list.html:34
+msgid "No offers yet."
+msgstr "Încă nu aveți oferte."
+
+#: templates/core/home.html:47
+msgid "Run: python manage.py seed_sample_offers"
+msgstr ""
+
+#: templates/core/home.html:55
+msgid "View all offers"
+msgstr "Vezi toate ofertele"
+
+#: templates/core/home.html:61
+msgid "Restaurant"
+msgstr "Restaurant"
+
+#: templates/core/home.html:61
+msgid "Spa"
+msgstr "Spa"
+
+#: templates/core/home.html:61
+msgid "Beauty"
+msgstr "Frumusețe"
+
+#: templates/core/home.html:62
+msgid "Travel"
+msgstr "Călătorii"
+
+#: templates/core/home.html:62
+msgid "Adventure"
+msgstr "Aventură"
+
+#: templates/core/home.html:62
+msgid "Family"
+msgstr "Familie"
+
+#: templates/core/home.html:62
+msgid "Courses"
+msgstr "Cursuri"
+
+#: templates/core/home.html:63
+msgid "Events"
+msgstr "Evenimente"
+
+#: templates/core/home.html:63 templates/partials/navbar.html:45
+msgid "Gift Cards"
+msgstr "Carduri cadou"
+
+#: templates/core/home.html:64 templates/partials/header_search.html:4
+msgid "Search, e.g. wellness, spa..."
+msgstr "Caută experiențe..."
+
+#: templates/core/home.html:65 templates/partials/header_actions.html:30
+msgid "Need help?"
+msgstr ""
+
+#: templates/core/home.html:65 templates/partials/navbar.html:31
+msgid "Categories"
+msgstr "Top categorii"
+
+#: templates/core/home.html:65 templates/partials/deals_toolbar.html:8
+msgid "All locations"
+msgstr "Acțiuni"
+
+#: templates/core/home.html:66 templates/partials/deals_toolbar.html:15
+msgid "Recommended"
+msgstr "Rambursat"
+
+#: templates/core/home.html:66 templates/partials/deals_toolbar.html:19
+msgid "Cheapest"
+msgstr ""
+
+#: templates/core/home.html:66 templates/partials/deals_toolbar.html:21
+msgid "Best discount"
+msgstr "Cea mai mare reducere"
+
+#: templates/core/landing.html:3 templates/core/landing.html:9
+msgid "Join Experio's Founding Partner Network"
+msgstr "Alătură-te rețelei de parteneri fondatori Experio"
+
+#: templates/core/landing.html:11
+msgid ""
+"Get early access to a new marketplace that helps local businesses sell "
+"digital gift vouchers and attract new customers."
+msgstr ""
+"Obține acces timpuriu la o nouă piață care ajută afacerile locale să vândă "
+"vouchere cadou digitale și să atragă clienți noi."
+
+#: templates/core/landing.html:13 templates/merchants/register.html:6
+msgid "Register Your Business"
+msgstr "Înregistrează-ți afacerea"
+
+#: templates/core/landing.html:22
+msgid "Simple process"
+msgstr "Proces simplu"
+
+#: templates/core/landing.html:23 templates/partials/landing_navbar.html:8
+msgid "How it works"
+msgstr "Cum funcționează"
+
+#: templates/core/landing.html:32 templates/partials/footer.html:22
+#: templates/partials/landing_navbar.html:10
+msgid "Register"
+msgstr "Înregistrare"
+
+#: templates/core/landing.html:33
+msgid "Tell us about your business."
+msgstr "Spune-ne despre afacerea ta."
+
+#: templates/core/landing.html:42
+msgid "Get Contacted"
+msgstr "Fii contactat"
+
+#: templates/core/landing.html:43
+msgid "We'll discuss how Experio can help you attract new customers."
+msgstr "Vom discuta cum te poate ajuta Experio să atragi clienți noi."
+
+#: templates/core/landing.html:52
+msgid "Launch Together"
+msgstr "Lansare împreună"
+
+#: templates/core/landing.html:53
+msgid "Create your first voucher offers when the platform launches."
+msgstr "Creează primele tale oferte de vouchere când platforma se lansează."
+
+#: templates/core/landing.html:61
+msgid "Founding partners"
+msgstr "Parteneri fondatori"
+
+#: templates/core/landing.html:62
+msgid "Why become a founding partner?"
+msgstr "De ce să devii partener fondator?"
+
+#: templates/core/landing.html:68
+msgid "Free participation during the launch period"
+msgstr "Participare gratuită în perioada de lansare"
+
+#: templates/core/landing.html:72
+msgid "Early visibility on the platform"
+msgstr "Vizibilitate timpurie pe platformă"
+
+#: templates/core/landing.html:76
+msgid "Direct influence on platform features"
+msgstr "Influență directă asupra funcțiilor platformei"
+
+#: templates/core/landing.html:80
+msgid "Priority onboarding and support"
+msgstr "Onboarding și suport prioritar"
+
+#: templates/core/landing.html:84
+msgid ""
+"Reach new customers and generate additional sales through digital gift "
+"vouchers"
+msgstr ""
+"Ajunge la clienți noi și generează vânzări suplimentare prin vouchere cadou "
+"digitale"
+
+#: templates/core/landing.html:100
+msgid "You are already registered as a partner."
+msgstr "Ești deja înregistrat ca partener."
+
+#: templates/core/landing.html:101
+msgid "Go to merchant dashboard"
+msgstr "Mergi la panoul comerciantului"
+
+#: templates/core/landing.html:105 templates/core/landing.html:113
+msgid "Become a Founding Partner"
+msgstr "Devino partener fondator"
+
+#: templates/core/landing.html:106
+msgid "Tell us about your business — it only takes a few minutes."
+msgstr "Spune-ne despre afacerea ta — durează doar câteva minute."
+
+#: templates/core/landing.html:127
+msgid "FAQ"
+msgstr "Întrebări frecvente"
+
+#: templates/core/landing.html:130
+msgid "How much does it cost?"
+msgstr "Cât costă?"
+
+#: templates/core/landing.html:131
+msgid "Founding partners join free during the launch phase."
+msgstr "Partenerii fondatori se alătură gratuit în faza de lansare."
+
+#: templates/core/landing.html:134
+msgid "When will the platform launch?"
+msgstr "Când se va lansa platforma?"
+
+#: templates/core/landing.html:135
+msgid ""
+"We are currently onboarding businesses and will launch after building our "
+"initial partner network."
+msgstr ""
+"În prezent înregistrăm afaceri și vom lansa după construirea rețelei "
+"inițiale de parteneri."
+
+#: templates/core/landing.html:138
+msgid "Am I committing to anything?"
+msgstr "Mă oblig la ceva?"
+
+#: templates/core/landing.html:139
+msgid ""
+"No. Registering simply lets us contact you and discuss partnership "
+"opportunities."
+msgstr ""
+"Nu. Înregistrarea ne permite doar să te contactăm și să discutăm "
+"oportunități de parteneriat."
+
+#: templates/dashboard/admin.html:3 templates/partials/header_actions.html:22
+msgid "Admin Dashboard"
+msgstr "Panou administrator"
+
+#: templates/dashboard/admin.html:12
+msgid "Revenue (RON)"
+msgstr "Venituri (RON)"
+
+#: templates/dashboard/admin.html:19
+msgid "Admin Analytics"
+msgstr "Analiză administrator"
+
+#: templates/dashboard/admin.html:21
+msgid "Total Revenue"
+msgstr "Venit total"
+
+#: templates/dashboard/admin.html:22
+msgid "Commission Revenue"
+msgstr "Venit din comision"
+
+#: templates/dashboard/admin.html:23
+msgid "Sold Vouchers"
+msgstr "Vouchere vândute"
+
+#: templates/dashboard/admin.html:24
+msgid "Active Merchants"
+msgstr "Comercianți activi"
+
+#: templates/dashboard/admin.html:25 templates/dashboard/merchant.html:14
+msgid "Active Offers"
+msgstr "Oferte active"
+
+#: templates/dashboard/admin.html:29
+msgid "Sales by Month"
+msgstr "Vânzări pe lună"
+
+#: templates/dashboard/admin.html:33
+msgid "Top Merchants"
+msgstr "Top comercianți"
+
+#: templates/dashboard/admin.html:40 templates/dashboard/admin.html:51
+msgid "No data"
+msgstr "Fără date"
+
+#: templates/dashboard/admin.html:44
+msgid "Top Categories"
+msgstr "Top categorii"
+
+#: templates/dashboard/admin.html:49
+#, python-format
+msgid "%(count)s sales"
+msgstr "%(count)s vânzări"
+
+#: templates/dashboard/admin.html:57
+msgid "Recent Transactions"
+msgstr "Tranzacții recente"
+
+#: templates/dashboard/admin.html:60 templates/dashboard/customer.html:44
+#: templates/dashboard/merchant.html:28
+msgid "Date"
+msgstr "Dată"
+
+#: templates/dashboard/admin.html:60 templates/dashboard/merchant.html:28
+#: templates/merchants/sales.html:9
+msgid "Customer"
+msgstr "Client"
+
+#: templates/dashboard/admin.html:60 templates/dashboard/customer.html:16
+#: templates/dashboard/customer.html:44 templates/dashboard/merchant.html:28
+#: templates/merchants/sales.html:9 vouchers/services.py:78
+msgid "Offer"
+msgstr "Ofertă"
+
+#: templates/dashboard/admin.html:60 templates/dashboard/customer.html:44
+msgid "Amount"
+msgstr "Sumă"
+
+#: templates/dashboard/customer.html:3 templates/dashboard/customer.html:6
+#: templates/payments/success.html:16
+msgid "My Account"
+msgstr "Contul meu"
+
+#: templates/dashboard/customer.html:8
+msgid "Purchased Vouchers"
+msgstr "Vouchere cumpărate"
+
+#: templates/dashboard/customer.html:15 templates/dashboard/merchant.html:28
+#: templates/merchants/sales.html:9
+msgid "Code"
+msgstr "Cod"
+
+#: templates/dashboard/customer.html:17 templates/offers/detail.html:48
+#: vouchers/services.py:77
+msgid "Merchant"
+msgstr "Comerciant"
+
+#: templates/dashboard/customer.html:18 templates/dashboard/customer.html:44
+#: templates/dashboard/merchant.html:28 templates/merchants/pending.html:9
+#: templates/merchants/sales.html:9 templates/offers/merchant_list.html:14
+#: vouchers/services.py:82
+msgid "Status"
+msgstr "Status"
+
+#: templates/dashboard/customer.html:19
+msgid "Expires"
+msgstr "Expiră"
+
+#: templates/dashboard/customer.html:20 templates/offers/merchant_list.html:14
+msgid "Actions"
+msgstr "Acțiuni"
+
+#: templates/dashboard/customer.html:32
+#: templates/emails/voucher_purchased.html:13
+msgid "Download PDF"
+msgstr "Descarcă PDF"
+
+#: templates/dashboard/customer.html:36
+msgid "No vouchers yet."
+msgstr "Încă nu aveți vouchere."
+
+#: templates/dashboard/customer.html:36
+msgid "Browse offers"
+msgstr "Răsfoiește ofertele"
+
+#: templates/dashboard/customer.html:41
+msgid "Order History"
+msgstr "Istoric comenzi"
+
+#: templates/dashboard/customer.html:54
+msgid "No orders yet."
+msgstr "Încă nu aveți comenzi."
+
+#: templates/dashboard/merchant.html:3 templates/dashboard/merchant.html:7
+#: templates/partials/header_actions.html:17
+msgid "Merchant Dashboard"
+msgstr "Panou comerciant"
+
+#: templates/dashboard/merchant.html:9
+msgid "New Offer"
+msgstr "Ofertă nouă"
+
+#: templates/dashboard/merchant.html:10 templates/merchants/redeem.html:3
+#: templates/merchants/redeem.html:6
+msgid "Redeem Voucher"
+msgstr "Valorifică voucher"
+
+#: templates/dashboard/merchant.html:15
+msgid "Total Sales"
+msgstr "Vânzări totale"
+
+#: templates/dashboard/merchant.html:16
+msgid "Revenue"
+msgstr "Venituri"
+
+#: templates/dashboard/merchant.html:17 templates/merchants/sales.html:9
+#: vouchers/models.py:11
+msgid "Redeemed"
+msgstr "Valorificat"
+
+#: templates/dashboard/merchant.html:20
+msgid "Overview"
+msgstr "Prezentare generală"
+
+#: templates/dashboard/merchant.html:21 templates/offers/list.html:3
+msgid "Offers"
+msgstr "Oferte"
+
+#: templates/dashboard/merchant.html:22 templates/merchants/sales.html:3
+#: templates/merchants/sales.html:6
+msgid "Sales"
+msgstr "Vânzări"
+
+#: templates/dashboard/merchant.html:23
+msgid "Redemption"
+msgstr "Valorificare"
+
+#: templates/dashboard/merchant.html:25
+msgid "Recent Sales"
+msgstr "Vânzări recente"
+
+#: templates/dashboard/merchant.html:39
+msgid "No sales yet."
+msgstr "Încă nu există vânzări."
+
+#: templates/emails/merchant_approved.html:4
+msgid "You're approved!"
+msgstr "Ați fost aprobat!"
+
+#: templates/emails/merchant_approved.html:5
+#, python-format
+msgid ""
+"Your merchant account for <strong>%(name)s</strong> has been approved. You "
+"can now create offers."
+msgstr ""
+"Contul dvs. de comerciant pentru <strong>%(name)s</strong> a fost aprobat. "
+"Acum puteți crea oferte."
+
+#: templates/emails/merchant_approved.html:6
+msgid "Create your first offer"
+msgstr "Creați prima ofertă"
+
+#: templates/emails/merchant_registration.html:4
+msgid "Registration received"
+msgstr "Înregistrare primită"
+
+#: templates/emails/merchant_registration.html:5
+#, python-format
+msgid ""
+"We received your merchant application for <strong>%(name)s</strong>. Our "
+"team will review it shortly."
+msgstr ""
+"Am primit cererea dvs. de comerciant pentru <strong>%(name)s</strong>. "
+"Echipa noastră o va analiza în curând."
+
+#: templates/emails/offer_approved.html:4
+msgid "Offer approved"
+msgstr "Ofertă aprobată"
+
+#: templates/emails/offer_approved.html:5
+#, python-format
+msgid "Your offer <strong>%(title)s</strong> is now live on Experio."
+msgstr "Oferta dvs. <strong>%(title)s</strong> este acum activă pe Experio."
+
+#: templates/emails/offer_approved.html:6
+msgid "View offer"
+msgstr "Vezi oferta"
+
+#: templates/emails/partner_application.html:4
+msgid "New founding partner application"
+msgstr "Cerere nouă de partener fondator"
+
+#: templates/emails/partner_application.html:6
+#: templates/partials/founding_partner_form.html:7
+msgid "Business Information"
+msgstr "Informații despre afacere"
+
+#: templates/emails/partner_application.html:14
+#: templates/partials/founding_partner_form.html:33
+msgid "Contact Information"
+msgstr "Informații de contact"
+
+#: templates/emails/partner_application.html:19
+#: templates/partials/founding_partner_form.html:54
+msgid "About Your Business"
+msgstr "Despre afacerea ta"
+
+#: templates/emails/partner_application.html:24
+#: templates/partials/founding_partner_form.html:78
+msgid "Voucher Ideas"
+msgstr "Idei de vouchere"
+
+#: templates/emails/partner_application.html:33
+msgid "None selected"
+msgstr "Nimic selectat"
+
+#: templates/emails/payment_failed.html:4
+msgid "Payment failed"
+msgstr "Plată eșuată"
+
+#: templates/emails/payment_failed.html:5
+#, python-format
+msgid "Your payment for %(title)s could not be processed. Please try again."
+msgstr ""
+"Plata pentru %(title)s nu a putut fi procesată. Vă rugăm să încercați din "
+"nou."
+
+#: templates/emails/payment_failed.html:6
+msgid "Return to offer"
+msgstr "Înapoi la ofertă"
+
+#: templates/emails/voucher_purchased.html:4
+msgid "Your voucher is ready!"
+msgstr "Voucherul dvs. este gata!"
+
+#: templates/emails/voucher_purchased.html:5
+#: templates/emails/welcome_customer.html:5
+#, python-format
+msgid "Hi %(name)s,"
+msgstr "Bună, %(name)s,"
+
+#: templates/emails/voucher_purchased.html:6
+msgid "Thank you for your purchase. Your voucher details:"
+msgstr "Vă mulțumim pentru achiziție. Detaliile voucherului:"
+
+#: templates/emails/voucher_purchased.html:8
+msgid "Code:"
+msgstr "Cod:"
+
+#: templates/emails/voucher_purchased.html:9
+msgid "Offer:"
+msgstr "Ofertă:"
+
+#: templates/emails/voucher_purchased.html:10
+msgid "Merchant:"
+msgstr "Comerciant:"
+
+#: templates/emails/voucher_purchased.html:11
+msgid "Valid until:"
+msgstr "Valabil până la:"
+
+#: templates/emails/voucher_redeemed.html:4
+msgid "Voucher redeemed"
+msgstr "Voucher valorificat"
+
+#: templates/emails/voucher_redeemed.html:5
+#, python-format
+msgid ""
+"Your voucher <strong>%(code)s</strong> for %(title)s was redeemed at "
+"%(date)s."
+msgstr ""
+"Voucherul dvs. <strong>%(code)s</strong> pentru %(title)s a fost valorificat"
+" la %(date)s."
+
+#: templates/emails/welcome_customer.html:6
+msgid "Start exploring local experiences and save with exclusive vouchers."
+msgstr ""
+"Începeți să explorați experiențe locale și economisiți cu vouchere "
+"exclusive."
+
+#: templates/emails/welcome_customer.html:7
+#: templates/partials/auth_brand_panel.html:11
+msgid "Browse Offers"
+msgstr "Răsfoiește ofertele"
+
+#: templates/merchants/pending.html:3
+msgid "Pending Approval"
+msgstr "În așteptarea aprobării"
+
+#: templates/merchants/pending.html:7
+msgid "Awaiting Approval"
+msgstr "Se așteaptă aprobarea"
+
+#: templates/merchants/pending.html:8
+#, python-format
+msgid "Your business <strong>%(name)s</strong> is pending review."
+msgstr "Afacerea dvs. <strong>%(name)s</strong> este în curs de analiză."
+
+#: templates/merchants/redeem.html:11 vouchers/services.py:79
+msgid "Voucher Code"
+msgstr "Cod voucher"
+
+#: templates/merchants/redeem.html:14
+msgid "Redeem"
+msgstr "Valorifică"
+
+#: templates/merchants/redeem.html:16
+msgid "Scan QR codes with any camera app and paste the code above."
+msgstr ""
+"Scanați codurile QR cu orice aplicație de cameră și lipiți codul de mai sus."
+
+#: templates/merchants/redeem.html:20
+msgid "Success!"
+msgstr "Succes!"
+
+#: templates/merchants/redeem.html:20
+#, python-format
+msgid "Voucher %(code)s for %(title)s has been redeemed."
+msgstr "Voucherul %(code)s pentru %(title)s a fost valorificat."
+
+#: templates/merchants/register.html:7
+msgid "Complete your profile. An admin will review and approve your account."
+msgstr ""
+"Completați profilul. Un administrator va analiza și aproba contul dvs."
+
+#: templates/merchants/sales.html:9 templates/offers/merchant_list.html:14
+msgid "Price"
+msgstr "Preț"
+
+#: templates/merchants/sales.html:9
+msgid "Purchased"
+msgstr "Cumpărat"
+
+#: templates/offers/detail.html:7
+msgid "Preview mode — offer not published."
+msgstr "Mod previzualizare — oferta nu este publicată."
+
+#: templates/offers/detail.html:41
+msgid "Buy Voucher"
+msgstr "Cumpără voucher"
+
+#: templates/offers/detail.html:44
+msgid "Login to Buy"
+msgstr "Autentificare pentru cumpărare"
+
+#: templates/offers/detail.html:61 vouchers/services.py:101
+msgid "Terms & Conditions"
+msgstr "Termeni și condiții"
+
+#: templates/offers/detail.html:69
+msgid "Related Offers"
+msgstr "Oferte similare"
+
+#: templates/offers/list.html:8
+#, python-format
+msgid "Results for \"%(query)s\""
+msgstr "Rezultate pentru „%(query)s”"
+
+#: templates/offers/list.html:16 templates/offers/list.html:20
+msgid "Filters"
+msgstr "Filtre"
+
+#: templates/offers/list.html:24
+msgid "Category"
+msgstr "Categorie"
+
+#: templates/offers/list.html:26 templates/partials/navbar.html:39
+msgid "All"
+msgstr "Toate"
+
+#: templates/offers/list.html:38
+msgid "Min Price"
+msgstr "Preț minim"
+
+#: templates/offers/list.html:42
+msgid "Max Price"
+msgstr "Preț maxim"
+
+#: templates/offers/list.html:47
+msgid "Sort"
+msgstr "Sortare"
+
+#: templates/offers/list.html:49 templates/partials/deals_toolbar.html:17
+msgid "Newest"
+msgstr "Cele mai noi"
+
+#: templates/offers/list.html:50
+msgid "Highest Discount"
+msgstr "Cea mai mare reducere"
+
+#: templates/offers/list.html:51
+msgid "Price Low-High"
+msgstr "Preț crescător"
+
+#: templates/offers/list.html:52
+msgid "Price High-Low"
+msgstr "Preț descrescător"
+
+#: templates/offers/list.html:56
+msgid "Apply"
+msgstr "Aplică"
+
+#: templates/offers/list.html:68
+msgid "No offers found."
+msgstr "Nu s-au găsit oferte."
+
+#: templates/offers/list.html:73
+msgid "Pagination"
+msgstr "Paginare"
+
+#: templates/offers/list.html:78
+#, python-format
+msgid "Page %(number)s of %(total)s"
+msgstr "Pagina %(number)s din %(total)s"
+
+#: templates/offers/merchant_form.html:25
+msgid "Images"
+msgstr "Imagini"
+
+#: templates/offers/merchant_form.html:26
+#, python-format
+msgid ""
+"Upload up to %(total)s slots (%(initial)s existing). Sort order 0 = featured"
+" image."
+msgstr ""
+"Încărcați până la %(total)s sloturi (%(initial)s existente). Ordinea 0 = "
+"imagine principală."
+
+#: templates/offers/merchant_form.html:60
+msgid "No image slots available. Refresh the page and try again."
+msgstr ""
+"Nu sunt sloturi de imagine disponibile. Reîmprospătați pagina și încercați "
+"din nou."
+
+#: templates/offers/merchant_form.html:63
+msgid "Save Offer"
+msgstr "Salvează oferta"
+
+#: templates/offers/merchant_list.html:3 templates/offers/merchant_list.html:7
+msgid "My Offers"
+msgstr "Ofertele mele"
+
+#: templates/offers/merchant_list.html:14
+msgid "Title"
+msgstr "Titlu"
+
+#: templates/offers/merchant_list.html:14
+msgid "Qty"
+msgstr "Cant."
+
+#: templates/offers/merchant_list.html:24
+msgid "Edit"
+msgstr "Editează"
+
+#: templates/offers/merchant_list.html:25
+msgid "Preview"
+msgstr "Previzualizare"
+
+#: templates/offers/merchant_list.html:26
+msgid "Delete?"
+msgstr "Șterge?"
+
+#: templates/offers/merchant_list.html:28
+msgid "Delete"
+msgstr "Șterge"
+
+#: templates/partials/auth_brand_panel.html:6
+msgid "Discover Local Experiences"
+msgstr "Descoperă experiențe locale"
+
+#: templates/partials/auth_brand_panel.html:7
+msgid "Buy discounted vouchers from the best businesses near you."
+msgstr ""
+"Cumpără vouchere cu reducere de la cele mai bune afaceri din apropiere."
+
+#: templates/partials/auth_brand_panel.html:15
+msgid "Top Discounts"
+msgstr "Cele mai mari reduceri"
+
+#: templates/partials/auth_brand_panel.html:19
+#: templates/partials/footer.html:15
+msgid "Partner With Us"
+msgstr "Colaborează cu noi"
+
+#: templates/partials/auth_form.html:5
+#, python-brace-format
+msgid "Please use at least {min} characters."
+msgstr ""
+
+#: templates/partials/auth_form.html:6
+msgid "Passwords do not match."
+msgstr ""
+
+#: templates/partials/brand_logo.html:4
+msgid "Experio logo"
+msgstr "Logo Experio"
+
+#: templates/partials/footer.html:9
+msgid ""
+"Discover and purchase local experiences and vouchers from trusted merchants."
+msgstr ""
+"Descoperiți și cumpărați experiențe locale și vouchere de la comercianți de "
+"încredere."
+
+#: templates/partials/footer.html:12
+msgid "Explore"
+msgstr "Explorează"
+
+#: templates/partials/footer.html:14
+msgid "All Offers"
+msgstr "Toate ofertele"
+
+#: templates/partials/footer.html:19 templates/partials/header_actions.html:10
+#: templates/partials/landing_navbar.html:13
+msgid "Account"
+msgstr "Cont"
+
+#: templates/partials/footer.html:27 templates/partials/landing_footer.html:18
+msgid "All rights reserved."
+msgstr "Toate drepturile rezervate."
+
+#: templates/partials/header_actions.html:13
+#: templates/payments/success.html:12
+msgid "My Vouchers"
+msgstr "Voucherele mele"
+
+#: templates/partials/header_actions.html:19
+msgid "Become a Merchant"
+msgstr "Devino comerciant"
+
+#: templates/partials/header_actions.html:25
+msgid "Logout"
+msgstr "Deconectare"
+
+#: templates/partials/header_search.html:5
+msgid "Search"
+msgstr ""
+
+#: templates/partials/landing_footer.html:9
+msgid ""
+"Connecting local businesses with customers through experience vouchers."
+msgstr "Conectăm afacerile locale cu clienții prin vouchere de experiențe."
+
+#: templates/partials/landing_footer.html:13
+msgid "Partner registration"
+msgstr "Înregistrare partener"
+
+#: templates/partials/landing_navbar.html:7
+msgid "Main navigation"
+msgstr "Navigare principală"
+
+#: templates/partials/landing_navbar.html:9
+msgid "Why join early"
+msgstr "De ce să te alături devreme"
+
+#: templates/partials/landing_navbar.html:15
+msgid "Join now"
+msgstr "Alătură-te acum"
+
+#: templates/partials/language_switcher.html:3
+msgid "Language"
+msgstr "Limbă"
+
+#: templates/partials/navbar.html:17
+msgid "Menu"
+msgstr ""
+
+#: templates/partials/navbar.html:35
+msgid "Scroll categories left"
+msgstr "Top categorii"
+
+#: templates/partials/navbar.html:49
+msgid "Scroll categories right"
+msgstr ""
+
+#: templates/partials/offer_card.html:23
+msgid "View Offer"
+msgstr "Vezi oferta"
+
+#: templates/payments/success.html:3
+msgid "Payment Successful"
+msgstr "Plată reușită"
+
+#: templates/payments/success.html:7
+msgid "Payment Successful!"
+msgstr "Plată reușită!"
+
+#: templates/payments/success.html:9
+#, python-format
+msgid "Your voucher <code>%(code)s</code> is ready."
+msgstr "Voucherul dvs. <code>%(code)s</code> este gata."
+
+#: templates/payments/success.html:11
+msgid "Download PDF Voucher"
+msgstr "Descarcă voucher PDF"
+
+#: templates/payments/success.html:15
+msgid ""
+"Your payment is being processed. Check your email and dashboard shortly."
+msgstr ""
+"Plata dvs. este în curs de procesare. Verificați e-mailul și panoul în "
+"curând."
+
+#: vouchers/models.py:10
+msgid "Active"
+msgstr "Activ"
+
+#: vouchers/models.py:13
+msgid "Cancelled"
+msgstr "Anulat"
+
+#: vouchers/services.py:71
+msgid "Experio Voucher"
+msgstr "Voucher Experio"
+
+#: vouchers/services.py:80
+msgid "Purchase Price"
+msgstr "Preț de achiziție"
+
+#: vouchers/services.py:81
+msgid "Valid Until"
+msgstr "Valabil până la"
+
+#: vouchers/services.py:117
+msgid "Voucher not found."
+msgstr "Voucherul nu a fost găsit."
+
+#: vouchers/services.py:120
+msgid "This voucher belongs to another merchant."
+msgstr "Acest voucher aparține altui comerciant."
+
+#: vouchers/services.py:123
+#, python-format
+msgid "Voucher is %(status)s."
+msgstr "Voucherul este %(status)s."
+
+#: vouchers/services.py:128
+msgid "Voucher has expired."
+msgstr "Voucherul a expirat."
+
+#~ msgid "Access to promotional campaigns"
+#~ msgstr "Acces la campanii promoționale"
+
+#~ msgid "Partner program"
+#~ msgstr "Program de parteneriat"
+
+#~ msgid ""
+#~ "Experio helps local businesses reach new customers with digital vouchers for"
+#~ " experiences, wellness, dining, and more. Register today and be ready when "
+#~ "we launch."
+#~ msgstr ""
+#~ "Experio ajută afacerile locale să ajungă la clienți noi prin vouchere "
+#~ "digitale pentru experiențe, wellness, restaurante și multe altele. "
+#~ "Înregistrează-te astăzi și fii pregătit pentru lansare."
+
+#~ msgid "Register your business"
+#~ msgstr "Înregistrează-ți afacerea"
+
+#~ msgid "See how it works"
+#~ msgstr "Vezi cum funcționează"
+
+#~ msgid "Local businesses"
+#~ msgstr "Afaceri locale"
+
+#~ msgid "Restaurants, spas, activities & more"
+#~ msgstr "Restaurante, spa-uri, activități și multe altele"
+
+#~ msgid "Digital vouchers"
+#~ msgstr "Vouchere digitale"
+
+#~ msgid "Sell offers customers can buy online"
+#~ msgstr "Vinde oferte pe care clienții le pot cumpăra online"
+
+#~ msgid "Grow your reach"
+#~ msgstr "Extinde-ți aria de acoperire"
+
+#~ msgid "Get discovered by new customers"
+#~ msgstr "Fii descoperit de clienți noi"
+
+#~ msgid "A simple path from registration to your first sale."
+#~ msgstr "Un parcurs simplu de la înregistrare la prima vânzare."
+
+#~ msgid "Apply to join"
+#~ msgstr "Aplică pentru înscriere"
+
+#~ msgid "Submit your business details through the registration form below."
+#~ msgstr ""
+#~ "Trimite detaliile afacerii tale prin formularul de înregistrare de mai jos."
+
+#~ msgid "Get approved"
+#~ msgstr "Obține aprobarea"
+
+#~ msgid ""
+#~ "Our team reviews your profile to keep the network trusted and high quality."
+#~ msgstr ""
+#~ "Echipa noastră îți analizează profilul pentru a menține rețeaua de încredere"
+#~ " și de calitate."
+
+#~ msgid "Create offers"
+#~ msgstr "Creează oferte"
+
+#~ msgid ""
+#~ "Publish vouchers for your services with pricing, photos, and descriptions."
+#~ msgstr ""
+#~ "Publică vouchere pentru serviciile tale cu prețuri, fotografii și descrieri."
+
+#~ msgid "Redeem & earn"
+#~ msgstr "Valorifică și câștigă"
+
+#~ msgid ""
+#~ "Customers purchase online; you redeem vouchers and track sales in your "
+#~ "dashboard."
+#~ msgstr ""
+#~ "Clienții cumpără online; tu valorifici voucherele și urmărești vânzările în "
+#~ "panoul tău."
+
+#~ msgid "Benefits"
+#~ msgstr "Beneficii"
+
+#~ msgid "Why businesses choose Experio as their voucher partner."
+#~ msgstr "De ce aleg afacerile Experio ca partener de vouchere."
+
+#~ msgid "Reach new customers"
+#~ msgstr "Ajunge la clienți noi"
+
+#~ msgid ""
+#~ "Get in front of people actively looking for local experiences and deals."
+#~ msgstr ""
+#~ "Apari în fața persoanelor care caută activ experiențe locale și oferte."
+
+#~ msgid "No upfront listing fees"
+#~ msgstr "Fără taxe inițiale de listare"
+
+#~ msgid ""
+#~ "Join the network without paying to be listed. You earn when customers buy."
+#~ msgstr ""
+#~ "Alătură-te rețelei fără să plătești pentru listare. Câștigi când clienții "
+#~ "cumpără."
+
+#~ msgid "Merchant dashboard"
+#~ msgstr "Panou comerciant"
+
+#~ msgid ""
+#~ "Manage offers, track sales, and redeem vouchers from one simple dashboard."
+#~ msgstr ""
+#~ "Gestionează ofertele, urmărește vânzările și valorifică voucherele dintr-un "
+#~ "singur panou simplu."
+
+#~ msgid "Secure payments"
+#~ msgstr "Plăți securizate"
+
+#~ msgid ""
+#~ "Customers pay online; payouts are handled reliably through our platform."
+#~ msgstr ""
+#~ "Clienții plătesc online; plățile sunt gestionate în mod fiabil prin "
+#~ "platforma noastră."
+
+#~ msgid "Multi-language support"
+#~ msgstr "Suport multilingv"
+
+#~ msgid "Reach customers in English, Hungarian, and Romanian from day one."
+#~ msgstr "Ajunge la clienți în engleză, maghiară și română din prima zi."
+
+#~ msgid "Dedicated onboarding"
+#~ msgstr "Onboarding dedicat"
+
+#~ msgid ""
+#~ "We help you set up your profile and first offers so you can start selling "
+#~ "quickly."
+#~ msgstr ""
+#~ "Te ajutăm să îți configurezi profilul și primele oferte ca să poți începe "
+#~ "rapid să vinzi."
+
+#~ msgid "Launch Partner Benefits"
+#~ msgstr "Beneficii partener de lansare"
+
+#~ msgid "No setup costs"
+#~ msgstr "Fără costuri de configurare"
+
+#~ msgid "Additional exposure through our platform"
+#~ msgstr "Vizibilitate suplimentară prin platforma noastră"
+
+#~ msgid "Digital vouchers with QR code redemption"
+#~ msgstr "Vouchere digitale cu valorificare prin cod QR"
+
+#~ msgid "Easy management dashboard"
+#~ msgstr "Panou de administrare ușor de folosit"
+
+#~ msgid "Submit application"
+#~ msgstr "Trimite cererea"
+
+#~ msgid "Thank you! We received your application and will be in touch soon."
+#~ msgstr "Mulțumim! Am primit cererea ta și te vom contacta în curând."
+
+#~ msgid "Merchant registration"
+#~ msgstr "Înregistrare comerciant"
+
+#~ msgid "Tell us about your business to join the Experio partner network."
+#~ msgstr ""
+#~ "Spune-ne despre afacerea ta pentru a te alătura rețelei de parteneri "
+#~ "Experio."
+
+#~ msgid ""
+#~ "Complete your business profile. An admin will review and approve your "
+#~ "account."
+#~ msgstr ""
+#~ "Completați profilul. Un administrator va analiza și aproba contul dvs."
+
+#~ msgid "Not signed in yet?"
+#~ msgstr "Nu ești autentificat încă?"
+
+#~ msgid "Create an account"
+#~ msgstr "Creează un cont"
+
+#~ msgid ""
+#~ "to register with your full business profile, or submit a quick application "
+#~ "below."
+#~ msgstr ""
+#~ "pentru a înregistra profilul complet al afacerii, sau trimite o cerere "
+#~ "rapidă mai jos."
+
+#~ msgid "Already have an account?"
+#~ msgstr "Ai deja un cont?"
+
+#~ msgid "Log in"
+#~ msgstr "Autentifică-te"
+
+#~ msgid "to complete the full registration form."
+#~ msgstr "pentru a completa formularul complet de înregistrare."
+
+#~ msgid "Business"
+#~ msgstr "Afacere"
+
+#~ msgid "Featured Offers"
+#~ msgstr "Oferte recomandate"
+
+#~ msgid "Hand-picked deals from local merchants"
+#~ msgstr "Oferte alese de la comercianți locali"
+
+#~ msgid "View all"
+#~ msgstr "Vezi toate"
+
+#~ msgid "No featured offers yet."
+#~ msgstr "Încă nu există oferte recomandate."
+
+#~ msgid "Popular Categories"
+#~ msgstr "Categorii populare"
+
+#~ msgid "Find experiences by interest"
+#~ msgstr "Găsește experiențe după interes"
+
+#~ msgid "Newest Offers"
+#~ msgstr "Cele mai noi oferte"
+
+#~ msgid "Recently added to the marketplace"
+#~ msgstr "Adăugate recent pe platformă"
+
+#~ msgid "Best savings right now"
+#~ msgstr "Cele mai bune economii acum"
+
+#~ msgid "Platform performance at a glance"
+#~ msgstr "Performanța platformei dintr-o privire"
+
+#~ msgid "Your vouchers and order history"
+#~ msgstr "Voucherele și istoricul comenzilor"
+
+#~ msgid "All vouchers sold through your offers"
+#~ msgstr "Toate voucherele vândute prin ofertele dvs."
+
+#, python-format
+#~ msgid "Save %(savings)s RON · %(discount)s%% off"
+#~ msgstr "Economisiți %(savings)s RON · %(discount)s%% reducere"
+
+#, python-format
+#~ msgid "Valid until %(date)s"
+#~ msgstr "Valabil până la %(date)s"
+
+#~ msgid "Browse Experiences"
+#~ msgstr "Răsfoiește experiențe"
+
+#~ msgid "Find and book local experiences near you"
+#~ msgstr "Găsiți și rezervați experiențe locale din apropiere"
+
+#~ msgid "Django Admin"
+#~ msgstr "Admin Django"

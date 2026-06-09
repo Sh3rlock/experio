@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% load i18n static %}
+{% block content %}
+<section class="auth-page page-shell">
+    <div class="container-app auth-page-inner auth-page-inner--split">
+        <div class="auth-split-card">
+            {% include 'partials/auth_brand_panel.html' %}
+            <div class="auth-split-body">
+                <div class="auth-form-card-header">
+                    <h1 class="auth-form-title">{% block auth_title %}{% endblock %}</h1>
+                    {% block auth_subtitle %}{% endblock %}
+                </div>
+                <div class="auth-form-card-body">
+                    {% block auth_content %}{% endblock %}
+                </div>
+                {% block auth_footer %}{% endblock %}
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
+{% block extra_js %}
+{% block auth_extra_js %}{% endblock %}
+{% endblock %}

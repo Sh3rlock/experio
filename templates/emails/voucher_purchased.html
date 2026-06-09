@@ -1,0 +1,14 @@
+{% extends 'emails/base_email.html' %}
+{% load i18n %}
+{% block content %}
+<h2>{% trans "Your voucher is ready!" %}</h2>
+<p>{% blocktrans with name=voucher.customer.first_name|default:voucher.customer.email %}Hi {{ name }},{% endblocktrans %}</p>
+<p>{% trans "Thank you for your purchase. Your voucher details:" %}</p>
+<ul>
+    <li><strong>{% trans "Code:" %}</strong> {{ voucher.voucher_code }}</li>
+    <li><strong>{% trans "Offer:" %}</strong> {{ voucher.offer.title }}</li>
+    <li><strong>{% trans "Merchant:" %}</strong> {{ voucher.offer.merchant.business_name }}</li>
+    <li><strong>{% trans "Valid until:" %}</strong> {{ voucher.expires_at|date:"d M Y" }}</li>
+</ul>
+<p><a href="{{ site_url }}/vouchers/{{ voucher.pk }}/download/" style="background:#4f46e5;color:#fff;padding:12px 24px;text-decoration:none;border-radius:6px;">{% trans "Download PDF" %}</a></p>
+{% endblock %}

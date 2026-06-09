@@ -1,0 +1,28 @@
+{% load i18n %}
+<div class="col-12 col-sm-6 col-md-4 col-lg-4 col-xl-3">
+    <a href="{% url 'offers:detail' offer.slug %}" class="deal-grid-card">
+        <div class="card-image-wrap">
+            {% with img=offer.featured_image %}
+            {% if img %}
+            <img src="{{ img.image.url }}" class="card-image" alt="{{ offer.title }}">
+            {% else %}
+            <div class="card-image bg-secondary d-flex align-items-center justify-content-center">
+                <i class="bi bi-image text-white fs-1"></i>
+            </div>
+            {% endif %}
+            {% endwith %}
+            <span class="discount-flag">-{{ offer.discount_percentage }}%</span>
+        </div>
+        <div class="card-body">
+            <h3 class="card-title">{{ offer.title|truncatechars:55 }}</h3>
+            <p class="card-location mb-0">
+                <i class="bi bi-geo-alt"></i> {{ offer.merchant.city }}
+                {% if offer.display_rating %} · {{ offer.display_rating }}/5{% endif %}
+            </p>
+            <div class="card-prices mt-2">
+                <span class="price-sale">{{ offer.sale_price|floatformat:0 }} RON</span>
+                <span class="price-old">{{ offer.original_price|floatformat:0 }} RON</span>
+            </div>
+        </div>
+    </a>
+</div>

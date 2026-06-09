@@ -1,0 +1,22 @@
+{% load i18n static %}
+<div class="auth-brand-panel">
+    <a href="{% url 'core:home' %}" class="auth-brand-link">
+        {% include 'partials/brand_logo.html' with logo_class='brand-logo-img--auth-panel' %}
+    </a>
+    <p class="auth-brand-tagline">{% trans "Discover Local Experiences" %}</p>
+    <p class="auth-brand-text">{% trans "Buy discounted vouchers from the best businesses near you." %}</p>
+    <ul class="auth-brand-features list-unstyled mb-0">
+        <li>
+            <i class="bi bi-ticket-perforated" aria-hidden="true"></i>
+            {% trans "Browse Offers" %}
+        </li>
+        <li>
+            <i class="bi bi-percent" aria-hidden="true"></i>
+            {% trans "Top Discounts" %}
+        </li>
+        <li>
+            <i class="bi bi-shop" aria-hidden="true"></i>
+            {% trans "Partner With Us" %}
+        </li>
+    </ul>
+</div>

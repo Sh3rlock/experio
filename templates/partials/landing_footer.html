@@ -1,0 +1,20 @@
+{% load i18n static %}
+<footer class="footer-deals landing-footer">
+    <div class="container-app">
+        <div class="row g-4 align-items-center">
+            <div class="col-md-6">
+                <a href="{% url 'core:landing' %}" class="footer-brand-link d-inline-block mb-2">
+                    {% include 'partials/brand_logo.html' with logo_class='brand-logo-img--footer' %}
+                </a>
+                <p class="mb-0">{% trans "Connecting local businesses with customers through experience vouchers." %}</p>
+            </div>
+            <div class="col-md-6 text-md-end">
+                <ul class="list-unstyled mb-0 landing-footer-links">
+                    <li><a href="#register">{% trans "Partner registration" %}</a></li>
+                </ul>
+            </div>
+        </div>
+        <hr class="border-secondary my-4">
+        <p class="text-center mb-0 small">&copy; {% now "Y" %} Experio. {% trans "All rights reserved." %}</p>
+    </div>
+</footer>

@@ -1,0 +1,22 @@
+{% extends 'account/base_auth.html' %}
+{% load i18n %}
+{% block title %}{% trans "Sign Out" %}{% endblock %}
+{% block auth_icon %}
+<div class="auth-status-icon auth-status-icon--warning">
+    <i class="bi bi-box-arrow-right" aria-hidden="true"></i>
+</div>
+{% endblock %}
+{% block auth_title %}{% trans "Sign Out" %}{% endblock %}
+{% block auth_subtitle %}
+<p class="auth-form-subtitle">{% trans "Are you sure you want to sign out?" %}</p>
+{% endblock %}
+{% block auth_content %}
+<form method="post" action="{% url 'account_logout' %}" class="auth-form">
+    {% csrf_token %}
+    {{ redirect_field }}
+    <div class="auth-action-stack">
+        <button type="submit" class="btn btn-primary btn-lg w-100">{% trans "Sign Out" %}</button>
+        <a href="{% url 'core:home' %}" class="btn btn-outline-secondary btn-lg w-100">{% trans "Cancel" %}</a>
+    </div>
+</form>
+{% endblock %}

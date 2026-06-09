@@ -1,0 +1,60 @@
+{% extends 'base.html' %}
+{% load i18n %}
+{% block title %}{% trans "My Account" %}{% endblock %}
+{% block content %}
+<div class="container-app py-4 page-shell">
+    <h1 class="mb-4">{% trans "My Account" %}</h1>
+    <ul class="nav nav-tabs nav-tabs-scroll mb-4">
+        <li class="nav-item"><a class="nav-link active" href="#">{% trans "Purchased Vouchers" %}</a></li>
+        <li class="nav-item"><a class="nav-link" href="{% url 'accounts:profile' %}">{% trans "Profile" %}</a></li>
+    </ul>
+    <div class="table-responsive table-responsive-cards bg-white border rounded mb-4">
+        <table class="table table-hover mb-0">
+            <thead>
+                <tr>
+                    <th>{% trans "Code" %}</th>
+                    <th>{% trans "Offer" %}</th>
+                    <th>{% trans "Merchant" %}</th>
+                    <th>{% trans "Status" %}</th>
+                    <th>{% trans "Expires" %}</th>
+                    <th>{% trans "Actions" %}</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for v in vouchers %}
+                <tr>
+                    <td><code class="text-break">{{ v.voucher_code }}</code></td>
+                    <td>{{ v.offer.title }}</td>
+                    <td>{{ v.offer.merchant.business_name }}</td>
+                    <td><span class="badge bg-{% if v.status == 'active' %}success{% elif v.status == 'redeemed' %}secondary{% else %}warning{% endif %}">{{ v.get_status_display }}</span></td>
+                    <td class="text-nowrap">{{ v.expires_at|date:"d M Y" }}</td>
+                    <td>
+                        <a href="{% url 'vouchers:download' v.pk %}" class="btn btn-sm btn-outline-primary">{% trans "Download PDF" %}</a>
+                    </td>
+                </tr>
+                {% empty %}
+                <tr><td colspan="6" class="text-muted">{% trans "No vouchers yet." %} <a href="{% url 'offers:list' %}">{% trans "Browse offers" %}</a></td></tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+    <h3 class="h5 mt-4">{% trans "Order History" %}</h3>
+    <div class="table-responsive table-responsive-cards bg-white border rounded">
+        <table class="table mb-0">
+            <thead><tr><th>{% trans "Date" %}</th><th>{% trans "Offer" %}</th><th>{% trans "Amount" %}</th><th>{% trans "Status" %}</th></tr></thead>
+            <tbody>
+                {% for p in payments %}
+                <tr>
+                    <td class="text-nowrap">{{ p.created_at|date:"d M Y H:i" }}</td>
+                    <td>{{ p.offer.title }}</td>
+                    <td class="text-nowrap">{{ p.amount }} {{ p.currency }}</td>
+                    <td>{{ p.get_status_display }}</td>
+                </tr>
+                {% empty %}
+                <tr><td colspan="4" class="text-muted">{% trans "No orders yet." %}</td></tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>
+{% endblock %}

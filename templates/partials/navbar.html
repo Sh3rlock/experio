@@ -1,0 +1,55 @@
+{% load i18n static %}
+<header class="site-header sticky-top">
+    <div class="header-top">
+        <div class="container-app header-top-inner">
+            <div class="header-bar">
+                <div class="header-bar-leading">
+                    <a href="{% url 'core:home' %}" class="brand-link">
+                        {% include 'partials/brand_logo.html' with logo_class='brand-logo-img--header' %}
+                    </a>
+                    <div class="header-lang-bar d-lg-none">
+                        {% include 'partials/language_switcher.html' %}
+                    </div>
+                </div>
+                <button class="header-menu-btn d-lg-none ms-auto" type="button"
+                        data-bs-toggle="collapse" data-bs-target="#headerCollapse"
+                        aria-controls="headerCollapse" aria-expanded="false"
+                        aria-label="{% trans 'Menu' %}">
+                    <i class="bi bi-list fs-4" aria-hidden="true"></i>
+                </button>
+                <div class="header-desktop-strip d-none d-lg-flex">
+                    {% include 'partials/header_search.html' with search_class='header-search--desktop' %}
+                    {% include 'partials/header_actions.html' %}
+                </div>
+            </div>
+            {% include 'partials/header_search.html' with search_class='header-search--mobile d-lg-none' %}
+            <div class="collapse header-collapse d-lg-none" id="headerCollapse">
+                {% include 'partials/header_actions.html' %}
+            </div>
+        </div>
+    </div>
+    <nav class="nav-categories" aria-label="{% trans 'Categories' %}">
+        <div class="container-app nav-categories-inner">
+            <div class="nav-scroll-wrap" data-nav-scroll-wrap>
+                <button type="button" class="nav-scroll-btn nav-scroll-btn--prev" data-nav-scroll-prev hidden
+                        aria-label="{% trans 'Scroll categories left' %}">
+                    <i class="bi bi-chevron-left" aria-hidden="true"></i>
+                </button>
+                <div class="nav-scroll" data-nav-scroll tabindex="0">
+                    <a href="{% url 'offers:list' %}" class="nav-link{% if not request.GET.category %} active{% endif %}">{% trans "All" %}</a>
+                    {% for cat in nav_categories %}
+                    <a href="{% url 'offers:list' %}?category={{ cat.slug }}"
+                       class="nav-link{% if request.GET.category == cat.slug %} active{% endif %}">{% trans cat.name %}</a>
+                    {% endfor %}
+                    <a href="{% url 'offers:list' %}?category=gift-cards" class="nav-link nav-link-gift">
+                        <i class="bi bi-gift"></i> {% trans "Gift Cards" %}
+                    </a>
+                </div>
+                <button type="button" class="nav-scroll-btn nav-scroll-btn--next" data-nav-scroll-next hidden
+                        aria-label="{% trans 'Scroll categories right' %}">
+                    <i class="bi bi-chevron-right" aria-hidden="true"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+</header>

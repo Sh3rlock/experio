@@ -1,0 +1,35 @@
+{% load i18n %}
+<div class="header-actions">
+    <div class="header-lang-menu d-none d-lg-flex">
+        {% include 'partials/language_switcher.html' %}
+    </div>
+    {% if user.is_authenticated %}
+    <div class="dropdown">
+        <a href="#" class="header-help dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+            <i class="bi bi-person-circle fs-5"></i>
+            <span class="d-none d-sm-inline">{% trans "Account" %}</span>
+        </a>
+        <ul class="dropdown-menu dropdown-menu-end">
+            <li><a class="dropdown-item" href="{% url 'dashboard:customer' %}">{% trans "My Vouchers" %}</a></li>
+            <li><a class="dropdown-item" href="{% url 'accounts:profile' %}">{% trans "Profile" %}</a></li>
+            {% if user.is_merchant %}
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="{% url 'dashboard:merchant' %}">{% trans "Merchant Dashboard" %}</a></li>
+            {% else %}
+            <li><a class="dropdown-item" href="{% url 'merchants:register' %}">{% trans "Become a Merchant" %}</a></li>
+            {% endif %}
+            {% if user.is_staff %}
+            <li><a class="dropdown-item" href="{% url 'dashboard:admin' %}">{% trans "Admin Dashboard" %}</a></li>
+            {% endif %}
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="{% url 'account_logout' %}">{% trans "Logout" %}</a></li>
+        </ul>
+    </div>
+    {% else %}
+    <a href="{% url 'account_login' %}" class="header-help d-none d-sm-flex">
+        <i class="bi bi-chat-dots"></i> {% trans "Need help?" %}
+    </a>
+    <a href="{% url 'account_login' %}" class="btn btn-sm btn-outline-secondary">{% trans "Login" %}</a>
+    <a href="{% url 'account_signup' %}" class="btn btn-sm btn-primary d-none d-sm-inline-block">{% trans "Sign Up" %}</a>
+    {% endif %}
+</div>

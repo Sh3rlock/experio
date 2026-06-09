@@ -1,0 +1,22 @@
+{% load i18n %}
+<form method="post" action="{{ form_action }}" class="auth-form" novalidate
+      data-msg-required="{% trans 'This field is required.' %}"
+      data-msg-email="{% trans 'Please enter a valid email address.' %}"
+      data-msg-minlength="{% trans 'Please use at least {min} characters.' %}"
+      data-msg-password-match="{% trans 'Passwords do not match.' %}">
+    {% csrf_token %}
+    {% if form.non_field_errors %}
+    <div class="alert alert-danger auth-form-alert" role="alert">
+        {% for error in form.non_field_errors %}{{ error }}{% endfor %}
+    </div>
+    {% endif %}
+    <div class="auth-form-fields">
+        {% for field in form.visible_fields %}
+        {% include 'partials/auth_form_field.html' with field=field %}
+        {% endfor %}
+    </div>
+    <button type="submit" class="btn btn-primary btn-lg w-100 auth-form-submit"{% if submit_name %} name="{{ submit_name }}"{% endif %}{% if submit_value %} value="{{ submit_value }}"{% endif %}>
+        {{ submit_label }}
+    </button>
+    {{ redirect_field }}
+</form>

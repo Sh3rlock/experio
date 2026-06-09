@@ -1,0 +1,21 @@
+{% extends 'account/base_auth_split.html' %}
+{% load i18n static %}
+{% url 'account_login' as login_action %}
+{% block title %}{% trans "Login" %}{% endblock %}
+{% block auth_title %}{% trans "Welcome back" %}{% endblock %}
+{% block auth_subtitle %}
+<p class="auth-form-subtitle">
+    {% blocktrans %}New to Experio? <a href="{{ signup_url }}">Create an account</a>{% endblocktrans %}
+</p>
+{% endblock %}
+{% block auth_content %}
+{% include 'partials/auth_form.html' with form=form form_action=login_action submit_label=_('Sign In') %}
+{% endblock %}
+{% block auth_footer %}
+<p class="auth-form-footer text-center mb-0">
+    <a href="{% url 'account_reset_password' %}" class="auth-link">{% trans "Forgot password?" %}</a>
+</p>
+{% endblock %}
+{% block auth_extra_js %}
+<script src="{% static 'js/auth-forms.js' %}" defer></script>
+{% endblock %}

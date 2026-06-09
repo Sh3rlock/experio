@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+{% load i18n %}
+{% block title %}{% trans "Merchant Dashboard" %}{% endblock %}
+{% block content %}
+<div class="container-app py-4 page-shell">
+    <div class="page-toolbar">
+        <h1>{% trans "Merchant Dashboard" %}</h1>
+        <div class="page-toolbar-actions">
+            <a href="{% url 'offers:merchant_create' %}" class="btn btn-primary">{% trans "New Offer" %}</a>
+            <a href="{% url 'merchants:redeem' %}" class="btn btn-outline-primary">{% trans "Redeem Voucher" %}</a>
+        </div>
+    </div>
+    <div class="row g-3 g-md-4 mb-4">
+        <div class="col-6 col-md-3"><div class="card stat-card p-3"><div class="text-muted small">{% trans "Active Offers" %}</div><div class="fs-3 fw-bold">{{ active_offers }}</div></div></div>
+        <div class="col-6 col-md-3"><div class="card stat-card p-3"><div class="text-muted small">{% trans "Total Sales" %}</div><div class="fs-3 fw-bold">{{ total_sales }}</div></div></div>
+        <div class="col-6 col-md-3"><div class="card stat-card p-3"><div class="text-muted small">{% trans "Revenue" %}</div><div class="fs-3 fw-bold">{{ revenue }} RON</div></div></div>
+        <div class="col-6 col-md-3"><div class="card stat-card p-3"><div class="text-muted small">{% trans "Redeemed" %}</div><div class="fs-3 fw-bold">{{ redeemed }}</div></div></div>
+    </div>
+    <ul class="nav nav-tabs nav-tabs-scroll mb-3">
+        <li class="nav-item"><a class="nav-link active" href="{% url 'dashboard:merchant' %}">{% trans "Overview" %}</a></li>
+        <li class="nav-item"><a class="nav-link" href="{% url 'offers:merchant_list' %}">{% trans "Offers" %}</a></li>
+        <li class="nav-item"><a class="nav-link" href="{% url 'merchants:sales' %}">{% trans "Sales" %}</a></li>
+        <li class="nav-item"><a class="nav-link" href="{% url 'merchants:redeem' %}">{% trans "Redemption" %}</a></li>
+    </ul>
+    <h4 class="h5 mb-3">{% trans "Recent Sales" %}</h4>
+    <div class="table-responsive table-responsive-cards bg-white border rounded">
+        <table class="table mb-0">
+            <thead><tr><th>{% trans "Code" %}</th><th>{% trans "Offer" %}</th><th>{% trans "Customer" %}</th><th>{% trans "Status" %}</th><th>{% trans "Date" %}</th></tr></thead>
+            <tbody>
+                {% for v in recent_sales %}
+                <tr>
+                    <td><code class="text-break">{{ v.voucher_code }}</code></td>
+                    <td>{{ v.offer.title }}</td>
+                    <td class="text-break">{{ v.customer.email }}</td>
+                    <td>{{ v.get_status_display }}</td>
+                    <td class="text-nowrap">{{ v.purchased_at|date:"d M Y" }}</td>
+                </tr>
+                {% empty %}
+                <tr><td colspan="5" class="text-muted">{% trans "No sales yet." %}</td></tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>
+{% endblock %}

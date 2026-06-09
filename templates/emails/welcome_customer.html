@@ -1,0 +1,8 @@
+{% extends 'emails/base_email.html' %}
+{% load i18n %}
+{% block content %}
+<h2>{% trans "Welcome to Experio!" %}</h2>
+<p>{% blocktrans with name=user.first_name|default:user.email %}Hi {{ name }},{% endblocktrans %}</p>
+<p>{% trans "Start exploring local experiences and save with exclusive vouchers." %}</p>
+<p><a href="{{ site_url }}/offers/">{% trans "Browse Offers" %}</a></p>
+{% endblock %}

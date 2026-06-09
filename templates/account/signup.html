@@ -1,0 +1,16 @@
+{% extends 'account/base_auth_split.html' %}
+{% load i18n static %}
+{% url 'account_signup' as signup_action %}
+{% block title %}{% trans "Sign Up" %}{% endblock %}
+{% block auth_title %}{% trans "Create your account" %}{% endblock %}
+{% block auth_subtitle %}
+<p class="auth-form-subtitle">
+    {% blocktrans %}Already have an account? <a href="{{ login_url }}">Sign in</a>{% endblocktrans %}
+</p>
+{% endblock %}
+{% block auth_content %}
+{% include 'partials/auth_form.html' with form=form form_action=signup_action submit_label=_('Sign Up') %}
+{% endblock %}
+{% block auth_extra_js %}
+<script src="{% static 'js/auth-forms.js' %}" defer></script>
+{% endblock %}
