@@ -41,7 +41,7 @@ Set these in Railway → your service → **Variables**:
 | `ALLOWED_HOSTS` | `your-app.up.railway.app,.railway.app` |
 | `CSRF_TRUSTED_ORIGINS` | `https://your-app.up.railway.app` |
 | `SITE_URL` | `https://your-app.up.railway.app` |
-| `SECURE_SSL_REDIRECT` | `True` |
+| `SECURE_SSL_REDIRECT` | `False` (Railway handles HTTPS at the edge) |
 | `EMAIL_BACKEND` | `django.core.mail.backends.smtp.EmailBackend` |
 | `EMAIL_HOST` | Your SMTP host |
 | `EMAIL_PORT` | `587` |

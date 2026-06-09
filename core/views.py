@@ -1,6 +1,7 @@
 from django.conf import settings
 from django.contrib import messages
 from django.contrib.auth import get_user_model
+from django.http import HttpResponse
 from django.shortcuts import redirect, render
 from django.utils.translation import gettext as _
 from django.views.decorators.http import require_POST
@@ -14,6 +15,10 @@ from offers.selectors import (
     get_popular_categories,
     get_top_discounts,
 )
+
+
+def health(request):
+    return HttpResponse('ok', content_type='text/plain')
 
 
 @require_POST

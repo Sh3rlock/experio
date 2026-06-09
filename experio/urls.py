@@ -3,9 +3,10 @@ from django.conf.urls.static import static
 from django.contrib import admin
 from django.urls import include, path
 
-from core.views import set_language
+from core.views import health, set_language
 
 urlpatterns = [
+    path('health/', health, name='health'),
     path('i18n/setlang/', set_language, name='set_language'),
     path('admin/', admin.site.urls),
     path('accounts/', include('allauth.urls')),

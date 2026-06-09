@@ -15,11 +15,13 @@ DEBUG = config('DEBUG', default=True, cast=bool)
 ALLOWED_HOSTS = list(config('ALLOWED_HOSTS', default='localhost,127.0.0.1', cast=Csv()))
 CSRF_TRUSTED_ORIGINS = list(config('CSRF_TRUSTED_ORIGINS', default='', cast=Csv()))
 
-# Railway health checks use Host: healthcheck.railway.app; public domain is in RAILWAY_PUBLIC_DOMAIN.
-if os.environ.get('RAILWAY_ENVIRONMENT'):
+# Railway health checks use Host: healthcheck.railway.app (always allow in production).
+if not DEBUG:
     for host in ('healthcheck.railway.app', '.railway.app'):
         if host not in ALLOWED_HOSTS:
             ALLOWED_HOSTS.append(host)
+
+if os.environ.get('RAILWAY_ENVIRONMENT'):
     railway_domain = os.environ.get('RAILWAY_PUBLIC_DOMAIN')
     if railway_domain:
         if railway_domain not in ALLOWED_HOSTS:
@@ -226,6 +228,8 @@ LOGGING = {
 
 if not DEBUG:
     SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
-    SECURE_SSL_REDIRECT = config('SECURE_SSL_REDIRECT', default=True, cast=bool)
+    # Railway terminates TLS at the edge; internal health checks use plain HTTP.
+    _ssl_redirect_default = 'False' if os.environ.get('RAILWAY_ENVIRONMENT') else 'True'
+    SECURE_SSL_REDIRECT = config('SECURE_SSL_REDIRECT', default=_ssl_redirect_default, cast=bool)
     SESSION_COOKIE_SECURE = True
     CSRF_COOKIE_SECURE = True

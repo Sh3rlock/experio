@@ -9,6 +9,7 @@ class LandingPageModeMiddleware:
     """When landing mode is on, only the landing page and essential paths are reachable."""
 
     ALLOWED_PREFIXES = (
+        '/health/',
         '/i18n/setlang/',
         '/static/',
         '/media/',
