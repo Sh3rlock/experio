@@ -54,15 +54,18 @@ Set these in Railway → your service → **Variables**:
 
 After Railway assigns a domain, update `ALLOWED_HOSTS`, `CSRF_TRUSTED_ORIGINS`, and `SITE_URL` to match.
 
-## 4. Post-deploy setup
+## 4. Admin login (auto-created on deploy)
 
-Open Railway **Shell** for the web service:
+`entrypoint.sh` runs `ensure_superuser` after migrations. Defaults:
 
-```bash
-python manage.py createsuperuser
-```
+| Field | Default |
+|-------|---------|
+| Email | `matyas@experio.local` |
+| Password | `QweAsd789` |
 
-Partner applications are emailed to the first superuser (or `DEFAULT_FROM_EMAIL` if none exists).
+Override with `DJANGO_SUPERUSER_USERNAME`, `DJANGO_SUPERUSER_EMAIL`, and `DJANGO_SUPERUSER_PASSWORD`. Set `CREATE_DEFAULT_SUPERUSER=False` to disable.
+
+Log in at `/admin/` after the first deploy. Partner applications are emailed to the first superuser (or `DEFAULT_FROM_EMAIL` if none exists).
 
 ## 5. Smoke test
 
@@ -71,7 +74,7 @@ Partner applications are emailed to the first superuser (or `DEFAULT_FROM_EMAIL`
 - [ ] Founding partner form submits
 - [ ] Email notification received
 - [ ] `/offers/` redirects to `/`
-- [ ] `/admin/` works after `createsuperuser`
+- [ ] `/admin/` works with the default superuser
 
 ## Custom domain
 

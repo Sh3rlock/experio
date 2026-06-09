@@ -12,8 +12,21 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 SECRET_KEY = config('SECRET_KEY', default='django-insecure-dev-key-change-in-production')
 DEBUG = config('DEBUG', default=True, cast=bool)
-ALLOWED_HOSTS = config('ALLOWED_HOSTS', default='localhost,127.0.0.1', cast=Csv())
-CSRF_TRUSTED_ORIGINS = config('CSRF_TRUSTED_ORIGINS', default='', cast=Csv())
+ALLOWED_HOSTS = list(config('ALLOWED_HOSTS', default='localhost,127.0.0.1', cast=Csv()))
+CSRF_TRUSTED_ORIGINS = list(config('CSRF_TRUSTED_ORIGINS', default='', cast=Csv()))
+
+# Railway health checks use Host: healthcheck.railway.app; public domain is in RAILWAY_PUBLIC_DOMAIN.
+if os.environ.get('RAILWAY_ENVIRONMENT'):
+    for host in ('healthcheck.railway.app', '.railway.app'):
+        if host not in ALLOWED_HOSTS:
+            ALLOWED_HOSTS.append(host)
+    railway_domain = os.environ.get('RAILWAY_PUBLIC_DOMAIN')
+    if railway_domain:
+        if railway_domain not in ALLOWED_HOSTS:
+            ALLOWED_HOSTS.append(railway_domain)
+        origin = f'https://{railway_domain}'
+        if origin not in CSRF_TRUSTED_ORIGINS:
+            CSRF_TRUSTED_ORIGINS.append(origin)
 
 INSTALLED_APPS = [
     'django.contrib.admin',
