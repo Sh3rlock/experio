@@ -3,19 +3,52 @@
 {% block title %}{% trans "Join Experio's Founding Partner Network" %}{% endblock %}
 {% block content %}
 
-<section class="landing-hero landing-hero--simple">
+<div class="landing-hero-stack">
+<section class="landing-hero landing-hero--simple landing-hero--overlapped">
     <div class="container-app">
         <div class="landing-hero-content">
             <h1 class="landing-hero-title">{% trans "Join Experio's Founding Partner Network" %}</h1>
             <p class="landing-hero-lead">
                 {% trans "Get early access to a new marketplace that helps local businesses sell digital gift vouchers and attract new customers." %}
             </p>
-            <a href="#register" class="btn btn-primary btn-lg">{% trans "Register Your Business" %}</a>
+            <!-- <a href="#register" class="btn btn-primary btn-lg">{% trans "Register Your Business" %}</a> -->
         </div>
     </div>
 </section>
 
-<section class="landing-pitch landing-section-gradient">
+<section id="register" class="landing-section landing-register landing-register--overlap">
+    <div class="container-app">
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <div class="landing-register-card">
+                    {% if has_merchant %}
+                    <div class="text-center py-4">
+                        <i class="bi bi-check-circle-fill text-success display-4" aria-hidden="true"></i>
+                        <p class="mt-3 mb-3">{% trans "You are already registered as a partner." %}</p>
+                        <a href="{% url 'dashboard:merchant' %}" class="btn btn-primary">{% trans "Go to merchant dashboard" %}</a>
+                    </div>
+                    {% else %}
+                    <div class="landing-section-header text-center mb-4">
+                        <!-- <h2>{% trans "Become a Founding Partner" %}</h2> -->
+                        <p>{% trans "Tell us about your business — it only takes a few minutes." %}</p>
+                    </div>
+
+                    <form method="post" action="#register" class="landing-partner-form" novalidate>
+                        {% csrf_token %}
+                        {% include 'partials/founding_partner_form.html' with form=application_form %}
+                        <button type="submit" name="submit_application" class="btn btn-primary btn-lg w-100 mt-4">
+                            {% trans "Send" %}
+                        </button>
+                    </form>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+</div>
+
+<!-- <section class="landing-pitch landing-section-gradient">
     <div class="container-app">
         <div id="how-it-works" class="landing-pitch-block">
             <div class="landing-block-header text-center">
@@ -87,38 +120,7 @@
             </div>
         </div>
     </div>
-</section>
-
-<section id="register" class="landing-section landing-register">
-    <div class="container-app">
-        <div class="row justify-content-center">
-            <div class="col-lg-8">
-                <div class="landing-register-card">
-                    {% if has_merchant %}
-                    <div class="text-center py-4">
-                        <i class="bi bi-check-circle-fill text-success display-4" aria-hidden="true"></i>
-                        <p class="mt-3 mb-3">{% trans "You are already registered as a partner." %}</p>
-                        <a href="{% url 'dashboard:merchant' %}" class="btn btn-primary">{% trans "Go to merchant dashboard" %}</a>
-                    </div>
-                    {% else %}
-                    <div class="landing-section-header text-center mb-4">
-                        <h2>{% trans "Become a Founding Partner" %}</h2>
-                        <p>{% trans "Tell us about your business — it only takes a few minutes." %}</p>
-                    </div>
-
-                    <form method="post" action="#register" class="landing-partner-form" novalidate>
-                        {% csrf_token %}
-                        {% include 'partials/founding_partner_form.html' with form=application_form %}
-                        <button type="submit" name="submit_application" class="btn btn-primary btn-lg w-100 mt-4">
-                            {% trans "Become a Founding Partner" %}
-                        </button>
-                    </form>
-                    {% endif %}
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
+</section> -->
 
 <section id="faq" class="landing-section landing-section-compact landing-faq">
     <div class="container-app">

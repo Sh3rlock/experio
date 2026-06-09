@@ -901,7 +901,11 @@ msgstr "Már regisztrált partnerként."
 msgid "Go to merchant dashboard"
 msgstr "Ugrás a kereskedői irányítópultra"
 
-#: templates/core/landing.html:105 templates/core/landing.html:113
+#: templates/core/landing.html:40
+msgid "Send"
+msgstr "Küldés"
+
+#: templates/core/landing.html:32
 msgid "Become a Founding Partner"
 msgstr "Legyen alapító partner"
 

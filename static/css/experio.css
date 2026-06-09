@@ -1862,13 +1862,27 @@ body.landing-app {
 }
 
 .landing-hero--simple .landing-hero-content {
-    max-width: 40rem;
+    max-width: 45rem;
     margin: 0 auto;
 }
 
 .landing-hero--simple .landing-hero-lead {
     margin-left: auto;
     margin-right: auto;
+}
+
+.landing-hero-stack {
+    position: relative;
+}
+
+.landing-hero--overlapped {
+    padding-bottom: 7rem;
+}
+
+.landing-register--overlap .landing-register-card {
+    box-shadow:
+        0 20px 50px rgba(15, 23, 42, 0.12),
+        0 8px 24px rgba(15, 23, 42, 0.06);
 }
 
 .landing-hero::before {
@@ -2227,6 +2241,13 @@ body.landing-app {
     padding-bottom: 2.5rem;
 }
 
+.landing-section.landing-register--overlap {
+    margin-top: -5.5rem;
+    padding-top: 0;
+    position: relative;
+    z-index: 2;
+}
+
 .landing-faq {
     padding-bottom: 3rem;
 }
@@ -2467,6 +2488,14 @@ textarea.landing-field {
 @media (max-width: 767.98px) {
     .landing-hero {
         padding: 2.5rem 0 3rem;
+    }
+
+    .landing-hero--overlapped {
+        padding-bottom: 5rem;
+    }
+
+    .landing-section.landing-register--overlap {
+        margin-top: -3.5rem;
     }
 
     .landing-section {

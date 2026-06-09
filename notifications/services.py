@@ -109,17 +109,23 @@ def send_payment_failed(payment):
     )
 
 
-def send_partner_application(application):
+def _partner_application_notify_email():
+    if settings.PARTNER_APPLICATION_NOTIFY_EMAIL:
+        return settings.PARTNER_APPLICATION_NOTIFY_EMAIL
+
     from django.contrib.auth import get_user_model
 
-    admin_email = (
+    return (
         get_user_model().objects.filter(is_superuser=True, is_active=True)
         .values_list('email', flat=True)
         .first()
     ) or settings.DEFAULT_FROM_EMAIL
+
+
+def send_partner_application(application):
     _send_email(
         _('New founding partner application: %(business)s') % {'business': application['business_name']},
         'partner_application.html',
         {'application': application, 'site_url': settings.SITE_URL},
-        admin_email,
+        _partner_application_notify_email(),
     )

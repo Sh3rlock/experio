@@ -49,6 +49,7 @@ Set these in Railway → your service → **Variables**:
 | `EMAIL_USER` | SMTP username |
 | `EMAIL_PASSWORD` | SMTP password |
 | `DEFAULT_FROM_EMAIL` | Verified sender |
+| `PARTNER_APPLICATION_NOTIFY_EMAIL` | `matyass91@gmail.com` (where form submissions are sent) |
 
 **Do not set** `DATABASE_URL` or `REDIS_URL` unless you add those services later.
 
@@ -65,7 +66,7 @@ After Railway assigns a domain, update `ALLOWED_HOSTS`, `CSRF_TRUSTED_ORIGINS`, 
 
 Override with `DJANGO_SUPERUSER_USERNAME`, `DJANGO_SUPERUSER_EMAIL`, and `DJANGO_SUPERUSER_PASSWORD`. Set `CREATE_DEFAULT_SUPERUSER=False` to disable.
 
-Log in at `/admin/` after the first deploy. Partner applications are emailed to the first superuser (or `DEFAULT_FROM_EMAIL` if none exists).
+Log in at `/admin/` after the first deploy. Partner applications are emailed to `PARTNER_APPLICATION_NOTIFY_EMAIL`, or the first superuser if that variable is unset.
 
 ## 5. Smoke test
 
