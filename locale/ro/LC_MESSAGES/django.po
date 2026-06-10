@@ -210,7 +210,11 @@ msgstr "Contul dvs. de comerciant așteaptă aprobarea."
 msgid "Admin access required."
 msgstr "Este necesar acces de administrator."
 
-#: core/views.py:42
+#: templates/core/landing_success.html:3 templates/core/landing_success.html:12
+msgid "Application Received"
+msgstr "Cerere primită"
+
+#: templates/core/landing_success.html:14
 msgid ""
 "Thank you for your interest! We will contact you within 2 business days to "
 "discuss how we can help your business reach new customers through digital "
@@ -381,7 +385,7 @@ msgstr ""
 #: templates/account/account_inactive.html:14
 #: templates/account/verified_email_required.html:24
 msgid "Back to home"
-msgstr ""
+msgstr "Înapoi la pagina principală"
 
 #: templates/account/confirm_email_verification_code.html:4
 msgid "Email Verification"

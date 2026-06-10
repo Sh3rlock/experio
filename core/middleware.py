@@ -25,7 +25,7 @@ class LandingPageModeMiddleware:
             return self.get_response(request)
 
         path = request.path
-        if path in ('', '/'):
+        if path in ('', '/', '/register/success/'):
             return self.get_response(request)
         if any(path.startswith(prefix) for prefix in self.ALLOWED_PREFIXES):
             return self.get_response(request)

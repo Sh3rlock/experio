@@ -1871,6 +1871,39 @@ body.landing-app {
     margin-right: auto;
 }
 
+.landing-success-hero {
+    min-height: calc(100vh - 12rem);
+    display: flex;
+    align-items: center;
+    padding: 4rem 0;
+}
+
+.landing-success-content {
+    max-width: 40rem;
+    margin: 0 auto;
+}
+
+.landing-success-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 5rem;
+    height: 5rem;
+    margin-bottom: 1.5rem;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.18);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+.landing-success-icon .bi {
+    font-size: 2.75rem;
+    color: #fff;
+}
+
+.landing-success-hero .landing-hero-lead {
+    margin-bottom: 2rem;
+}
+
 .landing-hero-stack {
     position: relative;
 }

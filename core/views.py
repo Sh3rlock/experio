@@ -1,9 +1,12 @@
+import logging
+
 from django.conf import settings
-from django.contrib import messages
 from django.contrib.auth import get_user_model
 from django.http import HttpResponse
 from django.shortcuts import redirect, render
 from django.utils.translation import gettext as _
+
+logger = logging.getLogger(__name__)
 from django.views.decorators.http import require_POST
 from django.views.i18n import set_language as django_set_language
 
@@ -40,21 +43,20 @@ def landing(request):
             data['business_category_display'] = application_form.category_label()
             data['voucher_interest_display'] = application_form.interest_label()
             data['voucher_types_display'] = application_form.voucher_type_labels()
-            send_partner_application(data)
-            messages.success(
-                request,
-                _(
-                    'Thank you for your interest! We will contact you within 2 business '
-                    'days to discuss how we can help your business reach new customers '
-                    'through digital gift vouchers.'
-                ),
-            )
-            return redirect('core:landing#register')
+            try:
+                send_partner_application(data)
+            except Exception:
+                logger.exception('Failed to send partner application email')
+            return redirect('core:landing_success')
 
     return render(request, 'core/landing.html', {
         'application_form': application_form,
         'has_merchant': request.user.is_authenticated and hasattr(request.user, 'merchant'),
     })
+
+
+def landing_success(request):
+    return render(request, 'core/landing_success.html')
 
 
 def home(request):
