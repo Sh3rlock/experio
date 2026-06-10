@@ -210,19 +210,18 @@ msgstr "Kereskedői fiókja jóváhagyásra vár."
 msgid "Admin access required."
 msgstr "Adminisztrátori hozzáférés szükséges."
 
-#: templates/core/landing_success.html:3 templates/core/landing_success.html:12
-msgid "Application Received"
-msgstr "Jelentkezés beérkezett"
+#: templates/core/landing_success.html:3 templates/core/landing_success.html:9
+msgid "Thank you for your interest!"
+msgstr "Köszönjük érdeklődését!"
 
-#: templates/core/landing_success.html:14
+#: templates/core/landing_success.html:11
 msgid ""
-"Thank you for your interest! We will contact you within 2 business days to "
-"discuss how we can help your business reach new customers through digital "
-"gift vouchers."
+"We will contact you soon to discuss how we can help your business reach new "
+"customers through digital gift vouchers."
 msgstr ""
-"Köszönjük érdeklődését! 2 munkanapon belül felvesszük Önnel a kapcsolatot, "
-"hogy megbeszéljük, hogyan segíthetünk vállalkozásának új ügyfeleket elérni "
-"digitális ajándékkuponokon keresztül."
+"Hamarosan felvesszük Önnel a kapcsolatot, hogy megbeszéljük, hogyan "
+"segíthetünk vállalkozásának új ügyfeleket elérni digitális ajándékkuponokon "
+"keresztül."
 
 #: merchants/forms.py:21
 msgid "Romania"

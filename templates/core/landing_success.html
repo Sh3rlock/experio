@@ -1,21 +1,15 @@
 {% extends 'base_landing.html' %}
 {% load i18n %}
-{% block title %}{% trans "Application Received" %}{% endblock %}
+{% block title %}{% trans "Thank you for your interest!" %}{% endblock %}
 {% block content %}
 
 <section class="landing-hero landing-hero--simple landing-success-hero">
     <div class="container-app">
         <div class="landing-success-content text-center">
-            <div class="landing-success-icon" aria-hidden="true">
-                <i class="bi bi-check-circle-fill"></i>
-            </div>
-            <h1 class="landing-hero-title">{% trans "Application Received" %}</h1>
+            <h1 class="landing-hero-title">{% trans "Thank you for your interest!" %}</h1>
             <p class="landing-hero-lead">
-                {% trans "Thank you for your interest! We will contact you within 2 business days to discuss how we can help your business reach new customers through digital gift vouchers." %}
+                {% trans "We will contact you soon to discuss how we can help your business reach new customers through digital gift vouchers." %}
             </p>
-            <a href="{% url 'core:landing' %}" class="btn btn-primary btn-lg">
-                {% trans "Back to home" %}
-            </a>
         </div>
     </div>
 </section>

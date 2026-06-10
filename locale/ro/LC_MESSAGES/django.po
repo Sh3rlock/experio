@@ -210,19 +210,17 @@ msgstr "Contul dvs. de comerciant așteaptă aprobarea."
 msgid "Admin access required."
 msgstr "Este necesar acces de administrator."
 
-#: templates/core/landing_success.html:3 templates/core/landing_success.html:12
-msgid "Application Received"
-msgstr "Cerere primită"
+#: templates/core/landing_success.html:3 templates/core/landing_success.html:9
+msgid "Thank you for your interest!"
+msgstr "Îți mulțumim pentru interes!"
 
-#: templates/core/landing_success.html:14
+#: templates/core/landing_success.html:11
 msgid ""
-"Thank you for your interest! We will contact you within 2 business days to "
-"discuss how we can help your business reach new customers through digital "
-"gift vouchers."
+"We will contact you soon to discuss how we can help your business reach new "
+"customers through digital gift vouchers."
 msgstr ""
-"Îți mulțumim pentru interes! Te vom contacta în 2 zile lucrătoare pentru a "
-"discuta cum putem ajuta afacerea ta să ajungă la clienți noi prin vouchere "
-"cadou digitale."
+"Te vom contacta în curând pentru a discuta cum putem ajuta afacerea ta să "
+"ajungă la clienți noi prin vouchere cadou digitale."
 
 #: merchants/forms.py:21
 msgid "Romania"
