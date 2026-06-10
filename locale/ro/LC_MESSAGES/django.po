@@ -86,40 +86,36 @@ msgid "Profile updated successfully."
 msgstr "Profilul a fost actualizat cu succes."
 
 #: core/forms.py:19
-msgid "Restaurant / Café"
-msgstr "Restaurant / Cafenea"
-
-#: core/forms.py:20
-msgid "Hotel / Accommodation"
-msgstr "Hotel / Cazare"
+msgid "Experience"
+msgstr "Experiență"
 
 #: core/forms.py:21
-msgid "Wellness / Spa"
-msgstr "Wellness / Spa"
+msgid "Gastro"
+msgstr "Gastronomie"
 
 #: core/forms.py:22
-msgid "Beauty Salon"
-msgstr "Salon de înfrumusețare"
+msgid "Health"
+msgstr "Sănătate"
 
 #: core/forms.py:23 templates/core/home.html:61
-msgid "Fitness"
-msgstr "Fitness"
+msgid "Beauty"
+msgstr "Frumusețe"
+
+#: core/forms.py:20 templates/core/home.html:62
+msgid "Travel"
+msgstr "Călătorie"
 
 #: core/forms.py:24
-msgid "Adventure & Activities"
-msgstr "Aventură și activități"
+msgid "Course"
+msgstr "Curs"
 
 #: core/forms.py:25
-msgid "Tourism"
-msgstr "Turism"
-
-#: core/forms.py:26
-msgid "Retail Store"
-msgstr "Magazin retail"
-
-#: core/forms.py:27
 msgid "Other"
 msgstr "Altele"
+
+#: templates/core/home.html:61
+msgid "Fitness"
+msgstr "Fitness"
 
 #: core/forms.py:38
 msgid "Yes"
@@ -756,14 +752,6 @@ msgstr "Restaurant"
 #: templates/core/home.html:61
 msgid "Spa"
 msgstr "Spa"
-
-#: templates/core/home.html:61
-msgid "Beauty"
-msgstr "Frumusețe"
-
-#: templates/core/home.html:62
-msgid "Travel"
-msgstr "Călătorii"
 
 #: templates/core/home.html:62
 msgid "Adventure"

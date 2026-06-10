@@ -86,40 +86,36 @@ msgid "Profile updated successfully."
 msgstr "A profil sikeresen frissítve."
 
 #: core/forms.py:19
-msgid "Restaurant / Café"
-msgstr "Étterem / Kávézó"
-
-#: core/forms.py:20
-msgid "Hotel / Accommodation"
-msgstr "Szálloda / Szálláshely"
+msgid "Experience"
+msgstr "Élmény"
 
 #: core/forms.py:21
-msgid "Wellness / Spa"
-msgstr "Wellness / Spa"
+msgid "Gastro"
+msgstr "Gasztro"
 
 #: core/forms.py:22
-msgid "Beauty Salon"
-msgstr "Szépségszalon"
+msgid "Health"
+msgstr "Egészség"
 
 #: core/forms.py:23 templates/core/home.html:61
-msgid "Fitness"
-msgstr "Fitnesz"
+msgid "Beauty"
+msgstr "Szépség"
+
+#: core/forms.py:20 templates/core/home.html:62
+msgid "Travel"
+msgstr "Utazás"
 
 #: core/forms.py:24
-msgid "Adventure & Activities"
-msgstr "Kaland és programok"
+msgid "Course"
+msgstr "Tanfolyam"
 
 #: core/forms.py:25
-msgid "Tourism"
-msgstr "Turizmus"
-
-#: core/forms.py:26
-msgid "Retail Store"
-msgstr "Kiskereskedelmi üzlet"
-
-#: core/forms.py:27
 msgid "Other"
 msgstr "Egyéb"
+
+#: templates/core/home.html:61
+msgid "Fitness"
+msgstr "Fitnesz"
 
 #: core/forms.py:38
 msgid "Yes"
@@ -757,14 +753,6 @@ msgstr "Étterem"
 #: templates/core/home.html:61
 msgid "Spa"
 msgstr "Spa"
-
-#: templates/core/home.html:61
-msgid "Beauty"
-msgstr "Szépségápolás"
-
-#: templates/core/home.html:62
-msgid "Travel"
-msgstr "Utazás"
 
 #: templates/core/home.html:62
 msgid "Adventure"

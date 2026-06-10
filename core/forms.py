@@ -3,27 +3,23 @@ from django.utils.translation import gettext_lazy as _
 
 class PartnerApplicationForm(forms.Form):
     class BusinessCategory:
-        RESTAURANT = 'restaurant'
-        HOTEL = 'hotel'
-        WELLNESS = 'wellness'
+        EXPERIENCE = 'experience'
+        TRAVEL = 'travel'
+        GASTRO = 'gastro'
+        HEALTH = 'health'
         BEAUTY = 'beauty'
-        FITNESS = 'fitness'
-        ADVENTURE = 'adventure'
-        TOURISM = 'tourism'
-        RETAIL = 'retail'
+        COURSE = 'course'
         OTHER = 'other'
 
         @classmethod
         def choices(cls):
             return [
-                (cls.RESTAURANT, _('Restaurant / Café')),
-                (cls.HOTEL, _('Hotel / Accommodation')),
-                (cls.WELLNESS, _('Wellness / Spa')),
-                (cls.BEAUTY, _('Beauty Salon')),
-                (cls.FITNESS, _('Fitness')),
-                (cls.ADVENTURE, _('Adventure & Activities')),
-                (cls.TOURISM, _('Tourism')),
-                (cls.RETAIL, _('Retail Store')),
+                (cls.EXPERIENCE, _('Experience')),
+                (cls.TRAVEL, _('Travel')),
+                (cls.GASTRO, _('Gastro')),
+                (cls.HEALTH, _('Health')),
+                (cls.BEAUTY, _('Beauty')),
+                (cls.COURSE, _('Course')),
                 (cls.OTHER, _('Other')),
             ]
 
