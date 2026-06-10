@@ -894,6 +894,10 @@ msgstr "Mergi la panoul comerciantului"
 msgid "Send"
 msgstr "Trimite"
 
+#: templates/core/landing.html:152
+msgid "Sending your application..."
+msgstr "Se trimite cererea..."
+
 #: templates/core/landing.html:32
 msgid "Become a Founding Partner"
 msgstr "Devino partener fondator"

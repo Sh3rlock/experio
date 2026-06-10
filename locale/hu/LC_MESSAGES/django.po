@@ -896,6 +896,10 @@ msgstr "Ugrás a kereskedői irányítópultra"
 msgid "Send"
 msgstr "Küldés"
 
+#: templates/core/landing.html:152
+msgid "Sending your application..."
+msgstr "Jelentkezés küldése..."
+
 #: templates/core/landing.html:32
 msgid "Become a Founding Partner"
 msgstr "Legyen alapító partner"
