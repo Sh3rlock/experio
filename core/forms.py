@@ -72,7 +72,7 @@ class PartnerApplicationForm(forms.Form):
         required=False,
     )
     business_address = forms.CharField(
-        label=_('Business Address'),
+        label=_('Business Address - City'),
         max_length=255,
     )
     contact_person = forms.CharField(

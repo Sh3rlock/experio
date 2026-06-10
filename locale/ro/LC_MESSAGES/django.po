@@ -163,8 +163,8 @@ msgid "Website or Facebook Page"
 msgstr "Site web sau pagină Facebook"
 
 #: core/forms.py:79 templates/emails/partner_application.html:12
-msgid "Business Address"
-msgstr "Adresa afacerii"
+msgid "Business Address - City"
+msgstr "Adresa afacerii - Localitate"
 
 #: core/forms.py:83 templates/emails/partner_application.html:15
 msgid "Contact Person"

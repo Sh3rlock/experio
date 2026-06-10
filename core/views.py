@@ -5,8 +5,7 @@ from django.contrib.auth import get_user_model
 from django.http import HttpResponse
 from django.shortcuts import redirect, render
 from django.utils.translation import gettext as _
-
-logger = logging.getLogger(__name__)
+from django.views.decorators.csrf import ensure_csrf_cookie
 from django.views.decorators.http import require_POST
 from django.views.i18n import set_language as django_set_language
 
@@ -18,6 +17,8 @@ from offers.selectors import (
     get_popular_categories,
     get_top_discounts,
 )
+
+logger = logging.getLogger(__name__)
 
 
 def health(request):
@@ -33,6 +34,7 @@ def set_language(request):
     return response
 
 
+@ensure_csrf_cookie
 def landing(request):
     application_form = PartnerApplicationForm()
 

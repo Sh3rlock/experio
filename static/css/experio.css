@@ -2463,6 +2463,10 @@ textarea.landing-field {
     letter-spacing: 0.01em;
 }
 
+.landing-partner-form.is-submitting {
+    pointer-events: none;
+}
+
 .landing-form-submit-spinner {
     display: none;
     vertical-align: -0.125em;

@@ -53,7 +53,9 @@ Set these in Railway → your service → **Variables**:
 
 **Do not set** `DATABASE_URL` or `REDIS_URL` unless you add those services later.
 
-After Railway assigns a domain, update `ALLOWED_HOSTS`, `CSRF_TRUSTED_ORIGINS`, and `SITE_URL` to match.
+After Railway assigns a domain, update `ALLOWED_HOSTS`, `CSRF_TRUSTED_ORIGINS`, and `SITE_URL` to match your **actual** Railway URL (not the placeholder `your-app.up.railway.app`).
+
+> **CSRF 403 on Railway:** Set `SITE_URL` to your live URL (e.g. `https://experio-production.up.railway.app`). The app auto-adds it to `CSRF_TRUSTED_ORIGINS`. Keep `DEBUG=False` in production.
 
 ## 4. Admin login (auto-created on deploy)
 

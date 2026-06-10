@@ -190,6 +190,28 @@ STRIPE_WEBHOOK_SECRET = config('STRIPE_WEBHOOK_SECRET', default='')
 SITE_URL = config('SITE_URL', default='http://localhost:8000')
 LANDING_PAGE_MODE = config('LANDING_PAGE_MODE', default=True, cast=bool)
 
+
+def _add_csrf_trusted_origin(origin):
+    origin = (origin or '').rstrip('/')
+    if origin and origin not in CSRF_TRUSTED_ORIGINS:
+        CSRF_TRUSTED_ORIGINS.append(origin)
+
+
+_add_csrf_trusted_origin(SITE_URL)
+
+for _host in ALLOWED_HOSTS:
+    _host = _host.strip()
+    if not _host or _host.startswith('.'):
+        continue
+    _add_csrf_trusted_origin(f'https://{_host}')
+    if DEBUG:
+        _add_csrf_trusted_origin(f'http://{_host}')
+        _add_csrf_trusted_origin(f'http://{_host}:8000')
+
+if DEBUG:
+    for _host in ('localhost', '127.0.0.1'):
+        _add_csrf_trusted_origin(f'http://{_host}:8000')
+
 REDIS_URL = config('REDIS_URL', default='')
 
 if REDIS_URL:
@@ -227,8 +249,11 @@ LOGGING = {
     },
 }
 
-if not DEBUG:
+if os.environ.get('RAILWAY_ENVIRONMENT'):
+    # Railway terminates TLS at the edge; required for CSRF origin checks even when DEBUG=True.
     SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
+
+if not DEBUG:
     # Railway terminates TLS at the edge; internal health checks use plain HTTP.
     _ssl_redirect_default = 'False' if os.environ.get('RAILWAY_ENVIRONMENT') else 'True'
     SECURE_SSL_REDIRECT = config('SECURE_SSL_REDIRECT', default=_ssl_redirect_default, cast=bool)
