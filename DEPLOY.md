@@ -38,9 +38,9 @@ Set these in Railway → your service → **Variables**:
 | `SECRET_KEY` | Long random string |
 | `DEBUG` | `False` |
 | `LANDING_PAGE_MODE` | `True` |
-| `ALLOWED_HOSTS` | `your-app.up.railway.app,.railway.app` |
-| `CSRF_TRUSTED_ORIGINS` | `https://your-app.up.railway.app` |
-| `SITE_URL` | `https://your-app.up.railway.app` |
+| `ALLOWED_HOSTS` | `experio.ro,www.experio.ro,experio.up.railway.app,.railway.app` |
+| `CSRF_TRUSTED_ORIGINS` | `https://experio.ro,https://www.experio.ro,https://experio.up.railway.app` |
+| `SITE_URL` | `https://experio.ro` |
 | `SECURE_SSL_REDIRECT` | `False` (Railway handles HTTPS at the edge) |
 | `EMAIL_BACKEND` | `django.core.mail.backends.smtp.EmailBackend` |
 | `EMAIL_HOST` | Your SMTP host |
@@ -53,9 +53,9 @@ Set these in Railway → your service → **Variables**:
 
 **Do not set** `DATABASE_URL` or `REDIS_URL` unless you add those services later.
 
-After Railway assigns a domain, update `ALLOWED_HOSTS`, `CSRF_TRUSTED_ORIGINS`, and `SITE_URL` to match your **actual** Railway URL (not the placeholder `your-app.up.railway.app`).
+After Railway assigns a domain, update `ALLOWED_HOSTS`, `CSRF_TRUSTED_ORIGINS`, and `SITE_URL` to match your **actual** domains.
 
-> **CSRF 403 on Railway:** Set `SITE_URL` to your live URL (e.g. `https://experio-production.up.railway.app`). The app auto-adds it to `CSRF_TRUSTED_ORIGINS`. Keep `DEBUG=False` in production.
+> **CSRF 403 with custom domain:** Include both `https://experio.ro` and `https://www.experio.ro` in `CSRF_TRUSTED_ORIGINS`. The app also auto-adds origins from `ALLOWED_HOSTS` and shares CSRF cookies across `experio.ro` / `www.experio.ro`. Keep `DEBUG=False` in production.
 
 ## 4. Admin login (auto-created on deploy)
 

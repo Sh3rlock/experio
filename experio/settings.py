@@ -212,6 +212,17 @@ if DEBUG:
     for _host in ('localhost', '127.0.0.1'):
         _add_csrf_trusted_origin(f'http://{_host}:8000')
 
+# Share session/CSRF cookies across www and apex when both are allowed (e.g. experio.ro + www.experio.ro).
+for _host in ALLOWED_HOSTS:
+    _host = _host.strip()
+    if _host.startswith('www.'):
+        _root = _host[4:]
+        if _root in ALLOWED_HOSTS:
+            _cookie_domain = f'.{_root}'
+            SESSION_COOKIE_DOMAIN = _cookie_domain
+            CSRF_COOKIE_DOMAIN = _cookie_domain
+            break
+
 REDIS_URL = config('REDIS_URL', default='')
 
 if REDIS_URL:
