@@ -35,11 +35,11 @@ msgstr ""
 msgid "Please enter your email address."
 msgstr ""
 
-#: accounts/forms.py:70 accounts/forms.py:111
+#: accounts/forms.py:70 accounts/forms.py:111 core/forms.py:4
 #: templates/account/confirm_email_verification_code.html:59
 #: templates/account/email.html:49 templates/partials/auth_form.html:4
 msgid "Please enter a valid email address."
-msgstr ""
+msgstr "Introduceți o adresă de e-mail validă."
 
 #: accounts/forms.py:86 accounts/forms.py:147 accounts/forms.py:160
 msgid "Password"
@@ -396,11 +396,15 @@ msgid ""
 "expires shortly, so please enter it soon."
 msgstr ""
 
-#: templates/account/confirm_email_verification_code.html:18
+#: core/forms.py:3 templates/account/confirm_email_verification_code.html:18
 #: templates/account/confirm_email_verification_code.html:58
 #: templates/account/email.html:48 templates/partials/auth_form.html:3
 msgid "This field is required."
-msgstr "Este necesar acces de administrator."
+msgstr "Acest câmp este obligatoriu."
+
+#: core/forms.py:5
+msgid "Please select a valid option."
+msgstr "Selectați o opțiune validă."
 
 #: templates/account/confirm_email_verification_code.html:31
 #: templates/account/email_confirm.html:20

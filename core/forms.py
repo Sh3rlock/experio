@@ -1,6 +1,11 @@
 from django import forms
 from django.utils.translation import gettext_lazy as _
 
+FIELD_REQUIRED = _('This field is required.')
+EMAIL_INVALID = _('Please enter a valid email address.')
+INVALID_CHOICE = _('Please select a valid option.')
+
+
 class PartnerApplicationForm(forms.Form):
     class BusinessCategory:
         EXPERIENCE = 'experience'
@@ -60,11 +65,13 @@ class PartnerApplicationForm(forms.Form):
     business_name = forms.CharField(
         label=_('Business Name'),
         max_length=255,
+        error_messages={'required': FIELD_REQUIRED},
     )
     business_category = forms.ChoiceField(
         label=_('Business Category'),
         choices=BusinessCategory.choices,
         widget=forms.Select(attrs={'class': 'landing-field landing-field--select'}),
+        error_messages={'required': FIELD_REQUIRED, 'invalid_choice': INVALID_CHOICE},
     )
     website_or_social = forms.CharField(
         label=_('Website or Facebook Page'),
@@ -74,22 +81,33 @@ class PartnerApplicationForm(forms.Form):
     business_address = forms.CharField(
         label=_('Business Address - City'),
         max_length=255,
+        error_messages={'required': FIELD_REQUIRED},
     )
     contact_person = forms.CharField(
         label=_('Contact Person'),
         max_length=255,
+        error_messages={'required': FIELD_REQUIRED},
     )
-    email = forms.EmailField(label=_('Email Address'))
-    phone = forms.CharField(label=_('Phone Number'), max_length=20)
+    email = forms.EmailField(
+        label=_('Email Address'),
+        error_messages={'required': FIELD_REQUIRED, 'invalid': EMAIL_INVALID},
+    )
+    phone = forms.CharField(
+        label=_('Phone Number'),
+        max_length=20,
+        error_messages={'required': FIELD_REQUIRED},
+    )
     description = forms.CharField(
         label=_('Brief Description'),
         help_text=_('Tell us about your business and what makes it special.'),
         widget=forms.Textarea(attrs={'rows': 4}),
+        error_messages={'required': FIELD_REQUIRED},
     )
     voucher_interest = forms.ChoiceField(
         label=_('Would you be interested in selling gift vouchers online?'),
         choices=VoucherInterest.choices,
         widget=forms.RadioSelect,
+        error_messages={'required': FIELD_REQUIRED, 'invalid_choice': INVALID_CHOICE},
     )
     voucher_types = forms.MultipleChoiceField(
         label=_('What types of vouchers would you like to offer?'),
