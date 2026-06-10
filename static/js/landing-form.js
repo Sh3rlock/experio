@@ -8,7 +8,7 @@
         loader.hidden = false;
         loader.setAttribute('aria-busy', 'true');
 
-        form.querySelectorAll('input, select, textarea, button').forEach((field) => {
+        form.querySelectorAll('input:not([type="hidden"]), select, textarea, button').forEach((field) => {
             field.disabled = true;
         });
     });
